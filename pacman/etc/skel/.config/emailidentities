@@ -1,0 +1,12 @@
+[General]
+Default Identity=994897748
+
+[Identity #0]
+Default Domain=fedora
+Disable Fcc=false
+Identity=Unnamed
+Image Location=
+Inline Signature=
+Override Encryption Defaults=false
+Signature Enabled=false
+uoid=994897748

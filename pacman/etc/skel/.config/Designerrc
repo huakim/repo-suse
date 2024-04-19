@@ -1,0 +1,4 @@
+[KFileDialog Settings]
+Recent Files[$e]=select.ui,file:$HOME/Desktop/copr-gui/monitor.ui,file:$HOME/Desktop/copr-gui/select.ui
+Recent URLs[$e]=file:$HOME/Desktop/copr-gui/,file:$HOME/Desktop/
+detailViewIconSize=16

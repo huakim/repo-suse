@@ -1,0 +1,7 @@
+[KUE]
+enabled=1
+autorefresh=0
+baseurl=https://download.opensuse.org/repositories/KDE:/Extra/openSUSE_Tumbleweed/
+type=rpm-md
+priority=75
+keeppackages=1

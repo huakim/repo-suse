@@ -1,0 +1,1 @@
+../zypp/repos.d

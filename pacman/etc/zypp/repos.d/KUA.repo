@@ -1,0 +1,7 @@
+[KUA]
+enabled=1
+autorefresh=0
+baseurl=https://download.opensuse.org/repositories/KDE:Applications/KDE_Frameworks5_openSUSE_Tumbleweed/
+type=rpm-md
+priority=75
+keeppackages=1

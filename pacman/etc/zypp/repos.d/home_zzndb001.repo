@@ -1,0 +1,10 @@
+[home_zzndb001]
+name=home:zzndb001 (openSUSE_Tumbleweed)
+enabled=1
+autorefresh=0
+baseurl=https://download.opensuse.org/repositories/home:/zzndb001/openSUSE_Tumbleweed/
+type=rpm-md
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/home:/zzndb001/openSUSE_Tumbleweed/repodata/repomd.xml.key
+keepcache=1
+keeppackages=1

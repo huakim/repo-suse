@@ -10,6 +10,7 @@ etc/modules-load.d
 etc/refractainstaller.conf
 etc/refractasnapshot.conf
 #etc/sddm.conf.d/kde_settings.conf
+etc/sddm.conf.d
 etc/skel
 etc/ssh/sshd_config.d
 #etc/pulse/default.pa.d/virtualmic

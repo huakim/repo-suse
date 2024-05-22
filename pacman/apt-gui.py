@@ -7,6 +7,9 @@ j=__import__('apt-base')
 pkgs=j.pkgs
 main=j.main
 
+if pkgs[0] == 'zypper':
+    pkgs.append('yast2-packager')
+
 qemu=(
 'libvirt',
 'qemu-system-x86',
@@ -18,7 +21,7 @@ yast2=(
 'yast2-installation',
 'yast2-control-center-qt'
 )
-pkgs.extend(yast2)
+#pkgs.extend(yast2)
 
 pkgs.extend((
 "dbus-1-x11",

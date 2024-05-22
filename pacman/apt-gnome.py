@@ -63,7 +63,9 @@ pkgs.extend((
 #"remmina-plugins-rdp",
 #"remmina-plugins-secret",
 #"remmina-plugins-vnc",
+'transmission-gtk',
 #"valent",
+'uget',
 "xdg-desktop-portal-gtk"
 ))
 

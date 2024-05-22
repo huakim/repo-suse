@@ -1,7 +1,9 @@
 [KQt6]
-enabled=1
-autorefresh=0
-baseurl=http://download.opensuse.org/repositories/KDE:/Qt6/openSUSE_Tumbleweed/
+name=Qt 6 packages for openSUSE (openSUSE_Tumbleweed)
 type=rpm-md
-priority=50
+baseurl=https://download.opensuse.org/repositories/KDE:/Qt6/openSUSE_Tumbleweed/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/KDE:/Qt6/openSUSE_Tumbleweed/repodata/repomd.xml.key
+enabled=1
+keepcache=1
 keeppackages=1

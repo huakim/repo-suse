@@ -1,17 +1,11 @@
 # see `man dnf.conf` for defaults and possible options
 
 [main]
-gpgcheck=False
+gpgcheck=True
 installonly_limit=3
-max_parallel_downloads=14
-fastestmirror=1
 clean_requirements_on_remove=True
 best=False
 skip_if_unavailable=True
-#releasever=39
-reposdir=/etc/dnf/repos.d
 keepcache=True
-install_weak_deps=False
-#cacheonly=True
-optional_metadata_types=filelists
-
+max_parallel_downloads=20
+install_weak_deps=0

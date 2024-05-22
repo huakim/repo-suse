@@ -1,6 +1,6 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/local/games
 export PATH
-alias sudo='sudo '
+alias sudo='WAYLAND_DISPLAY="$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" sudo '
 
 git-update(){
  git add --all

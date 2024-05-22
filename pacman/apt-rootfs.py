@@ -7,11 +7,15 @@ j=__import__('apt-chroot')
 pkgs=j.pkgs
 main=j.main
 
-dnfplugins=(
 
-)
+
+if pkgs[0] == 'dnf5':
+    dnfplugins=('dnf5-plugins',)
+else:
+    dnfplugins=[]
 
 pkgs.extend(dnfplugins)
+
 # push @pkgs, qw(
 pkgs.extend((
 "branding-upstream",
@@ -55,6 +59,7 @@ pkgs.extend((
 "tar",
 "gzip",
 "unzip",
+"udisks2"
 "wget",
 "which",
 "whois"

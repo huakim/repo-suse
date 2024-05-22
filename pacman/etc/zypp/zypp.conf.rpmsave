@@ -5,7 +5,7 @@
 
 
 [main]
-
+solver.onlyRequires = true 
 
 ##
 ## Override the detected architecture

@@ -1,7 +1,10 @@
 [KUA]
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/KDE:Applications/KDE_Frameworks5_openSUSE_Tumbleweed/
+name=KDE Release Gear (KDE_Frameworks5_openSUSE_Tumbleweed)
 type=rpm-md
-priority=75
+baseurl=https://download.opensuse.org/repositories/KDE:/Applications/KDE_Frameworks5_openSUSE_Tumbleweed/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/KDE:/Applications/KDE_Frameworks5_openSUSE_Tumbleweed/repodata/repomd.xml.key
+enabled=1
 keeppackages=1
+keepcache=1
+

@@ -67,7 +67,8 @@ Defaults secure_path="/usr/sbin:/usr/bin:/sbin:/bin"
 ## installed system. When configuring sudo, delete the two
 ## following lines:
 Defaults targetpw   # ask for the password of the target user i.e. root
-ALL   ALL=(ALL) ALL   # WARNING! Only use this together with 'Defaults targetpw'!
+#ALL   ALL=(ALL) ALL   # WARNING! Only use this together with 'Defaults targetpw'!
+Defaults env_keep += "WAYLAND_DISPLAY"
 
 ##
 ## Runas alias specification

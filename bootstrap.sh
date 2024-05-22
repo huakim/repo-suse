@@ -49,6 +49,7 @@ chroot "${dir}" /bin/bash "/${idir}/pacman/copy.sh"
 chroot "${dir}" /bin/bash "/${idir}/pacman/setup.sh"
 chroot "${dir}" /bin/bash "/${idir}/pacman/user.sh"
 #chroot . /sbin/runuser -u lenovo -c 'cd /extra/home/lenovo; ./txt.sh'
+DRACUT_ARGS="${DRACUT_ARGS:-'--force-drivers usb-storage'}"
 eval "chroot . /bin/dracut --kver=$(ls ./lib/modules) ${DRACUT_ARGS}"
 if [ -f "${FSTAB}" ]; then
   rm -v "${dir}/etc/fstab"

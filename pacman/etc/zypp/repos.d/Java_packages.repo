@@ -1,0 +1,9 @@
+[Java_packages]
+name=Factory Java packages (openSUSE_Tumbleweed)
+enabled=1
+autorefresh=0
+baseurl=https://download.opensuse.org/repositories/Java:/packages/openSUSE_Tumbleweed/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/Java:/packages/openSUSE_Tumbleweed/repodata/repomd.xml.key
+keeppackages=1
+keepcache=1

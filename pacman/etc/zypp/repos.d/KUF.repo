@@ -1,7 +1,10 @@
 [KUF]
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/KDE:Frameworks/openSUSE_Tumbleweed
+name=KDE Frameworks and Plasma (openSUSE_Tumbleweed)
 type=rpm-md
-priority=75
+baseurl=https://download.opensuse.org/repositories/KDE:/Frameworks/openSUSE_Tumbleweed/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/KDE:/Frameworks/openSUSE_Tumbleweed/repodata/repomd.xml.key
+enabled=1
 keeppackages=1
+keepcache=1
+

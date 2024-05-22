@@ -7,3 +7,4 @@ gpgcheck=1
 repo_gpgcheck=0
 gpgkey=https://download.copr.fedorainfracloud.org/results/randalthor17/floorp/pubkey.gpg
 keeppackages=1
+keepcache=1

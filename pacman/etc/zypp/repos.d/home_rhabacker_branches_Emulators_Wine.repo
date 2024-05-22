@@ -7,3 +7,4 @@ type=rpm-md
 gpgcheck=1
 gpgkey=https://download.opensuse.org/repositories/home:/rhabacker:/branches:/Emulators:/Wine/15.5/repodata/repomd.xml.key
 keeppackages=1
+keepcache=1

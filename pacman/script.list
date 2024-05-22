@@ -31,5 +31,5 @@ paccm.sh
 pypgen.sh
 script.list
 setup.sh
-setup-list.sh
+setup-live.sh
 user.sh

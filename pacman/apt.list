@@ -1,5 +1,4 @@
 etc/dnf
-etc/yum.repos.d
 etc/zypp
 etc/pki/rpm-gpg
 var/cache/libdnf5

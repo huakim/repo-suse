@@ -8,20 +8,13 @@ pkgs=j.pkgs
 main=j.main
 
 if pkgs[0] == 'zypper':
-    pkgs.append('yast2-packager')
+    pkgs.append('yast2-qt-pkg')
 
 qemu=(
 'libvirt',
 'qemu-system-x86',
 'virt-manager'
 )
-yast2=(
-'yast2',
-'yast2-packager',
-'yast2-installation',
-'yast2-control-center-qt'
-)
-#pkgs.extend(yast2)
 
 pkgs.extend((
 "dbus-1-x11",

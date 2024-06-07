@@ -38,3 +38,6 @@ ButtonsOnLeft=M
 ButtonsOnRight=LIAX
 library=org.kde.breeze
 theme=Breeze
+
+[ModifierOnlyShortcuts]
+Meta=org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview

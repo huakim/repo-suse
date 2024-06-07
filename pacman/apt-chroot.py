@@ -42,7 +42,7 @@ def ZYPPER_CONFIG():
         flags.append('install')
         if not INTERACTIVE:
             flags.extend(('--no-confirm',
-            '--allow-downgrade', '--force',
+            '--allow-downgrade',
             '--allow-name-change',
             '--allow-arch-change',
             '--allow-vendor-change',

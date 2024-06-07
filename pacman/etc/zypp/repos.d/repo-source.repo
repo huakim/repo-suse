@@ -4,4 +4,3 @@ enabled=0
 autorefresh=0
 baseurl=http://download.opensuse.org/source/tumbleweed/repo/oss/
 keeppackages=1
-keepcache=1

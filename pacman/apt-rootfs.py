@@ -59,7 +59,7 @@ pkgs.extend((
 "tar",
 "gzip",
 "unzip",
-"udisks2"
+"udisks2",
 "wget",
 "which",
 "whois"

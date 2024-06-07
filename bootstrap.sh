@@ -31,7 +31,9 @@ i sys
 
 idir="extra/repo"
 i "${idir}" "${smp}"
-#echo "${smp}"
+echo "${smp}"
+ls "${idir}"
+read
 #alias chroot='systemd-nspawn -D '
 #chroot . /bin/bash
 #chroot . /bin/dpkg --add-architecture i386

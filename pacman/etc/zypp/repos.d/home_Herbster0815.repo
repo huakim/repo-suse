@@ -1,9 +1,0 @@
-[home_Herbster0815]
-name=Packages used on my private machines - Use at your own risk! :-) (openSUSE_Tumbleweed)
-type=rpm-md
-baseurl=https://download.opensuse.org/repositories/home:/Herbster0815/openSUSE_Tumbleweed/
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/Herbster0815/openSUSE_Tumbleweed/repodata/repomd.xml.key
-enabled=1
-keeppackages=1
-keepcache=1

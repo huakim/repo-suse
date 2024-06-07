@@ -5,4 +5,3 @@ autorefresh=0
 baseurl=http://download.opensuse.org/update/tumbleweed/
 type=rpm-md
 keeppackages=1
-keepcache=1

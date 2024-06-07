@@ -1,9 +1,0 @@
-[home_mantarimay_sway]
-name=sway & wlroots (standard)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/home:/mantarimay:/sway/standard/
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/mantarimay:/sway/standard/repodata/repomd.xml.key
-keeppackages=1
-keepcache=1

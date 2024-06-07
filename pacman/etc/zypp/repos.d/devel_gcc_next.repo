@@ -1,9 +1,0 @@
-[devel_gcc_next]
-name=Subproject with the future next releases (openSUSE_Tumbleweed)
-type=rpm-md
-baseurl=https://download.opensuse.org/repositories/devel:/gcc:/next/openSUSE_Tumbleweed/
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/devel:/gcc:/next/openSUSE_Tumbleweed/repodata/repomd.xml.key
-enabled=1
-keeppackages=1
-keepcache=1

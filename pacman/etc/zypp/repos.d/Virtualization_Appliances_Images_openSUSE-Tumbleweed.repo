@@ -1,9 +1,0 @@
-[Virtualization_Appliances_Images_openSUSE-Tumbleweed]
-name=openSUSE Tumbleweed Images (rpm)
-type=rpm-md
-baseurl=https://download.opensuse.org/repositories/Virtualization:/Appliances:/Images:/openSUSE-Tumbleweed/rpm/
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/Virtualization:/Appliances:/Images:/openSUSE-Tumbleweed/rpm/repodata/repomd.xml.key
-enabled=1
-keeppackages=1
-keepcache=1

@@ -21,6 +21,7 @@ pkgs.extend((
 "dracut-kiwi-live",
 #"dracut-live",
 "efibootmgr",
+"exfatprogs",
 "ntfs-3g",
 "ntfsprogs",
 #"rEFInd",

@@ -1,4 +1,4 @@
 [KFileDialog Settings]
-Recent Files[$e]=Passwords.kdbx,file:$HOME/Desktop/local/lock/Passwords.kdbx
-Recent URLs[$e]=file:$HOME/Desktop/local/lock/,file:$HOME/Desktop/local/
+Recent Files[$e]=Passwords.kdbx,file:$HOME/Desktop/Passwords.kdbx
+Recent URLs[$e]=file:$HOME/Desktop/local/,file:$HOME/Desktop/,file:$HOME/Documents/
 detailViewIconSize=16

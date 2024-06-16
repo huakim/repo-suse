@@ -10,6 +10,9 @@ Id_8=ceb0cfcf-1eed-47d2-84c8-164770edb4f7
 Number=8
 Rows=1
 
+[ModifierOnlyShortcuts]
+Meta=org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview
+
 [NightColor]
 Active=true
 Mode=Constant
@@ -38,6 +41,3 @@ ButtonsOnLeft=M
 ButtonsOnRight=LIAX
 library=org.kde.breeze
 theme=Breeze
-
-[ModifierOnlyShortcuts]
-Meta=org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview

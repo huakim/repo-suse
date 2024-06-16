@@ -20,6 +20,7 @@ pkgs.extend((
 'bluedevil6',
 'breeze-gtk',
 #'calamares',
+'colord-kde',
 'dolphin',
 'gtk2-metatheme-breeze',
 'gtk3-metatheme-breeze',

@@ -1,6 +1,6 @@
 # ~/.zshrc file for zsh interactive shells.
 # see /usr/share/doc/zsh/examples/zshrc for examples
-if [[ `readlink /proc/$$/exe` == "/usr/bin/bash" ]]
+if [[ -n "$BASH_VERSION" ]]
 then
 . /etc/bash/profile
 fi

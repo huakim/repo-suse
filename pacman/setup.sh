@@ -60,3 +60,5 @@ uP /usr/bin/gnome-emulator gnome-terminal /usr/bin/lxterminal 25
 uP /usr/bin/vi vi /usr/bin/nano 25
 uP /usr/bin/python python /usr/bin/python3 25
 uP /usr/bin/dnf dnf /usr/bin/dnf5 25
+uP /usr/bin/waybar waybar /usr/bin/sfwbar 25
+

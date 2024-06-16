@@ -44,6 +44,7 @@ pkgs.extend((
 "nano",
 "ncurses",
 "net-tools",
+"openssh",
 "pciutils",
 "psmisc",
 "rsync",

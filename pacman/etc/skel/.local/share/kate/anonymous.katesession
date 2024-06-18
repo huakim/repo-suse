@@ -1,6 +1,3 @@
-[Document 0]
-URL=file:///bin/amuFormat.sh
-
 [Kate Plugins]
 cmaketoolsplugin=false
 compilerexplorer=false
@@ -52,7 +49,7 @@ Kate-MDI-Sidebar-2-Splitter=594
 Kate-MDI-Sidebar-3-Bar-0-TvList=output,diagnostics,kate_plugin_katesearch,kateprojectinfo,kate_private_plugin_katekonsoleplugin
 Kate-MDI-Sidebar-3-LastSize=200
 Kate-MDI-Sidebar-3-SectSizes=0
-Kate-MDI-Sidebar-3-Splitter=370
+Kate-MDI-Sidebar-3-Splitter=640
 Kate-MDI-Sidebar-Style=2
 Kate-MDI-Sidebar-Visible=true
 Kate-MDI-ToolView-diagnostics-Position=3
@@ -95,13 +92,11 @@ Orientation=1
 Sizes=594
 
 [MainWindow0-ViewSpace 0]
-Active View=file:///bin/amuFormat.sh
-Count=1
-Documents=file:///bin/amuFormat.sh
-View 0=file:///bin/amuFormat.sh
+Count=0
+Documents=
 
 [Open Documents]
-Count=1
+Count=0
 
 [Open MainWindows]
 Count=1
@@ -132,7 +127,3 @@ SearchDiskFiles=
 SearchDiskFiless=
 SizeLimit=128
 UseRegExp=false
-
-[Recent Files]
-File1[$e]=/bin/amuFormat.sh
-Name1[$e]=amuFormat.sh

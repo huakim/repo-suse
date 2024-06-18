@@ -1,0 +1,8 @@
+[FileDialogSize]
+1920x1080 screen: Height=600
+1920x1080 screen: Width=980
+
+[KFileDialog Settings]
+Recent Files[$e]=index.html,file:$HOME/Documents/index.html
+Recent URLs[$e]=file:$HOME/Documents/
+detailViewIconSize=16

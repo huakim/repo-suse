@@ -1,7 +1,0 @@
-[X11_xfce_rat]
-name=Xfce Development Repository aka RAT (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/X11:/xfce:/rat/openSUSE_Tumbleweed/
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/X11:/xfce:/rat/openSUSE_Tumbleweed/repodata/repomd.xml.key

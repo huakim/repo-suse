@@ -165,7 +165,7 @@ ScreenScaleFactors=eDP-1=1;
 XwaylandClientsScale=false
 
 [KShortcutsDialog Settings]
-Dialog Size=600,480
+Dialog Size=1326,712
 
 [PreviewSettings]
 MaximumRemoteSize=0

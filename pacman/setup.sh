@@ -1,8 +1,8 @@
 #!/bin/sh
-#dir="$(realpath $(dirname $0))/"
+dir="$(realpath $(dirname $0))/"
 
 export HOME="/etc/skel"
-#gs='gsettings set'
+
 lT='ln -sfTv'
 uP(){
     if [ -e "$3" ]; then
@@ -62,3 +62,4 @@ uP /usr/bin/python python /usr/bin/python3 25
 uP /usr/bin/dnf dnf /usr/bin/dnf5 25
 uP /usr/bin/waybar waybar /usr/bin/sfwbar 25
 
+. "$dir/gnome.sh"

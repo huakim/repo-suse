@@ -23,6 +23,7 @@ copy-live.sh
 cpangen.pl
 dcat.sh
 extra.list
+gnome.sh
 genrepo.sh
 listfiles.sh
 makedeb_gen.sh

@@ -22,6 +22,7 @@ pkgs.extend((
 "dconf-editor",
 "eog",
 "evince",
+#"evolution",
 "extension-manager",
 "file-roller",
 "nautilus-file-roller",
@@ -37,6 +38,7 @@ pkgs.extend((
 "gnome-disk-utility",
 "gnome-keyring",
 "gnome-menus",
+#"gnome-online-accounts",
 "gnome-power-manager",
 "gnome-remote-desktop",
 "gnome-session",
@@ -79,9 +81,9 @@ for i in ('good', 'bad', 'base', 'ugly' ):
 pkgs.append('gstreamer-plugin-openh264')
 
 pkgs.extend((
-'geary',
+#'geary',
 'epiphany',
-#'evolution',
+'evolution',
 'seahorse'
 ))
 

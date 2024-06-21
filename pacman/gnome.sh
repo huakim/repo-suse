@@ -76,5 +76,5 @@ $gs $e apply-custom-theme true
 $gs $e animation-time 0
 $gs $e animate-show-apps false
 $gs $e always-center-icons true
-
+$gs $e autohide false
 

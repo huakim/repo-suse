@@ -46,13 +46,13 @@ pkgs.extend((
 "gnome-shell-extension-unite",
 #"gnome-shell-extension-gsconnect",
 "gnome-system-monitor",
-"gnome-terminal",
 #"nautilus-extension-terminal",
 "gnome-themes-extras",
 "gnome-tweaks",
 "gvfs",
 "gvfs-fuse",
 "gvfs-backends",
+"keepassxc",
 "libnma",
 #"nautilus",
 #"nautilus-gsconnect",
@@ -65,10 +65,12 @@ pkgs.extend((
 #"remmina-plugins-rdp",
 #"remmina-plugins-secret",
 #"remmina-plugins-vnc",
+'Tangram',
 'thunar',
 'transmission-gtk',
 #"valent",
 'uget',
+"xfce4-terminal",
 "xdg-desktop-portal-gtk"
 ))
 

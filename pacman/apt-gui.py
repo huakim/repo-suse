@@ -10,6 +10,7 @@ main=j.main
 if pkgs[0] == 'zypper':
     pkgs.append('yast2-qt-pkg')
 
+
 qemu=(
 'libvirt',
 'qemu-system-x86',

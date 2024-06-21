@@ -83,10 +83,10 @@ pkgs.extend((
 ))
 
 pkgs.extend((
-#'kmail-account-wizard',
+'kmail-account-wizard',
 #'qt5-qtwebengine-devtools',
 'falkon',
-#'kmail'
+'kmail'
 ))
 
 if __name__ == '__main__':

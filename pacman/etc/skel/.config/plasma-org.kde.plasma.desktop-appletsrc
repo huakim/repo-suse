@@ -881,7 +881,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][268][Applets][278][Configuration]
-PreloadWeight=65
+PreloadWeight=70
 SystrayContainmentId=279
 
 [Containments][268][Applets][293]
@@ -954,7 +954,7 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][279][Applets][289][Configuration]
-PreloadWeight=41
+PreloadWeight=46
 
 [Containments][279][Applets][290]
 immutability=1

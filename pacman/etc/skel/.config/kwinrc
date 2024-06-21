@@ -14,6 +14,7 @@ Rows=1
 Meta=org.kde.kglobalaccel,/component/kwin,org.kde.kglobalaccel.Component,invokeShortcut,Overview
 
 [NightColor]
+Active=true
 Mode=Constant
 NightTemperature=2000
 

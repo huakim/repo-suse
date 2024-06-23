@@ -83,7 +83,7 @@ pkgs.extend((
 ))
 
 pkgs.extend((
-'kmail-account-wizard',
+#'kmail-account-wizard',
 #'qt5-qtwebengine-devtools',
 'falkon',
 'kmail'

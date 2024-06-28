@@ -868,6 +868,17 @@ plugin=org.kde.plasma.panelspacer
 immutability=1
 plugin=org.kde.plasma.lock_logout
 
+[Containments][268][Applets][275][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][268][Applets][275][Configuration][General]
+show_requestLogout=true
+show_requestReboot=true
+show_suspendToDisk=true
+show_suspendToRam=true
+show_switchUser=true
+
 [Containments][268][Applets][276]
 immutability=1
 plugin=org.kde.plasma.windowlist
@@ -896,8 +907,12 @@ showSeconds=Always
 DialogHeight=540
 DialogWidth=720
 
+[Containments][268][Applets][297]
+immutability=1
+plugin=org.kde.plasma.pager
+
 [Containments][268][General]
-AppletOrder=276;277;293;278;270;275
+AppletOrder=276;277;293;278;270;297;275
 
 [Containments][279]
 activityId=

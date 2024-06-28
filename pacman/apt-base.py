@@ -11,6 +11,11 @@ if pkgs[0] == 'zypper':
     pkgs.append('yast2-packager')
 
 pkgs.extend((
+'java-openj9',
+'luajit',
+))
+
+pkgs.extend((
 "NetworkManager-bluetooth",
 "NetworkManager-wifi",
 "NetworkManager-openvpn",

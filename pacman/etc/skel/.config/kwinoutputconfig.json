@@ -3,6 +3,7 @@
         "data": [
             {
                 "autoRotation": "InTabletMode",
+                "colorProfileSource": "sRGB",
                 "connectorName": "eDP-1",
                 "edidHash": "db067630cf478ff8638db83f2724a40b",
                 "edidIdentifier": "BOE 2066 0 31 2018 0",
@@ -24,6 +25,8 @@
             },
             {
                 "autoRotation": "InTabletMode",
+                "brightness": 1,
+                "colorProfileSource": "sRGB",
                 "connectorName": "eDP-1",
                 "edidHash": "7a4f91f3a5880e1afc499d9fa580304b",
                 "edidIdentifier": "STA 24010 0 4 2021 0",

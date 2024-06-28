@@ -57,6 +57,7 @@ pkgs.extend((
 #'materia-kde',
 #'lightdm',
 #'lightdm-settings',
+'okular',
 'plasma6-desktop',
 #'plasma6-drkonqi',
 #'plasma6-milou',

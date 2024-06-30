@@ -24,7 +24,7 @@ pkgs.extend((
 "google-roboto-mono-fonts",
 "google-opensans-fonts",
 #"open-sans-fonts",
-"libopenh264-7",
+#"libopenh264-7",
 "pipewire",
 "pipewire-pulseaudio",
 #"pipewire-media-session",
@@ -65,6 +65,22 @@ pkgs.extend((
 #"xorg-x11-server-Xorg",
 ))
 
-if __name__ == '__main__': 
+#codecs
+pkgs.extend((
+'ffmpeg',
+'gstreamer-plugins-good',
+'gstreamer-plugins-good-extra',
+'gstreamer-plugins-bad',
+'gstreamer-plugins-base',
+'gstreamer-plugins-ugly',
+'gstreamer-plugins-libav',
+'gstreamer-plugin-openh264',
+'pipewire-aptx',
+'libavcodec-full',
+'libfdk-aac2',
+'dav1d',
+))
+
+if __name__ == '__main__':
     main()
 

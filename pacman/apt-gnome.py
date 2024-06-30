@@ -77,9 +77,11 @@ pkgs.extend((
 "xdg-desktop-portal-gtk"
 ))
 
-for i in ('good', 'bad', 'base', 'ugly' ):
-    pkgs.append("gstreamer-plugins-"+i)
-pkgs.append('gstreamer-plugin-openh264')
+
+#ffmpeg gstreamer-plugin{s-{good{,-extra},bad,base,ugly,libav},-openh264} pipewire-aptx libavcodec-full libfdk-aac2 dav1d 
+#for i in ('good', 'bad', 'base', 'ugly' ):
+#    pkgs.append("gstreamer-plugins-"+i)
+#pkgs.append('gstreamer-plugin-openh264')
 
 pkgs.extend((
 #'geary',

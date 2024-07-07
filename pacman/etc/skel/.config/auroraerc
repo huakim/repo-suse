@@ -1,0 +1,5 @@
+[kwin4_decoration_qml_plastik]
+animateButtons=false
+coloredBorder=false
+titleAlignCenter=true
+titleAlignLeft=false

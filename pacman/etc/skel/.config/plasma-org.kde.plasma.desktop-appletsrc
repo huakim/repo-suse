@@ -664,30 +664,6 @@ PreloadWeight=42
 extraItems=org.kde.plasma.volume,org.kde.kscreen,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kdeconnect
 knownItems=org.kde.plasma.volume,org.kde.kscreen,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kdeconnect
 
-[Containments][24]
-ItemGeometries-1366x768=
-ItemGeometries-1920x1080=
-ItemGeometriesHorizontal=
-activityId=95cde8e0-f45e-4ec6-98f4-42b2b565ca13
-formfactor=0
-immutability=1
-lastScreen=0
-location=0
-plugin=org.kde.desktopcontainment
-wallpaperplugin=org.kde.color
-
-[Containments][24][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][24][General]
-ToolBoxButtonState=topcenter
-ToolBoxButtonX=345
-ToolBoxButtonY=28
-
-[Containments][24][Wallpaper][org.kde.color][General]
-Color=0,0,0
-
 [Containments][248]
 activityId=
 formfactor=2
@@ -835,8 +811,8 @@ plugin=org.kde.plasma.kickoff
 
 [Containments][267][Applets][296][Configuration]
 PreloadWeight=100
-popupHeight=510
-popupWidth=647
+popupHeight=506
+popupWidth=673
 
 [Containments][267][Applets][296][Configuration][ConfigDialog]
 DialogHeight=540
@@ -994,6 +970,27 @@ DialogWidth=720
 extraItems=org.kde.plasma.volume,org.kde.kscreen,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kdeconnect
 knownItems=org.kde.plasma.volume,org.kde.kscreen,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kdeconnect
 showAllItems=true
+
+[Containments][298]
+activityId=95cde8e0-f45e-4ec6-98f4-42b2b565ca13
+formfactor=0
+immutability=1
+lastScreen=0
+location=0
+plugin=org.kde.plasma.mobile.homescreen.halcyon
+wallpaperplugin=org.kde.color
+
+[Containments][298][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][298][General]
+ToolBoxButtonState=topcenter
+ToolBoxButtonX=345
+ToolBoxButtonY=28
+
+[Containments][298][Wallpaper][org.kde.color][General]
+Color=0,0,0
 
 [Containments][47]
 activityId=

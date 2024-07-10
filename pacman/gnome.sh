@@ -60,7 +60,7 @@ $gs $v night-light-schedule-automatic false
 $gs $v night-light-schedule-from 0
 $gs $v night-light-schedule-to 0
 v=org.gnome.shell
-$gs $v enabled-extensions "['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu']"
+$gs $v enabled-extensions "['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'valent@andyholmes.ca']"
 $gs $v favorite-apps "[]"
 v=$v.extensions
 e=$v.dash-to-dock
@@ -70,11 +70,14 @@ $gs $e show-mounts false
 $gs $e height-fraction 0.9
 $gs $e extend-height true
 $gs $e dock-position 'RIGHT'
+$gs $e dock-fixed true
 $gs $e dash-max-icon-size 27
 $gs $e custom-theme-shrink true
 $gs $e apply-custom-theme true
 $gs $e animation-time 0
-$gs $e animate-show-apps false
+$gs $e animate-show-apps true
 $gs $e always-center-icons true
 $gs $e autohide false
+$gs $e intellihide false
+$gs $e intellihide-mode 'ALWAYS_ON_TOP'
 

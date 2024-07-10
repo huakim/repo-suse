@@ -945,14 +945,14 @@ immutability=1
 plugin=org.kde.plasma.brightness
 
 [Containments][279][Applets][289][Configuration]
-PreloadWeight=46
+PreloadWeight=38
 
 [Containments][279][Applets][290]
 immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][279][Applets][290][Configuration]
-PreloadWeight=46
+PreloadWeight=38
 
 [Containments][279][Applets][291]
 immutability=1
@@ -963,33 +963,35 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][279][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=712
+DialogWidth=1324
 
 [Containments][279][General]
 extraItems=org.kde.plasma.volume,org.kde.kscreen,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kdeconnect
 knownItems=org.kde.plasma.volume,org.kde.kscreen,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kdeconnect
 showAllItems=true
 
-[Containments][298]
+[Containments][299]
+ItemGeometries-1366x768=
+ItemGeometriesHorizontal=
 activityId=95cde8e0-f45e-4ec6-98f4-42b2b565ca13
 formfactor=0
 immutability=1
 lastScreen=0
 location=0
-plugin=org.kde.plasma.mobile.homescreen.halcyon
+plugin=org.kde.desktopcontainment
 wallpaperplugin=org.kde.color
 
-[Containments][298][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+[Containments][299][ConfigDialog]
+DialogHeight=712
+DialogWidth=1324
 
-[Containments][298][General]
+[Containments][299][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=345
 ToolBoxButtonY=28
 
-[Containments][298][Wallpaper][org.kde.color][General]
+[Containments][299][Wallpaper][org.kde.color][General]
 Color=0,0,0
 
 [Containments][47]

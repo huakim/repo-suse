@@ -68,7 +68,6 @@ pkgs.extend((
 #"remmina-plugins-rdp",
 #"remmina-plugins-secret",
 #"remmina-plugins-vnc",
-'Tangram',
 'thunar',
 'transmission-gtk',
 "valent",
@@ -84,10 +83,10 @@ pkgs.extend((
 #pkgs.append('gstreamer-plugin-openh264')
 
 pkgs.extend((
-#'geary',
-'epiphany',
-'evolution',
-'seahorse'
+#'epiphany',
+#'evolution',
+#'seahorse',
+#'Tangram'
 ))
 
 #for i in ('dm', 'mpath', 'btrfs', 'lvm', 'nvdimm'):

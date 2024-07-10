@@ -1,6 +1,9 @@
 [Module-appmenu]
 autoload=false
 
+[Module-audioshortcutsservice]
+autoload=true
+
 [Module-baloosearchmodule]
 autoload=false
 
@@ -8,6 +11,9 @@ autoload=false
 autoload=true
 
 [Module-colorcorrectlocationupdater]
+autoload=false
+
+[Module-colord]
 autoload=false
 
 [Module-device_automounter]
@@ -20,7 +26,7 @@ autoload=false
 autoload=false
 
 [Module-gtkconfig]
-autoload=true
+autoload=false
 
 [Module-inotify]
 autoload=true
@@ -28,8 +34,14 @@ autoload=true
 [Module-kded_accounts]
 autoload=false
 
-[Module-kded_touchpad]
+[Module-kded_plasma_mobile_autodetect_apn]
 autoload=false
+
+[Module-kded_plasma_mobile_start]
+autoload=false
+
+[Module-kded_touchpad]
+autoload=true
 
 [Module-keyboard]
 autoload=false

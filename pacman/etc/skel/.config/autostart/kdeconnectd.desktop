@@ -1,0 +1,15 @@
+[Desktop Entry]
+Comment=
+Exec=kdeconnectd
+GenericName=
+Icon=kdeconnect
+MimeType=
+Name=kdeconnectd
+OnlyShowIn=KDE;
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -35,6 +35,17 @@ DialogWidth=1366
 immutability=1
 plugin=org.kde.plasma.showdesktop
 
+[Containments][2][Applets][25]
+immutability=1
+plugin=org.kde.plasma.taskmanager
+
+[Containments][2][Applets][25][Configuration][ConfigDialog]
+DialogHeight=700
+DialogWidth=1366
+
+[Containments][2][Applets][25][Configuration][General]
+launchers=
+
 [Containments][2][Applets][3]
 immutability=1
 plugin=org.kde.plasma.kickoff
@@ -51,13 +62,6 @@ DialogWidth=1366
 [Containments][2][Applets][3][Configuration][General]
 favoritesPortedToKAstats=true
 
-[Containments][2][Applets][5]
-immutability=1
-plugin=org.kde.plasma.icontasks
-
-[Containments][2][Applets][5][Configuration][General]
-launchers=
-
 [Containments][2][Applets][6]
 immutability=1
 plugin=org.kde.plasma.marginsseparator
@@ -71,7 +75,7 @@ PreloadWeight=75
 SystrayContainmentId=8
 
 [Containments][2][General]
-AppletOrder=3;5;6;7;18;19
+AppletOrder=3;25;6;7;18;19
 
 [Containments][24]
 ItemGeometries-1366x768=

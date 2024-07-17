@@ -1,3 +1,5 @@
+MenuBar=Disabled
+
 [Desktop Entry]
 DefaultProfile=Default Profile.profile
 
@@ -5,6 +7,7 @@ DefaultProfile=Default Profile.profile
 ConfigVersion=1
 
 [MainWindow]
+MenuBar=Disabled
 ToolBarsMovable=Disabled
 
 [UiSettings]

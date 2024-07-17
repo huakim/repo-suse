@@ -1,9 +1,0 @@
-[parameters]
-AccelFactor=0
-CircScrollDelta=5.73
-HorizScrollDelta=2.5
-MaxSpeed=2.85546317292349
-MaxTapMove=3.8
-MinSpeed=255
-Tapping=false
-VertScrollDelta=2.5

@@ -1,15 +1,11 @@
 [Keyboard]
-RepeatDelay=170
-RepeatRate=80
+RepeatDelay=150
+RepeatRate=85
+
+[Libinput][1267][12581][ASUE1201:00 04F3:3125 Mouse]
+PointerAcceleration=-0.200
 
 [Libinput][1267][12581][ASUE1201:00 04F3:3125 Touchpad]
-PointerAcceleration=0.600
-ScrollFactor=4
-
-[Libinput][1267][91][Elan Touchpad]
-Enabled=false
+Enabled=true
 PointerAcceleration=1.000
-ScrollFactor=9
-
-[Mouse]
-cursorTheme=breeze_cursors
+PointerAccelerationProfile=2

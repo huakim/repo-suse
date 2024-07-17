@@ -1,6 +1,6 @@
-[/home/lenovo/.local/share/Trash]
+[/home/suse/.local/share/Trash]
 Days=7
 LimitReachedAction=0
 Percent=10
-UseSizeLimit=false
+UseSizeLimit=true
 UseTimeLimit=false

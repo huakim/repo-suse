@@ -1,5 +1,2 @@
-[OSD]
-kbdLayoutChangedEnabled=false
-
 [Theme]
-name=Stone
+name=default

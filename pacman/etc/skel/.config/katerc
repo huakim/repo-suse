@@ -1,3 +1,6 @@
+[FileDialogSize]
+1366x768 screen: Window-Maximized=true
+
 [General]
 Days Meta Infos=30
 Save Meta Infos=true
@@ -18,7 +21,7 @@ Text Font=Hack,10,-1,7,400,0,0,0,0,0,0,0,0,0,0,1
 Word Wrap Marker=false
 
 [MainWindow]
-ToolBarsMovable=Disabled
+1366x768 screen: Window-Maximized=true
 
 [filetree]
 editShade=31,81,106

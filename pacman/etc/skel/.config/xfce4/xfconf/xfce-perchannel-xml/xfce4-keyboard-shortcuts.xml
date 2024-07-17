@@ -13,6 +13,8 @@
   <property name="commands" type="empty">
     <property name="custom" type="empty">
       <property name="override" type="bool" value="true"/>
+      <property name="Super_L" type="string" value="/usr/bin/xfce4-popup-whiskermenu"/>
+      <property name="&lt;Primary&gt;&lt;Alt&gt;Delete" type="string" value="/usr/bin/xfce4-session-logout"/>
     </property>
   </property>
 </channel>

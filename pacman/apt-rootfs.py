@@ -18,6 +18,8 @@ pkgs.extend(dnfplugins)
 
 # push @pkgs, qw(
 pkgs.extend((
+"fwupd",
+"aha",
 "branding-upstream",
 "ca-certificates",
 "ca-certificates-mozilla",

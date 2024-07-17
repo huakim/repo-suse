@@ -5,7 +5,7 @@ autoload=false
 autoload=true
 
 [Module-baloosearchmodule]
-autoload=false
+autoload=true
 
 [Module-bluedevil]
 autoload=true
@@ -26,13 +26,10 @@ autoload=false
 autoload=false
 
 [Module-gtkconfig]
-autoload=false
+autoload=true
 
 [Module-inotify]
 autoload=true
-
-[Module-kded_accounts]
-autoload=false
 
 [Module-kded_plasma_mobile_autodetect_apn]
 autoload=false
@@ -44,19 +41,16 @@ autoload=false
 autoload=true
 
 [Module-keyboard]
-autoload=false
+autoload=true
 
 [Module-kscreen]
 autoload=false
 
 [Module-ktimezoned]
-autoload=false
-
-[Module-kwrited]
-autoload=false
+autoload=true
 
 [Module-mprisservice]
-autoload=false
+autoload=true
 
 [Module-networkmanagement]
 autoload=true

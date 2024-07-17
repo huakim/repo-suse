@@ -1,6 +1,8 @@
 [Layout]
-LayoutList=us
-Options=grp:alt_shift_toggle,lv3:switch
+DisplayNames=,
+LayoutList=us,us
+Options=lv3:switch,grp:alt_shift_toggle
 ResetOldOptions=true
 SwitchMode=Window
 Use=true
+VariantList=,rus

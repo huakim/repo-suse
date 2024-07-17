@@ -1,0 +1,5 @@
+[iridium]
+enabled=1
+autorefresh=0
+baseurl=https://downloads.iridiumbrowser.de/openSUSE_Tumbleweed/
+keeppackages=1

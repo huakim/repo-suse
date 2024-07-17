@@ -71,7 +71,7 @@ pkgs.extend((
 'thunar',
 'transmission-gtk',
 "valent",
-'uget',
+'varia',
 "xfce4-terminal",
 "xdg-desktop-portal-gtk"
 ))

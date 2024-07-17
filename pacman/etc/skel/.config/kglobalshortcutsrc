@@ -1,11 +1,8 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
-switch-to-activity-95cde8e0-f45e-4ec6-98f4-42b2b565ca13=none,none,Switch to activity "Default"
+switch-to-activity-133d40ee-de7a-49d8-9577-e9fb4e22a9ee=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
-Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
-Switch keyboard layout to Japanese=none,none,Switch keyboard layout to Japanese
-Switch keyboard layout to Russian (Japanese, phonetic)=none,none,Switch keyboard layout to Russian (Japanese\\, phonetic)
 Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
@@ -13,7 +10,7 @@ _k_friendly_name=Keyboard Layout Switcher
 [kcm_touchpad]
 Disable Touchpad=Touchpad Off,Touchpad Off,
 Enable Touchpad=Touchpad On,Touchpad On,
-Toggle Touchpad=Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,
+Toggle Touchpad=Meta+Control\tTouchpad Toggle,Touchpad Toggle\tMeta+Ctrl+Zenkaku Hankaku,
 _k_friendly_name=Touchpad
 
 [kmix]
@@ -30,8 +27,9 @@ mute=Volume Mute,Volume Mute,Mute
 [ksmserver]
 Halt Without Confirmation=none,none,Shut Down Without Confirmation
 Lock Session=Meta+L\tScreensaver,Meta+L\tScreensaver,Lock Session
-Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Log Out
+Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Show Logout Prompt
 Log Out Without Confirmation=none,none,Log Out Without Confirmation
+LogOut=none,none,Log Out
 Reboot=none,none,Reboot
 Reboot Without Confirmation=none,none,Reboot Without Confirmation
 Shut Down=none,none,Shut Down
@@ -39,14 +37,12 @@ _k_friendly_name=KWin
 
 [kwin]
 Activate Window Demanding Attention=Meta+Ctrl+A,Meta+Ctrl+A,Activate Window Demanding Attention
-Cycle Overview=Meta+Tab,none,Cycle through Overview and Grid View
-Cycle Overview Opposite=Meta+Shift+Tab,none,Cycle through Grid View and Overview
+ClearLastMouseMark=Meta+Shift+F12,Meta+Shift+F12,Clear Last Mouse Mark
+ClearMouseMarks=Meta+Shift+F11,Meta+Shift+F11,Clear All Mouse Marks
+Cycle Overview=none,none,Cycle through Overview and Grid View
+Cycle Overview Opposite=none,none,Cycle through Grid View and Overview
 Decrease Opacity=none,,Decrease Opacity of Active Window by 5%
 Edit Tiles=Meta+T,Meta+T,Toggle Tiles Editor
-Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
-ExposeAll=Ctrl+F10\tLaunch (C),Ctrl+F10\tLaunch (C),Toggle Present Windows (All desktops)
-ExposeClass=Ctrl+F7,Ctrl+F7,Toggle Present Windows (Window class)
-ExposeClassCurrentDesktop=none,none,Toggle Present Windows (Window class on current desktop)
 Grid View=Meta+G,Meta+G,Toggle Grid View
 Increase Opacity=none,,Increase Opacity of Active Window by 5%
 Kill Window=Meta+Ctrl+Esc,Meta+Ctrl+Esc,Kill Window
@@ -195,11 +191,11 @@ view_zoom_out=Meta+-,Meta+-,Zoom Out
 
 [mediacontrol]
 _k_friendly_name=Media Controller
-mediavolumedown=none,none,Media volume down
-mediavolumeup=none,none,Media volume up
+mediavolumedown=none,,Media volume down
+mediavolumeup=none,,Media volume up
 nextmedia=Media Next,Media Next,Media playback next
 pausemedia=Media Pause,Media Pause,Pause media playback
-playmedia=none,none,Play media playback
+playmedia=none,,Play media playback
 playpausemedia=Media Play,Media Play,Play/Pause media playback
 previousmedia=Media Previous,Media Previous,Media playback previous
 stopmedia=Media Stop,Media Stop,Stop media playback
@@ -222,7 +218,7 @@ powerProfile=Battery\tMeta+B,Battery\tMeta+B,Switch Power Profile
 
 [plasmashell]
 _k_friendly_name=plasmashell
-activate application launcher=none,Meta\tAlt+F1,Activate Application Launcher
+activate application launcher=Meta+F1,Meta\tAlt+F1,Activate Application Launcher
 activate task manager entry 1=Meta+1,Meta+1,Activate Task Manager Entry 1
 activate task manager entry 10=none,Meta+0,Activate Task Manager Entry 10
 activate task manager entry 2=Meta+2,Meta+2,Activate Task Manager Entry 2
@@ -233,17 +229,7 @@ activate task manager entry 6=Meta+6,Meta+6,Activate Task Manager Entry 6
 activate task manager entry 7=Meta+7,Meta+7,Activate Task Manager Entry 7
 activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
-activate widget 104=none,none,Activate Application Launcher Widget
-activate widget 128=none,none,Activate Application Launcher Widget
-activate widget 152=none,none,Activate Application Launcher Widget
-activate widget 174=none,none,Activate Application Launcher Widget
-activate widget 197=none,none,Activate Application Launcher Widget
-activate widget 221=none,none,Activate Application Launcher Widget
-activate widget 296=Alt+F1,none,Activate Application Launcher Widget
 activate widget 3=none,none,Activate Application Launcher Widget
-activate widget 62=none,none,Activate Task Manager Widget
-activate widget 65=none,none,Activate Digital Clock Widget
-activate widget 81=none,none,Activate Application Launcher Widget
 clear-history=none,,Clear Clipboard History
 clipboard_action=Meta+Ctrl+X,Meta+Ctrl+X,Automatic Action Popup Menu
 cycle-panels=Meta+Alt+P,Meta+Alt+P,Move keyboard focus between panels

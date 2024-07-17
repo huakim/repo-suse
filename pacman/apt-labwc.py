@@ -4,13 +4,23 @@ pkgs=j.pkgs
 main=j.main
 
 pkgs.extend((
+"adwaita-qt5",
+"adwaita-qt6",
 "adwaita-xfce-icon-theme",
 "NetworkManager-gnome",
 "dbus-1-daemon",
-"epiphany",
-"evolution",
+"gtk2-metatheme-adwaita",
+"gtk3-metatheme-adwaita",
+#"gtk4-metatheme-adwaita",
+#"epiphany",
+#"evolution",
 "gnome-themes-extras",
+"keepassxc",
 "labwc",
+"menulibre",
+"mugshot",
+"qt5ct",
+"qt6ct",
 "sddm-qt6",
 "sfwbar",
 "thunar",
@@ -24,6 +34,8 @@ pkgs.extend((
 "xfce4-settings",
 "xfce4-terminal",
 "xfce4-whiskermenu-plugin",
+"xfce4-screenshooter",
+"xfce4-taskmanager",
 "xfwm4",
 "xwayland"
 ))

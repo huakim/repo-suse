@@ -48,6 +48,17 @@ mountandclean(){
     moveall "$t/$2"
 }
 
+copyextra(){
+    (
+        cd ${smp}
+        . ${smp}/copy-extra.sh "$1"
+        if [[ -n "$COPY_EXTRA_FILES" ]]
+        then
+            . ${smp}/pacman/aptcp.sh "$1"/pacman
+        fi
+    )
+}
+
 
 mountandclean "$ROOT_PARTITION" "root"
 mountandclean "$EXTRA_PARTITION" "extra"
@@ -81,20 +92,14 @@ PARTUUID=${ROOT_PARTITION} /                   auto    defaults 0 0
 cd "$t/extra"
 btrfs sub cr @backup  && \
 (
-(
-cd ${smp}
-. ${smp}/copy-extra.sh "$t/extra/@backup"
-)
+copyextra "$t/extra/@backup/repo"
 echo "
 PARTUUID=${EXTRA_PARTITION} /extra              btrfs   subvol=/@backup,defaults,compress=zstd:1 0 0
 " >> "${smp}/fstab"
 )
 
 ) || (
-(
-cd ${smp}
-. ${smp}/copy-extra.sh "$t/extra"
-)
+copyextra "$t/extra/repo"
 echo "
 PARTUUID=${EXTRA_PARTITION} /extra              auto    defaults 0 0
 " >> "${smp}/fstab"

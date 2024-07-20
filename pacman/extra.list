@@ -1,4 +1,5 @@
 #bootstrap-mount.sh
+deploy.sh
 bootstrap.sh
 chbootstrap.sh
 commit-extra.sh

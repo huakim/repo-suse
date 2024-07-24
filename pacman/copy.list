@@ -3,6 +3,7 @@ etc/bash
 #etc/dnsmasq.d
 #etc/dconf/db/local.d/user.dconf
 etc/environment.d
+etc/default/lxc-net
 etc/hdparm.conf
 #etc/lightdm
 etc/modprobe.d
@@ -24,4 +25,5 @@ etc/tor
 #usr/lib/refractasnapshot
 #usr/lib/refractainstaller
 usr/local/bin
+usr/share/lxc/templates/lxc-salt_tarball
 usr/share/X11/xkb

@@ -69,6 +69,8 @@ pkgs.extend((
 #"remmina-plugins-secret",
 #"remmina-plugins-vnc",
 'thunar',
+'thunar-plugin-archive',
+'thunar-volman',
 'transmission-gtk',
 "valent",
 'varia',

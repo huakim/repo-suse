@@ -118,7 +118,7 @@ mount /dev/disk/by-partuuid/$EFI_PARTITION "${dir}/boot/efi"
 refind-install --root "${dir}"
 conf="${dir}/boot/efi/EFI/refind/refind.conf"
 cat << EOF > "$conf"
-menuentry SuSE{
+menuentry SuSE {
 volume $ROOT_PARTITION
 loader $rootdir/vmlinuz
 options '${options}'

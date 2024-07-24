@@ -29,9 +29,9 @@ $gs $v monospace-font-name 'Ubuntu Mono 11'
 
 peripherals=$desktop.peripherals
 v=$peripherals.keyboard
-$gs $v delay 180
+$gs $v delay 175
 $gs $v repeat true
-$gs $v repeat-interval 20
+$gs $v repeat-interval 15
 
 $gs $peripherals.mouse speed 0.8
 

@@ -9,9 +9,63 @@ enable-animations=false
 scaling-factor=1
 text-scaling-factor=1.0
 gtk-theme='Breeze'
+clock-show-seconds=true
+document-font-name='Ubuntu Medium 11'
+monospace-font-name='Ubuntu Mono 11'
 
 [org/gnome/desktop/sound]
 theme-name='ocean'
 
 [org/gnome/desktop/wm/preferences]
 button-layout='icon:minimize,maximize,close'
+theme='Adwaita'
+
+[org/gnome/desktop/background]
+picture-options='none'
+primary-color='#000000'
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'us'), ('xkb', 'us+rus')]
+
+[org/gnome/desktop/peripherals/keyboard]
+delay=175
+repeat=true
+repeat-interval=15
+
+[org/gnome/desktop/peripherals/mouse]
+speed=0.80000000000000004
+
+[org/gnome/desktop/peripherals/touchpad]
+click-method='areas'
+natural-scroll=false
+speed=0.80000000000000004
+tap-and-drag=true
+tap-to-click=true
+two-finger-scrolling-enabled=true
+
+[org/gnome/desktop/wm/keybindings]
+switch-input-source=['<Shift>Alt_L']
+switch-input-source-backward=['<Alt>Shift_L']
+
+[org/virt-manager/virt-manager/vmlist-fields]
+disk-usage=false
+network-traffic=false
+
+[org/virt-manager/virt-manager/connections]
+uris=['qemu:///system']
+autoconnect=['qemu:///system']
+
+[org/virt-manager/virt-manager/vms/c56c004b36dd431ba8252aea88f073bb]
+scaling=1
+autoconnect=1
+vm-window-size=(1366, 845)
+
+[org/virt-manager/virt-manager/details]
+show-toolbar=true
+
+[org/virt-manager/virt-manager]
+manager-window-width=550
+manager-window-height=550
+
+[org/virt-manager/virt-manager/confirm]
+forcepoweroff=true

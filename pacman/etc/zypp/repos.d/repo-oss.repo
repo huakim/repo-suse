@@ -2,7 +2,7 @@
 name=openSUSE-Tumbleweed-Oss
 enabled=1
 autorefresh=0
-baseurl=https://mirror.tspu.ru/opensuse/tumbleweed/repo/oss/
+baseurl=http://download.opensuse.org/tumbleweed/repo/oss/
 path=/
 type=rpm-md
 keeppackages=1

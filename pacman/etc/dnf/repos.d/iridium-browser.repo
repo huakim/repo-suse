@@ -1,0 +1,8 @@
+[iridium-browser-project]
+name=repo for iridium-browser-project
+baseurl=https://downloads.iridiumbrowser.de/fedora_39/
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://downloads.iridiumbrowser.de/fedora_39/pubkey.gpg
+enabled=1
+enabled_metadata=1

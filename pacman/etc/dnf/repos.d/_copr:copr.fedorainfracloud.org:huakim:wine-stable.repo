@@ -1,0 +1,22 @@
+[copr:copr.fedorainfracloud.org:huakim:wine-stable]
+name=Copr repo for wine-stable owned by huakim
+baseurl=https://download.copr.fedorainfracloud.org/results/huakim/wine-stable/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/huakim/wine-stable/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+
+[copr:copr.fedorainfracloud.org:huakim:wine-stable:ml]
+name=Copr repo for wine-stable owned by huakim (i386)
+baseurl=https://download.copr.fedorainfracloud.org/results/huakim/wine-stable/fedora-$releasever-i386/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/huakim/wine-stable/pubkey.gpg
+repo_gpgcheck=0
+cost=1100
+enabled=1
+enabled_metadata=1

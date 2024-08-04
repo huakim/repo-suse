@@ -1,6 +1,15 @@
 gs='gsettings set'
+v=org.gnome.nautilus.preferences
+$gs $v 'default-folder-viewer' 'list-view'
+$gs $v 'show-hidden-files' true
+
+$gs org.gtk.gtk4.Settings.FileChooser 'show-hidden' true
+$gs org.gtk.Settings.FileChooser 'show-hidden' true
+$gs org.gnome.FileRoller.FileSelector 'show-hidden' true
+
 v=org.gnome.Epiphany
 $gs $v default-search-engine 'Google'
+
 v=$v.web:/org/gnome/epiphany/web/
 $gs $v ask-on-download true
 $gs $v enable-webextensions true
@@ -59,9 +68,11 @@ $gs $v night-light-enabled true
 $gs $v night-light-schedule-automatic false
 $gs $v night-light-schedule-from 0
 $gs $v night-light-schedule-to 0
+
 v=org.gnome.shell
-$gs $v enabled-extensions "['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'valent@andyholmes.ca']"
+$gs $v enabled-extensions "['Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'valent@andyholmes.ca']"
 $gs $v favorite-apps "[]"
+
 v=$v.extensions
 e=$v.dash-to-dock
 $gs $e show-trash false

@@ -68,6 +68,7 @@ cd "$t/root"
 btrfs sub cr @cache    && \
 btrfs sub cr @log      && \
 btrfs sub cr @         && \
+btrfs sub cr @/home    && \
 (
 mount /dev/disk/by-partuuid/$ROOT_PARTITION "${dir}" -o subvol=/@
 echo "is_btrfs=1" >> "${smp}/options"

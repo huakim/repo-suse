@@ -63,6 +63,7 @@ pkgs.extend((
 #'plasma6-milou',
 'plasma6-mobile',
 'plasma6-nm',
+'plasma6-nm-openvpn',
 'plasma6-pa',
 'plasma6-sddm-theme-openSUSE',
 'plasma6-session-x11',

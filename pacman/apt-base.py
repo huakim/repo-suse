@@ -11,7 +11,7 @@ if pkgs[0] == 'zypper':
     pkgs.append('yast2-packager')
 
 pkgs.extend((
-'java-openj9',
+#'java',
 'luajit',
 ))
 

@@ -1,0 +1,7 @@
+[home_badlydrawnface_branches_home_hawkeye116477_waterfox]
+name=Branch project for package waterfox-g-kpe (Fedora_39)
+type=rpm-md
+baseurl=https://download.opensuse.org/repositories/home:/badlydrawnface:/branches:/home:/hawkeye116477:/waterfox/Fedora_39/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/home:/badlydrawnface:/branches:/home:/hawkeye116477:/waterfox/Fedora_39/repodata/repomd.xml.key
+enabled=0

@@ -31,7 +31,7 @@ pkgs.extend((
 "plymouth",
 "pulseaudio-utils",
 #"keepassxc",
-#"secrets",
+"secrets",
 #"uget",
 "xdg-dbus-proxy",
 "xdg-utils",
@@ -76,7 +76,8 @@ pkgs.extend((
 'gstreamer-plugins-libav',
 'gstreamer-plugin-openh264',
 'pipewire-aptx',
-'libavcodec-full',
+'libavcodec61',
+'libavcodec60',
 'libfdk-aac2',
 'dav1d',
 ))

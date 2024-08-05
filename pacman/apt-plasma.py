@@ -29,7 +29,7 @@ pkgs.extend((
 'gwenview',
 'haruna',
 'pavucontrol-qt',
-'keepassxc',
+#'keepassxc',
 'kate',
 'kget',
 'ktorrent',

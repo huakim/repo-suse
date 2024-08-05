@@ -15,7 +15,7 @@ pkgs.extend((
 #"epiphany",
 #"evolution",
 "gnome-themes-extras",
-"keepassxc",
+#"keepassxc",
 "labwc",
 "menulibre",
 "mugshot",

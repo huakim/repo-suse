@@ -1,9 +1,0 @@
-[system_packagemanager_dnf]
-name=DNF Package Manager (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/system:/packagemanager:/dnf/openSUSE_Tumbleweed/
-type=rpm-md
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/system:/packagemanager:/dnf/openSUSE_Tumbleweed/repodata/repomd.xml.key
-keeppackages=1

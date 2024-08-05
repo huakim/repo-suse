@@ -1,9 +1,0 @@
-[X11_xfce_4.19]
-name=Xfce 4.19 (Development branch) (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/X11:/xfce:/4.19/openSUSE_Tumbleweed/
-type=rpm-md
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/X11:/xfce:/4.19/openSUSE_Tumbleweed/repodata/repomd.xml.key
-keeppackages=1

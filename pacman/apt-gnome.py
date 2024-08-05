@@ -55,7 +55,7 @@ pkgs.extend((
 "gvfs",
 "gvfs-fuse",
 "gvfs-backends",
-"keepassxc",
+#"keepassxc",
 "libnma",
 "libgnomesu",
 "nautilus",

@@ -2,7 +2,7 @@ PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:/us
 export PATH
 alias sudo='WAYLAND_DISPLAY="$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" sudo '
 
-git-update(){
+git_update(){
  git add --all
  message="${1:-update}"
  git commit -m "${message}"
@@ -23,11 +23,11 @@ ${1}(){
 " 
 }
 
-_ 'zypper-reponames' 'zypper repos ' '/^#/d;/^[^|]*|/!d'
+_ 'zypper_reponames' 'zypper repos ' '/^#/d;/^[^|]*|/!d'
 
-_ 'zypper-showmanual' 'zypper se -i ' '/package/!d;/i+/!d'
+_ 'zypper_showmanual' 'zypper se -i ' '/package/!d;/i+/!d'
 
-_ 'zypper-showauto' 'zypper se -i ' '/package/!d;/i+/d'
+_ 'zypper_showauto' 'zypper se -i ' '/package/!d;/i+/d'
 
 _='BuildRequires:[[:space:]]*'
 
@@ -39,7 +39,7 @@ ${1}(){
 "
 }
 
-_ 'rpmspec-buildreqs' 'rpmspec --parse' 'BuildRequires:[[:space:]]*'
+_ 'rpmspec_buildreqs' 'rpmspec --parse' 'BuildRequires:[[:space:]]*'
 
 _(){
  :

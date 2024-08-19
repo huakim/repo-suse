@@ -36,6 +36,7 @@ pkgs.extend((
 "squashfs",
 "tor",
 "obfs4",
+"glibc-locale",
 #"selinux-policy",
 #"selinux-tools",
 "gpm",
@@ -53,13 +54,13 @@ pkgs.extend((
 #"intel-compute-runtime",
 "kernel-default",
 "kexec-tools",
-"Mesa",
-"Mesa-dri",
+#"Mesa",
+#"Mesa-dri",
 #"nvidia-gpu-firmware",
-"kernel-firmware-realtek",
+#"kernel-firmware-realtek",
 "kernel-firmware-iwlwifi",
-"bluez-firmware",
-"kernel-firmware-bluetooth"
+#"bluez-firmware",
+#"kernel-firmware-bluetooth"
 ))
 
 if __name__ == '__main__': 

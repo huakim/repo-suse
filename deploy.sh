@@ -20,12 +20,12 @@ t="$(mktemp -d /tmp/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX)"
 (
 chmod 700 "$t"
 rm "${smp}/fstab"
-echo "options='root=PARTUUID=${ROOT_PARTITION} psi=1'" > "${smp}/options"
+echo "OPTIONS=\"\${OPTIONS} root=PARTUUID=${ROOT_PARTITION} psi=1\"" > "${smp}/options"
 
 if [[ -n "${SWAP_PARTITION}" ]]
 then
 echo "PARTUUID=${SWAP_PARTITION} swap swap defaults 0 0" >> "${smp}/fstab"
-echo "options=\"\${options} resume=PARTUUID=${SWAP_PARTITION}\"" >> "${smp}/options"
+echo "OPTIONS=\"\${OPTIONS} resume=PARTUUID=${SWAP_PARTITION}\"" >> "${smp}/options"
 fi
 
 moveall(){
@@ -78,7 +78,7 @@ PARTUUID=${ROOT_PARTITION} /home               btrfs   subvol=/@home,defaults,co
 PARTUUID=${ROOT_PARTITION} /var/cache          btrfs   subvol=/@cache,defaults,compress=zstd:1 0 0
 PARTUUID=${ROOT_PARTITION} /var/log            btrfs   subvol=/@log,defaults,compress=zstd:1 0 0
 " >> "${smp}/fstab"
-echo "rootdir=/@; options=\"\${options} rootfstype=btrfs rootflags=subvol=/@\"" >> "${smp}/options"
+echo "rootdir=/@; OPTIONS=\"\${options} rootfstype=btrfs rootflags=subvol=/@\"" >> "${smp}/options"
 )
 
 ) || (
@@ -114,19 +114,29 @@ FSTAB="${smp}/fstab" ${smp}/bootstrap.sh "$1"
 if [[ -n "${EFI_PARTITION}" ]]
 then
 echo "PARTUUID=${EFI_PARTITION} /boot/efi vfat umask=077 0 2" >> "${smp}/fstab"
-mkdir -p "${dir}/boot/efi"
-mount /dev/disk/by-partuuid/$EFI_PARTITION "${dir}/boot/efi"
+efidir="${dir}/boot/efi"
+mkdir -p "${efidir}"
+mount /dev/disk/by-partuuid/$EFI_PARTITION "${efidir}"
 refind-install --root "${dir}"
-conf="${dir}/boot/efi/EFI/refind/refind.conf"
+for i in refind BOOT
+do
+    confdir="${efidir}/EFI/${i}"
+    if [[ -d "${confdir}" ]]
+    then
+        conf="${confdir}/refind.conf"
+        icon="${confdir}/icons/os_suse.png"
+    fi
+done
 cat << EOF > "$conf"
 menuentry SuSE {
+icon ${icon}
 volume $ROOT_PARTITION
 loader $rootdir/vmlinuz
-options '${options}'
 initrd $rootdir/initrd.img
+options "${OPTIONS}"
 }
 EOF
-umount "${dir}/boot/efi"
+umount "${efidir}"
 umount "${dir}"
 fi
 

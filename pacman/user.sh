@@ -1,7 +1,7 @@
 
 #!/bin/sh
 user="suse"
-password='$y$j9T$mmXw9Jh0PiPha988WSRo3.$tGOra7DOoU5dbQrk23h9.DqkEBrYCLIQf2B.pEdV2C9'
+password='$6$iA6fDx4yzWKxy7tM$JShiydfJpce4mO28LD8pECBWFLjSG.ZMrqXFGS8pztB9T6I72NzZNBJ9PS08/xw2QLkJoJ92tAGqPZxSVv8xn1'
 admin='wheel'
 root='root'
 shell='/bin/bash'

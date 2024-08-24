@@ -185,7 +185,7 @@ if __name__ == '__main__':
   #my $CACHEONLY=$ENV{'CACHEONLY'};
 
   #my @flags=($dnf, 'install');
-  
+
   #push @flags, "--setopt=install_weak_deps=@{[$RECOMMENDS ? 'True': 'False']}";
   #$CACHEDIR && push @flags, "--setopt=cachedir=$CACHEDIR";
   #$LIBDIR && push @flags, "--setopt=persistdir=$LIBDIR";
@@ -194,18 +194,18 @@ if __name__ == '__main__':
   #$INTERACTIVE || push @flags, qw(-y);
   #$DOCS || push @flags, qw(--nodocs);
   #$INSTALLROOT && push @flags, qw(--installroot ), $INSTALLROOT;
-  #$CACHEONLY && push @flags, qw(--cacheonly);  
+  #$CACHEONLY && push @flags, qw(--cacheonly);
 
   #unless ($RELEASEVER){
-    #$RELEASEVER = qx(dnf config-manager --dump-variables); 
-    #$RELEASEVER =~ m/^(.*releasever.*)$/m; 
-    #$1 =~ m/.*=\s*(.*)/m; 
+    #$RELEASEVER = qx(dnf config-manager --dump-variables);
+    #$RELEASEVER =~ m/^(.*releasever.*)$/m;
+    #$1 =~ m/.*=\s*(.*)/m;
     #$RELEASEVER =  $1;
   #}
 
-  #print "$RELEASEVER\n";  
+  #print "$RELEASEVER\n";
   #push @flags, "--releasever=$RELEASEVER", @_, @pkgs;
-  
+
   #print Dumper(\@flags);
   #system(@flags);
   #lab:

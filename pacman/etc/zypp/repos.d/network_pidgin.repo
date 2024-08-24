@@ -1,0 +1,8 @@
+[network_pidgin]
+name=The Pidgin Instant Messenger (openSUSE_Tumbleweed)
+enabled=1
+autorefresh=0
+baseurl=https://download.opensuse.org/repositories/network:/pidgin/openSUSE_Tumbleweed/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/network:/pidgin/openSUSE_Tumbleweed/repodata/repomd.xml.key
+keeppackages=1

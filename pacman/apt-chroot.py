@@ -115,12 +115,17 @@ configs = {
 from shutil import which
 
 dnf = lambda pkgs, *a: print(pkgs)
+key = env("PACKAGEMANAGER")
 
-for key, value in configs.items():
-    if which(key):
-        dnf = value
-        pkgs = [key]
-        break
+if not key:
+    for key, value in configs.items():
+        if which(key):
+            dnf = value
+            pkgs = [key]
+            break
+else:
+    pkgs = [key]
+    dnf = configs.get(key)
 
 def chstr(a):
     if a == None or a == False or a == 0 or a == '':

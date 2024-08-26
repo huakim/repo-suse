@@ -29,7 +29,7 @@ pkgs.extend((
 "efibootmgr",
 "ntfs-3g",
 "ntfsprogs",
-#"rEFInd",
+"rEFInd",
 "pam",
 "pam-config",
 "procps4",

@@ -1,4 +1,4 @@
-WebBrowser=epiphany
 MailReader=evolution
-TerminalEmulator=xfce4-terminal
+TerminalEmulator=gnome-terminal
+WebBrowser=chromium-browser
 

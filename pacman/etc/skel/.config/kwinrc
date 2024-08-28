@@ -48,5 +48,3 @@ Placement=Maximizing
 
 [org.kde.kdecoration2]
 ButtonsOnRight=LBFIAX
-library=org.kde.kwin.aurorae
-theme=kwin4_decoration_qml_plastik

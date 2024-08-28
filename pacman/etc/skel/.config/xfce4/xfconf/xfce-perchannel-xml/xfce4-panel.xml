@@ -18,7 +18,8 @@
         <value type="int" value="8"/>
         <value type="int" value="16"/>
         <value type="int" value="3"/>
-        <value type="int" value="7"/>
+        <value type="int" value="1"/>
+        <value type="int" value="5"/>
         <value type="int" value="15"/>
         <value type="int" value="6"/>
         <value type="int" value="9"/>
@@ -40,16 +41,6 @@
     </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-7" type="string" value="notification-plugin">
-      <property name="show-frame" type="empty"/>
-      <property name="square-icons" type="empty"/>
-      <property name="icon-size" type="int" value="0"/>
-      <property name="symbolic-icons" type="empty"/>
-      <property name="known-legacy-items" type="array">
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="xfce4-power-manager"/>
-      </property>
-    </property>
     <property name="plugin-2" type="string" value="windowmenu">
       <property name="workspace-actions" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
@@ -104,15 +95,16 @@
       <property name="button-icon" type="string" value="applications-other"/>
       <property name="position-categories-alternate" type="bool" value="false"/>
       <property name="recent" type="array">
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
-        <value type="string" value="org.keepassxc.KeePassXC.desktop"/>
+        <value type="string" value="qt6ct.desktop"/>
         <value type="string" value="qt5ct.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="xfce4-color-settings.desktop"/>
+        <value type="string" value="xfce4-taskmanager.desktop"/>
+        <value type="string" value="chromium-browser.desktop"/>
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce4-mime-settings.desktop"/>
         <value type="string" value="thunar.desktop"/>
-        <value type="string" value="org.opensuse.yast.Packager.desktop"/>
-        <value type="string" value="xterm.desktop"/>
-        <value type="string" value="org.codeberg.dnkl.foot.desktop"/>
+        <value type="string" value="xfce-ui-settings.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
       </property>
     </property>
     <property name="plugin-11" type="string" value="tasklist">
@@ -127,6 +119,10 @@
     </property>
     <property name="plugin-16" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-1" type="string" value="notification-plugin"/>
+    <property name="plugin-5" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
     </property>
   </property>
 </channel>

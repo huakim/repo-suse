@@ -4,14 +4,14 @@ icon-theme='breeze-dark'
 cursor-theme='breeze_cursors'
 cursor-size=24
 toolbar-style='text'
-color-scheme='prefer-dark'
 enable-animations=false
 scaling-factor=1
 text-scaling-factor=1.0
-gtk-theme='Breeze'
+gtk-theme='Adwaita-dark'
 clock-show-seconds=true
 document-font-name='Ubuntu Medium 11'
 monospace-font-name='Ubuntu Mono 11'
+color-scheme='prefer-dark'
 
 [org/gnome/desktop/sound]
 theme-name='ocean'
@@ -69,3 +69,31 @@ manager-window-height=550
 
 [org/virt-manager/virt-manager/confirm]
 forcepoweroff=true
+
+[org/gtk/gtk4/settings/file-chooser]
+show-hidden=true
+
+[org/gtk/settings/file-chooser]
+show-hidden=true
+window-position=(141, 31)
+window-size=(1098, 824)
+date-format='regular'
+location-mode='path-bar'
+show-size-column=true
+show-type-column=true
+sidebar-width=150
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+
+[org/gnome/nm-applet/eap/1caa9807-81cb-4ab9-955d-c5fb1f36edcc]
+ignore-ca-cert=false
+ignore-phase2-ca-cert=false
+
+[org/gnome/epiphany/state]
+window-size=(1103, 454)
+is-maximized=false
+
+[org/gnome/desktop/a11y/applications]
+screen-reader-enabled=false

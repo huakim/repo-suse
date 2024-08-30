@@ -6,7 +6,7 @@
 j=__import__('apt-chroot')
 pkgs=j.pkgs
 main=j.main
-
+env=j.env
 
 
 if pkgs[0] == 'dnf5':

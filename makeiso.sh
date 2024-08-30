@@ -1,6 +1,6 @@
 #!/bin/sh
 DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
-sudo env "DRACUT_ARGS=$DRACUT_ARGS" ./bootstrap.sh "$1"
+sudo env "DRACUT_ARGS=$DRACUT_ARGS" "LIVEINSTALL=yes" "DEFAULTUSER=linux" ./bootstrap.sh "$1"
 
 smp="$(realpath $(dirname $0))"
 cd "${smp}"

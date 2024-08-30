@@ -6,6 +6,7 @@
 j=__import__('apt-rootfs')
 pkgs=j.pkgs
 main=j.main
+env=j.env
 
 if pkgs[0] == 'zypper':
     pkgs.append('yast2-packager')

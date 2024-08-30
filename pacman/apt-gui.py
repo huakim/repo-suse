@@ -6,10 +6,13 @@
 j=__import__('apt-base')
 pkgs=j.pkgs
 main=j.main
+env=j.env
 
 if pkgs[0] == 'zypper':
     pkgs.append('yast2-qt-pkg')
 
+if env.check('LIVEINSTALL'):
+    pkgs.append('calamares')
 
 qemu=(
 'libvirt',

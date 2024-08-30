@@ -6,7 +6,20 @@ import sys
 relver=re.compile('^(.*releasever.*)$', re.MULTILINE)
 relatr=re.compile('.*=\s*(.*)')
 
-env=os.environ.get
+def chstr(a):
+    if a == None or a == False or a == 0 or a == '':
+        return False
+    else:
+        return True
+
+def check(a):
+    if not chstr(a) or a == 'None' or a == 'False' or a == '0':
+        return False
+    else:
+        return True
+
+env=type('env',(), {'__call__': staticmethod(os.environ.get),
+'check': lambda self, a: check(self(a)), 'chstr': lambda self, a: chstr(self(a))})()
 
 pkgs = []
 
@@ -126,18 +139,6 @@ if not key:
 else:
     pkgs = [key]
     dnf = configs.get(key)
-
-def chstr(a):
-    if a == None or a == False or a == 0 or a == '':
-        return False
-    else:
-        return True
-
-def check(a):
-    if not chstr(a) or a == 'None' or a == 'False' or a == '0':
-        return False
-    else:
-        return True
 
 def load(*a):
     pkgs.sort()

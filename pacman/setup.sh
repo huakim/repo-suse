@@ -40,8 +40,8 @@ ds kaccess
 kver="$(ls /lib/modules)"
 
 $lT ../usr/share/zoneinfo/Etc/GMT-3 /etc/localtime
-$lT "usr/lib/modules/$kver/vmlinuz" /vmlinuz
-$lT "boot/initrd-$kver" /initrd.img
+$lT "usr/lib/modules/$kver/vmlinuz" /boot/vmlinuz
+$lT "boot/initrd-$kver" /boot/initrd
 
 uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/gnome-terminal 25
 uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/xfce4-terminal 25

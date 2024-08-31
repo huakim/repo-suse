@@ -11,8 +11,10 @@ env=j.env
 if pkgs[0] == 'zypper':
     pkgs.append('yast2-packager')
 
-pkgs.extend((
-#'java',
+if env.check('EXTRAINSTALL'):
+    pkgs.extend((
+'java',
+'java-devel',
 'luajit',
 ))
 
@@ -45,7 +47,13 @@ pkgs.extend((
 #"iwlwifi-dvm-firmware",
 #"iwlwifi-mvm-firmware",
 "e2fsprogs",
-"xfsprogs"
+"xfsprogs",
+# EFI
+'xorriso',
+'mtools',
+'grub2-efi',
+'grub2',
+'squashfs'
 ))
 #push @pkgs, qw(
 
@@ -64,5 +72,5 @@ pkgs.extend((
 #"kernel-firmware-bluetooth"
 ))
 
-if __name__ == '__main__': 
+if __name__ == '__main__':
     main()

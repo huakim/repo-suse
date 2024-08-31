@@ -20,6 +20,9 @@ qemu=(
 'virt-manager'
 )
 
+if env.check('EXTRAINSTALL'):
+    pkgs.extend(qemu)
+
 pkgs.extend((
 "dbus-1-x11",
 "gparted",

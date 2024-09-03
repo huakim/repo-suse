@@ -58,6 +58,7 @@ pkgs.extend((
 #'lightdm',
 #'lightdm-settings',
 'okular',
+'pam_kwallet6',
 'plasma6-desktop',
 #'plasma6-drkonqi',
 #'plasma6-milou',

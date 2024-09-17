@@ -4,6 +4,10 @@ dir="$(realpath $(dirname $0))/"
 export HOME="/etc/skel"
 
 lT='ln -sfTv'
+sk(){
+    mkdir "/etc/skel/${1}"
+}
+
 uP(){
     if [ -e "$3" ]; then
         if [ ! -e "$1" ]; then
@@ -60,6 +64,17 @@ uP /usr/bin/gnome-emulator gnome-terminal /usr/bin/lxterminal 25
 uP /usr/bin/vi vi /usr/bin/nano 25
 uP /usr/bin/python python /usr/bin/python3 25
 uP /usr/bin/dnf dnf /usr/bin/dnf5 25
+uP /usr/bin/dnf dnf /usr/bin/zypper 25
 uP /usr/bin/waybar waybar /usr/bin/sfwbar 25
+
+sk Downloads
+sk Desktop
+sk Documents
+sk Music
+sk Pictures
+sk Videos
+sk Templates
+sk Public
+sk Screenshots
 
 . "$dir/gnome.sh"

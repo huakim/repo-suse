@@ -1,8 +1,0 @@
-[Kernel_HEAD]
-name=Kernel builds for branch master (standard)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/Kernel:/HEAD/standard/
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/Kernel:/HEAD/standard/repodata/repomd.xml.key
-keeppackages=1

@@ -16,6 +16,16 @@ if env.check('EXTRAINSTALL'):
 'java',
 'java-devel',
 'luajit',
+'gcc-c++',
+'nim',
+'tor',
+'obfs4',
+'glibc-locale',
+'xorriso',
+'mtools',
+'grub2-efi',
+'grub2',
+'squashfs'
 ))
 
 pkgs.extend((
@@ -49,11 +59,11 @@ pkgs.extend((
 "e2fsprogs",
 "xfsprogs",
 # EFI
-'xorriso',
-'mtools',
-'grub2-efi',
-'grub2',
-'squashfs'
+#'xorriso',
+#'mtools',
+#'grub2-efi',
+#'grub2',
+#'squashfs'
 ))
 #push @pkgs, qw(
 

@@ -16,8 +16,9 @@ if env.check('LIVEINSTALL'):
 
 qemu=(
 'libvirt',
-'qemu-system-x86',
-'virt-manager'
+'qemu-x86',
+'virt-manager',
+'xterm',
 )
 
 if env.check('EXTRAINSTALL'):
@@ -56,7 +57,7 @@ pkgs.extend((
 "xf86-video-intel",
 "xf86-video-nouveau",
 "xhost",
-"xterm",
+#"xterm",
 "xinit",
 "xmessage",
 #"xorg-x11-fonts",

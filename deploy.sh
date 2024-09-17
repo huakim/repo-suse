@@ -131,8 +131,8 @@ cat << EOF > "$conf"
 menuentry SuSE {
 icon ${icon}
 volume $ROOT_PARTITION
-loader $rootdir/vmlinuz
-initrd $rootdir/initrd.img
+loader $rootdir/boot/vmlinuz
+initrd $rootdir/boot/initrd
 options "${OPTIONS}"
 }
 EOF

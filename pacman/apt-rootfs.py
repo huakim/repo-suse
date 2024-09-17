@@ -16,6 +16,29 @@ else:
 
 pkgs.extend(dnfplugins)
 
+if env.check('EXTRAINSTALL'):
+    pkgs.extend((
+
+"fakeroot",
+"file",
+"nano",
+"ncurses",
+"net-tools",
+"openssh",
+"pciutils",
+"psmisc",
+"rsync",
+"sed",
+"tar",
+"gzip",
+"unzip",
+"wget",
+"which",
+"whois",
+'unrar',
+'p7zip-full'
+))
+
 # push @pkgs, qw(
 pkgs.extend((
 "fwupd",
@@ -34,8 +57,6 @@ pkgs.extend((
 "dhcp-client",
 #"dnf-command(config-manager)",
 #"dnf-command(versionlock)",
-"fakeroot",
-"file",
 "glibc",
 "glibc-locale-base",
 #"gmp",
@@ -43,14 +64,6 @@ pkgs.extend((
 "inotify-tools",
 "less",
 "lsof",
-"nano",
-"ncurses",
-"net-tools",
-"openssh",
-"pciutils",
-"psmisc",
-"rsync",
-"sed",
 "selinux-policy",
 "selinux-tools",
 "shadow",
@@ -59,13 +72,7 @@ pkgs.extend((
 "systemd-container",
 "kmod",
 #"tzdata",
-"tar",
-"gzip",
-"unzip",
-"udisks2",
-"wget",
-"which",
-"whois"
+"udisks2"
 ))
 # );
 

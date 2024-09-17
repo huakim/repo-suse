@@ -1,12 +1,12 @@
 #!/bin/sh
 DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
 
-if [[ -e "bootstrap-$1" ]]
+if test -e "bootstrap-$1"
 then
   NO_DELETE_BOOTSTRAP=true
 fi
 
-if [[ -e "liveiso-$1" ]]
+if test -e "liveiso-$1"
 then
   NO_DELETE_LIVEISO=true
 fi
@@ -73,12 +73,12 @@ EOF
 
 "$GR" -v -o "liveiso-$1.iso" -V "${label}" "${iso}"
 
-if [[ -z "${NO_DELETE_BOOTSTRAP}" ]]
+if test -z "${NO_DELETE_BOOTSTRAP}"
 then
   rm -Rfv bootstrap-"$1"
 fi
 
-if [[ -z "${NO_DELETE_LIVEISO}" ]]
+if test -z "${NO_DELETE_LIVEISO}"
 then
   rm -Rfv liveiso-"$1"
 fi

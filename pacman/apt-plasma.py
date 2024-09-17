@@ -9,9 +9,24 @@
 #valent
 #gnomesu
 #);
+
 j=__import__('apt-gui')
 pkgs=j.pkgs
 main=j.main
+env=j.env
+
+
+
+if env.check("EXTRAINSTALL"):
+    pkgs.extend((
+"plasma6-mobile",
+"ktorrent",
+"kget",
+"kmenuedit6",
+"okular"
+))
+
+
 
 pkgs.extend((
 #'plasma-nm-openvpn',
@@ -31,8 +46,8 @@ pkgs.extend((
 'pavucontrol-qt',
 #'keepassxc',
 'kate',
-'kget',
-'ktorrent',
+#'kget',
+#'ktorrent',
 #'kate-plugins',
 'kdeconnect-kde',
 #'kde-inotify-survey',
@@ -45,7 +60,7 @@ pkgs.extend((
 #'kio-admin',
 'kio-extras',
 'kio-fuse',
-'kmenuedit6',
+#'kmenuedit6',
 'konsole',
 #'kscreen',
 #'ktorrent',
@@ -57,12 +72,12 @@ pkgs.extend((
 #'materia-kde',
 #'lightdm',
 #'lightdm-settings',
-'okular',
+#'okular',
 'pam_kwallet6',
 'plasma6-desktop',
 #'plasma6-drkonqi',
 #'plasma6-milou',
-'plasma6-mobile',
+#'plasma6-mobile',
 'plasma6-nm',
 'plasma6-nm-openvpn',
 'plasma6-pa',
@@ -89,7 +104,7 @@ pkgs.extend((
 pkgs.extend((
 #'kmail-account-wizard',
 #'qt5-qtwebengine-devtools',
-#'falkon',
+'falkon',
 #'kmail'
 ))
 

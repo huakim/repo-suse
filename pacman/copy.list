@@ -8,6 +8,7 @@ etc/hdparm.conf
 #etc/lightdm
 etc/modprobe.d
 etc/modules-load.d
+etc/dracut.conf.d
 etc/refractainstaller.conf
 etc/refractasnapshot.conf
 #etc/sddm.conf.d/kde_settings.conf

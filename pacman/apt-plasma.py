@@ -23,6 +23,7 @@ if env.check("EXTRAINSTALL"):
 "ktorrent",
 "kget",
 "kmenuedit6",
+"kdeconnect-kde",
 "okular"
 ))
 
@@ -49,7 +50,6 @@ pkgs.extend((
 #'kget',
 #'ktorrent',
 #'kate-plugins',
-'kdeconnect-kde',
 #'kde-inotify-survey',
 'kde-gtk-config6',
 'kde-inotify-survey',

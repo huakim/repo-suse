@@ -58,7 +58,7 @@ $gs $v switch-input-source "['<Shift>Alt_L']"
 $gs $v switch-input-source-backward "['<Alt>Shift_L']"
 
 v=$windowmanager.preferences
-$gs $v button-layout ":minimize,maximize,close"
+$gs $v button-layout "close,minimize,maximize:"
 $gs $v theme "Adwaita"
 
 $gs org.gnome.mutter attach-modal-dialogs false
@@ -70,25 +70,42 @@ $gs $v night-light-schedule-from 0
 $gs $v night-light-schedule-to 0
 
 v=org.gnome.shell
-$gs $v enabled-extensions "['Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'valent@andyholmes.ca']"
+$gs $v enabled-extensions "['Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'gtk4-ding@smedius.gitlab.com', 'gsconnect@andyholmes.github.io']"
 $gs $v favorite-apps "[]"
 
 v=$v.extensions
+e=$v.gtk4-ding
+#$gs $e free-position-icons false
+$gs $e icon-size 'small'
+
 e=$v.dash-to-dock
 $gs $e show-trash false
 $gs $e show-mounts-only-mounted false
 $gs $e show-mounts false
 $gs $e height-fraction 0.9
-$gs $e extend-height true
-$gs $e dock-position 'RIGHT'
+$gs $e extend-height false
+$gs $e dock-position 'BOTTOM'
 $gs $e dock-fixed true
 $gs $e dash-max-icon-size 27
 $gs $e custom-theme-shrink true
 $gs $e apply-custom-theme true
 $gs $e animation-time 0
-$gs $e animate-show-apps true
+#$gs $e animate-show-apps true
 $gs $e always-center-icons true
 $gs $e autohide false
 $gs $e intellihide false
 $gs $e intellihide-mode 'ALWAYS_ON_TOP'
+
+v=org.nemo.preferences
+$gs $v show-hidden-files true
+$gs $v default-folder-viewer 'list-view'
+$gs $v date-format 'iso'
+$gs $v thumbnail-limit '102400'
+
+e=$v.menu-config
+s='selection-menu'
+$gs $e $s-copy-to true
+$gs $e $s-duplicate true
+$gs $e $s-make-link true
+$gs $e $s-move-to true
 

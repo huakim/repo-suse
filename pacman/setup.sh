@@ -30,14 +30,15 @@ ds(){
 }
 
 mv /usr/lib/modprobe.d/50-blacklist-rndis.conf{,.disabled}
-systemctl disable NetworkManager-wait-online
 systemctl enable NetworkManager
+systemctl disable NetworkManager-wait-online
+#systemctl enable NetworkManager
 
 ds xfsettingsd
 ds org.gnome.Evolution-alarm-notify
-ds ca.andyholmes.Valent-autostart
+#ds ca.andyholmes.Valent-autostart
 ds geoclue-demo-agent
-ds org.kde.kdeconnect.daemon
+#ds org.kde.kdeconnect.daemon
 ds org.kde.kalendarac
 ds kaccess
 

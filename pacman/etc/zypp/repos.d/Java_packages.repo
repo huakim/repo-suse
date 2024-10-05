@@ -1,7 +1,7 @@
 [Java_packages]
 name=Factory Java packages (openSUSE_Tumbleweed)
 enabled=1
-autorefresh=0
+autorefresh=1
 baseurl=https://download.opensuse.org/repositories/Java:/packages/openSUSE_Tumbleweed/
 type=rpm-md
 gpgcheck=1

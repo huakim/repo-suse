@@ -1,0 +1,9 @@
+[zypp_TW]
+name=TW - build packages using the zypp stack on top of zypp:Head (zypp_Head_openSUSE_Factory)
+enabled=1
+autorefresh=1
+baseurl=https://download.opensuse.org/repositories/zypp:/TW/zypp_Head_openSUSE_Factory/
+type=rpm-md
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/zypp:/TW/zypp_Head_openSUSE_Factory/repodata/repomd.xml.key
+keeppackages=1

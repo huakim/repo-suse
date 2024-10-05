@@ -1,8 +1,9 @@
 [Emulators_Wine]
 name=Wine (openSUSE_Tumbleweed)
 enabled=1
-autorefresh=0
+autorefresh=1
 baseurl=https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/
+type=rpm-md
 gpgcheck=1
 gpgkey=https://download.opensuse.org/repositories/Emulators:/Wine/openSUSE_Tumbleweed/repodata/repomd.xml.key
 keeppackages=1

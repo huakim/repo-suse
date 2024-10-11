@@ -13,8 +13,9 @@ if pkgs[0] == 'zypper':
 
 if env.check('EXTRAINSTALL'):
     pkgs.extend((
-'java',
-'java-devel',
+'java-openj9',
+'java-sdk-openj9',
+'osckit',
 'luajit',
 'gcc-c++',
 'nim',
@@ -25,8 +26,10 @@ if env.check('EXTRAINSTALL'):
 'mtools',
 'grub2-efi',
 'grub2',
-'squashfs'
+'squashfs',
+"git"
 ))
+
 
 pkgs.extend((
 "NetworkManager-bluetooth",
@@ -42,7 +45,6 @@ pkgs.extend((
 "efibootmgr",
 "ntfs-3g",
 "ntfsprogs",
-"rEFInd",
 "pam",
 "pam-config",
 "procps4",

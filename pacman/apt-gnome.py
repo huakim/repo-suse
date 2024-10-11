@@ -15,23 +15,24 @@ main=j.main
 env=j.env
 
 qemu=(
-
 "alacarte",
+"atrill",
 "dconf-editor",
-"evince",
 "gnome-disk-utility",
 "gnome-remote-desktop",
-"gnome-shell-extension-gsconnect",
+"gnome-shell-extension-desktop-icons", #gtk4-ding",
+#"gnome-shell-extension-gsconnect",
 #"nautilus-extension-terminal",
 #"nautilus-file-roller",
 'transmission-gtk',
-'nemo-extension-gsconnect',
+#'nemo-extension-gsconnect',
 #"valent",
 'varia',
-'epiphany',
+#'epiphany',
 #'evolution',
 'seahorse',
-'Tangram'
+'waterfox-wayland'
+#'Tangram'
 )
 
 if env.check('EXTRAINSTALL'):

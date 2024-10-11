@@ -23,10 +23,11 @@ qemu=(
 
 if env.check('EXTRAINSTALL'):
     pkgs.extend(qemu)
+    pkgs.extend(("nekoray", "gparted", "keepassxc"))
 
 pkgs.extend((
 "dbus-1-x11",
-"gparted",
+#"gparted",
 #"generic-logos",
 "google-roboto-mono-fonts",
 "google-opensans-fonts",
@@ -35,9 +36,9 @@ pkgs.extend((
 "pipewire",
 "pipewire-pulseaudio",
 #"pipewire-media-session",
-"plymouth",
+#"plymouth",
 "pulseaudio-utils",
-"keepassxc",
+#"keepassxc",
 #"secrets",
 #"uget",
 "xdg-dbus-proxy",

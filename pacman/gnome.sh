@@ -92,9 +92,9 @@ $gs $e apply-custom-theme true
 $gs $e animation-time 0
 #$gs $e animate-show-apps true
 $gs $e always-center-icons true
-$gs $e autohide false
+$gs $e autohide true
 $gs $e intellihide false
-$gs $e intellihide-mode 'ALWAYS_ON_TOP'
+#$gs $e intellihide-mode 'ALWAYS_ON_TOP'
 
 v=org.nemo.preferences
 $gs $v show-hidden-files true

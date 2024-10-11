@@ -1,9 +1,0 @@
-[network_chromium]
-name=Chromium (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=1
-baseurl=https://download.opensuse.org/repositories/network:/chromium/openSUSE_Tumbleweed/
-type=rpm-md
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/network:/chromium/openSUSE_Tumbleweed/repodata/repomd.xml.key
-keeppackages=1

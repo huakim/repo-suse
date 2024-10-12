@@ -265,24 +265,31 @@ DialogWidth=1920
 [Containments][64][General]
 AppletOrder=72;78;70;79;71
 
-[Containments][80]
-ItemGeometries-1366x768=
-ItemGeometriesHorizontal=
+[Containments][83]
+activityId=133d40ee-de7a-49d8-9577-e9fb4e22a9ee
+formfactor=0
+immutability=1
+lastScreen=1
+location=0
+plugin=org.kde.plasma.folder
+wallpaperplugin=org.kde.image
+
+[Containments][84]
 activityId=133d40ee-de7a-49d8-9577-e9fb4e22a9ee
 formfactor=0
 immutability=1
 lastScreen=0
 location=0
-plugin=org.kde.desktopcontainment
+plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.color
 
-[Containments][80][ConfigDialog]
-DialogHeight=677
-DialogWidth=1366
+[Containments][84][ConfigDialog]
+DialogHeight=1052
+DialogWidth=1920
 
-[Containments][80][Wallpaper][org.kde.color][General]
+[Containments][84][Wallpaper][org.kde.color][General]
 Color=0,0,0
 
 [ScreenMapping]
-itemsOnDisabledScreens=0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,8,desktop:/Passwords.kdbx,desktop:/warcraft3,desktop:/temp,desktop:/nekoray-4.0-beta3-2024-07-13-debian-x64.deb,desktop:/home:huakim:rust,desktop:/home:huakim:matrix,desktop:/local,desktop:/nekoray-4.0-beta3-2024-07-13-debian-x64
-screenMapping=
+itemsOnDisabledScreens=1,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,2,desktop:/Home.desktop,desktop:/trash.desktop
+screenMapping=desktop:/local,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/home:huakim:rust,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/nekoray-4.0-beta3-2024-07-13-debian-x64,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/trash.desktop,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/warcraft3,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/Passwords.kdbx,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/Home.desktop,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/home:huakim:matrix,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/nekoray-4.0-beta3-2024-07-13-debian-x64.deb,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/temp,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee

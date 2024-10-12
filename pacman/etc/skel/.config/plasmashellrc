@@ -1,3 +1,6 @@
+[PlasmaTransientsConfig]
+PreloadWeight=42
+
 [PlasmaViews][Panel 2]
 floating=0
 
@@ -12,6 +15,7 @@ thickness=33
 
 [PlasmaViews][Panel 46]
 floating=0
+panelVisibility=2
 
 [PlasmaViews][Panel 46][Defaults]
 maxLength=2160
@@ -25,6 +29,7 @@ minLength=2160
 
 [PlasmaViews][Panel 64]
 floating=0
+panelVisibility=2
 
 [PlasmaViews][Panel 64][Defaults]
 maxLength=895

@@ -1,7 +1,7 @@
 [org/gnome/desktop/interface]
-font-name='Ubuntu 11'
-icon-theme='Adwaita'
-cursor-theme='Adwaita'
+font-name='Noto Sans,  10'
+icon-theme='breeze-dark'
+cursor-theme='breeze_cursors'
 cursor-size=24
 toolbar-style='text'
 enable-animations=false
@@ -17,7 +17,7 @@ color-scheme='prefer-dark'
 theme-name='ocean'
 
 [org/gnome/desktop/wm/preferences]
-button-layout=':minimize,maximize,close'
+button-layout='icon:minimize,maximize,close'
 theme='Adwaita'
 
 [org/gnome/desktop/background]

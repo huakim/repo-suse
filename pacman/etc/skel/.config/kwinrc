@@ -43,6 +43,12 @@ padding=4
 [Tiling][5890e69a-9623-57da-ae8b-38e7f9457db6]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][bb4b0e4d-6fe1-524b-8edd-e3a271922710]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][fd0cec7b-5d9f-5e9d-bafd-f457669cacf1]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Windows]
 Placement=Maximizing
 

@@ -24,7 +24,8 @@ if env.check("EXTRAINSTALL"):
 "kget",
 "kmenuedit6",
 "kdeconnect-kde",
-"okular"
+"okular",
+"neochat"
 ))
 
 

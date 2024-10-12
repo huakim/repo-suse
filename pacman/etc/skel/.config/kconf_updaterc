@@ -1,51 +1,51 @@
 updateInfoAdded=true
 
 [gtkconfig.upd]
-ctime=1724794214
+ctime=1728632289
 done=gtk_theme,dont_use_gtk_css_for_window_decorations,remove_deprecated_gtk4_option
-mtime=1722950792
+mtime=1728125056
 
 [krunnerglobalshortcuts2.upd]
-ctime=1724794220
+ctime=1728632297
 done=remove_deprecated_gtk4_option,5.22KRunnerGlobalShortcuts
-mtime=1722950915
+mtime=1728125076
 
 [krunnerhistory.upd]
-ctime=1724794220
+ctime=1728632297
 done=5.22KRunnerGlobalShortcuts,5.21KRunnerHistory
-mtime=1722950915
+mtime=1728125076
 
 [kwin.upd]
-ctime=1724794220
+ctime=1728632295
 done=5.21KRunnerHistory,kwin-6.0-reset-active-mouse-screen,kwin-6.0-delete-desktop-switching-shortcuts,kwin-6.0-remove-breeze-tabbox-default,kwin-6.1-remove-gridview-expose-shortcuts
-mtime=1722950730
+mtime=1728125061
 
 [migrate-calendar-to-plugin-id.upd]
-ctime=1724794220
+ctime=1728632297
 done=kwin-6.1-remove-gridview-expose-shortcuts,migrate-calendar-plugins
-mtime=1722950915
+mtime=1728125076
 
 [plasma6.0-remove-dpi-settings.upd]
-ctime=1724794220
+ctime=1728632297
 done=migrate-calendar-plugins,plasma6.0-remove-dpi-settings
-mtime=1722950915
+mtime=1728125076
 
 [plasma6.0-remove-old-shortcuts.upd]
-ctime=1724794220
+ctime=1728632297
 done=plasma6.0-remove-dpi-settings,plasma6.0-remove-old-shortcuts
-mtime=1722950915
+mtime=1728125076
 
 [plasmashell-6.0-keep-custom-position-of-panels.upd]
-ctime=1724794220
+ctime=1728632297
 done=plasma6.0-remove-old-shortcuts,plasmashell-6.0-keep-custom-position-of-panels
-mtime=1722950915
+mtime=1728125076
 
 [plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels.upd]
-ctime=1724794220
+ctime=1728632297
 done=plasmashell-6.0-keep-custom-position-of-panels,plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels
-mtime=1722950915
+mtime=1728125076
 
 [spectacle.upd]
-ctime=1724794223
+ctime=1728632301
 done=plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels,24.02.0-video_format,24.02.0-keep_old_save_location,24.02.0-rename_settings,24.02.0-keep_old_filename_templates,24.05.2-change_placeholder_format
-mtime=1724051692
+mtime=1725977513

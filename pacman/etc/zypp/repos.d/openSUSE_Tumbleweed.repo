@@ -1,0 +1,8 @@
+[openSUSE_Tumbleweed]
+name=openSUSE_Tumbleweed
+enabled=1
+autorefresh=1
+baseurl=https://download.opensuse.org/repositories/home:/huakim:/64Gram/openSUSE_Tumbleweed/
+path=/
+type=rpm-md
+keeppackages=1

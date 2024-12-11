@@ -1,7 +1,7 @@
 [home_X0F_branches_Emulators]
 name=Branch project for emulation packages (openSUSE_Tumbleweed)
 enabled=1
-autorefresh=1
+autorefresh=0
 baseurl=https://download.opensuse.org/repositories/home:/X0F:/branches:/Emulators/openSUSE_Tumbleweed/
 type=rpm-md
 gpgcheck=1

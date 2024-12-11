@@ -1,7 +1,7 @@
 [devel_microos_yuga_stable]
 name=Yuga Linux - Stable Packages (openSUSE_Tumbleweed)
 enabled=1
-autorefresh=1
+autorefresh=0
 baseurl=https://download.opensuse.org/repositories/devel:/microos:/yuga:/stable/openSUSE_Tumbleweed/
 type=rpm-md
 gpgcheck=1

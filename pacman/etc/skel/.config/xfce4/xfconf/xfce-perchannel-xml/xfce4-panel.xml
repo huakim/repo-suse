@@ -9,7 +9,7 @@
       <property name="position" type="string" value="p=6;x=0;y=0"/>
       <property name="length" type="uint" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
-      <property name="size" type="uint" value="30"/>
+      <property name="size" type="uint" value="28"/>
       <property name="length-adjust" type="empty"/>
       <property name="icon-size" type="uint" value="16"/>
       <property name="plugin-ids" type="array">
@@ -24,20 +24,24 @@
         <value type="int" value="6"/>
         <value type="int" value="9"/>
       </property>
+      <property name="autohide-behavior" type="uint" value="1"/>
     </property>
     <property name="dark-mode" type="bool" value="true"/>
     <property name="panel-2" type="empty">
       <property name="position" type="string" value="p=4;x=1343;y=449"/>
-      <property name="size" type="uint" value="45"/>
-      <property name="length" type="double" value="96.09375"/>
-      <property name="mode" type="uint" value="1"/>
+      <property name="size" type="uint" value="36"/>
+      <property name="length" type="double" value="100"/>
+      <property name="mode" type="uint" value="0"/>
       <property name="length-adjust" type="bool" value="true"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="12"/>
-        <value type="int" value="11"/>
         <value type="int" value="10"/>
+        <value type="int" value="11"/>
+        <value type="int" value="13"/>
+        <value type="int" value="7"/>
       </property>
       <property name="position-locked" type="bool" value="true"/>
+      <property name="autohide-behavior" type="uint" value="1"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -68,7 +72,7 @@
     <property name="plugin-6" type="string" value="pager"/>
     <property name="plugin-8" type="string" value="clock">
       <property name="digital-layout" type="uint" value="3"/>
-      <property name="digital-time-font" type="string" value="Monospace 14"/>
+      <property name="digital-time-font" type="string" value="Monospace 13"/>
       <property name="digital-time-format" type="string" value="%T"/>
     </property>
     <property name="plugin-9" type="string" value="actions">
@@ -95,20 +99,18 @@
       <property name="button-icon" type="string" value="applications-other"/>
       <property name="position-categories-alternate" type="bool" value="false"/>
       <property name="recent" type="array">
-        <value type="string" value="qt6ct.desktop"/>
-        <value type="string" value="qt5ct.desktop"/>
+        <value type="string" value="thunar.desktop"/>
         <value type="string" value="xfce4-color-settings.desktop"/>
         <value type="string" value="xfce4-taskmanager.desktop"/>
-        <value type="string" value="chromium-browser.desktop"/>
         <value type="string" value="xfce4-terminal-emulator.desktop"/>
         <value type="string" value="xfce4-mime-settings.desktop"/>
-        <value type="string" value="thunar.desktop"/>
         <value type="string" value="xfce-ui-settings.desktop"/>
         <value type="string" value="xfce-keyboard-settings.desktop"/>
       </property>
     </property>
     <property name="plugin-11" type="string" value="tasklist">
-      <property name="show-labels" type="bool" value="false"/>
+      <property name="show-labels" type="bool" value="true"/>
+      <property name="show-handle" type="bool" value="false"/>
     </property>
     <property name="plugin-12" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
@@ -124,5 +126,10 @@
     <property name="plugin-5" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
     </property>
+    <property name="plugin-7" type="string" value="separator">
+      <property name="expand" type="bool" value="true"/>
+      <property name="style" type="uint" value="0"/>
+    </property>
+    <property name="plugin-13" type="string" value="showdesktop"/>
   </property>
 </channel>

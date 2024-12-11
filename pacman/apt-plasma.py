@@ -39,9 +39,9 @@ pkgs.extend((
 #'calamares',
 'colord-kde',
 'dolphin',
-'gtk2-metatheme-breeze',
-'gtk3-metatheme-breeze',
-'gtk4-metatheme-breeze',
+'gtk2-metatheme-yaru-mate',
+'gtk3-metatheme-yaru-mate',
+'gtk4-metatheme-yaru-mate',
 #'gnome-disk-utility',
 'gwenview',
 'haruna',
@@ -98,8 +98,8 @@ pkgs.extend((
 'sddm-kcm6',
 'spectacle',
 'systemsettings6',
-'upower'
-#'xdg-desktop-portal-kde'
+'upower',
+'xdg-desktop-portal-kde'
 ))
 
 pkgs.extend((

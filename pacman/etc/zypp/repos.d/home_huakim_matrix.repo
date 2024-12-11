@@ -1,7 +1,7 @@
 [home_huakim_matrix]
 name=home_huakim_matrix (openSUSE_Tumbleweed)
 enabled=1
-autorefresh=1
+autorefresh=0
 baseurl=https://download.opensuse.org/repositories/home:/huakim:/matrix/openSUSE_Tumbleweed/
 type=rpm-md
 priority=1

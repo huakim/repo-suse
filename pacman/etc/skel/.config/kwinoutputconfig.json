@@ -25,6 +25,7 @@
                 "wideColorGamut": false
             },
             {
+                "allowSdrSoftwareBrightness": false,
                 "autoRotation": "InTabletMode",
                 "brightness": 1,
                 "colorProfileSource": "sRGB",
@@ -118,6 +119,20 @@
                     {
                         "enabled": true,
                         "outputIndex": 2,
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "priority": 0
+                    }
+                ]
+            },
+            {
+                "lidClosed": false,
+                "outputs": [
+                    {
+                        "enabled": true,
+                        "outputIndex": 1,
                         "position": {
                             "x": 0,
                             "y": 0

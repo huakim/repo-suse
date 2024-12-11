@@ -1,7 +1,7 @@
 [repo-oss]
 name=openSUSE-Tumbleweed-Oss
 enabled=1
-autorefresh=1
+autorefresh=0
 baseurl=http://download.opensuse.org/tumbleweed/repo/oss/
 path=/
 type=rpm-md

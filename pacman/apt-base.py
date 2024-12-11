@@ -13,8 +13,8 @@ if pkgs[0] == 'zypper':
 
 if env.check('EXTRAINSTALL'):
     pkgs.extend((
-'java-openj9',
-'java-sdk-openj9',
+'java-23',
+'java-23-devel',
 'osckit',
 'luajit',
 'gcc-c++',
@@ -27,7 +27,14 @@ if env.check('EXTRAINSTALL'):
 'grub2-efi',
 'grub2',
 'squashfs',
-"git"
+"git",
+"tor",
+"obfs4",
+"squashfs",
+"procps4",
+"xfsprogs",
+"e2fsprogs",
+"efibootmgr"
 ))
 
 
@@ -42,15 +49,11 @@ pkgs.extend((
 "dracut-kiwi-live",
 #"dracut-live",
 "exfatprogs",
-"efibootmgr",
+#"efibootmgr",
 "ntfs-3g",
 "ntfsprogs",
 "pam",
 "pam-config",
-"procps4",
-"squashfs",
-"tor",
-"obfs4",
 "glibc-locale",
 #"selinux-policy",
 #"selinux-tools",
@@ -58,8 +61,8 @@ pkgs.extend((
 #"gzip",
 #"iwlwifi-dvm-firmware",
 #"iwlwifi-mvm-firmware",
-"e2fsprogs",
-"xfsprogs",
+#"e2fsprogs",
+#"xfsprogs",
 # EFI
 #'xorriso',
 #'mtools',

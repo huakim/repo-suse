@@ -93,7 +93,9 @@ $gs $e animation-time 0
 #$gs $e animate-show-apps true
 $gs $e always-center-icons true
 $gs $e autohide true
-$gs $e intellihide false
+$gs $e autohide-in-fullscreen true
+$gs $e intellihide-mode 'FOCUS_APPLICATION_WINDOWS'
+$gs $e intellihide true
 #$gs $e intellihide-mode 'ALWAYS_ON_TOP'
 
 v=org.nemo.preferences

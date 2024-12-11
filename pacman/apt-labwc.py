@@ -2,13 +2,24 @@
 j=__import__('apt-gui')
 pkgs=j.pkgs
 main=j.main
+env=j.env
+
+if env.check("EXTRAINSTALL"):
+    pkgs.extend((
+"waterfox-kde",
+"keepassxc",
+"transmission-gtk",
+"xreader",
+"valent"
+))
 
 pkgs.extend((
-"adwaita-qt5",
-"adwaita-qt6",
+#"adwaita-qt5",
+#"adwaita-qt6",
 "adwaita-xfce-icon-theme",
 "NetworkManager-gnome",
 "dbus-1-daemon",
+"geany",
 "gtk2-metatheme-adwaita",
 "gtk3-metatheme-adwaita",
 #"gtk4-metatheme-adwaita",
@@ -20,10 +31,16 @@ pkgs.extend((
 "gvfs-fuse",
 #"keepassxc",
 "labwc",
+'polkit-gnome',
 "menulibre",
 "mugshot",
-"qt5ct",
-"qt6ct",
+"kvantum-manager",
+"kvantum-qt5",
+"kvantum-qt6",
+#"qt5ct",
+#"qt6ct",
+"eog",
+"vlc",
 "sddm-qt6",
 "sfwbar",
 "thunar",
@@ -33,6 +50,7 @@ pkgs.extend((
 "xfce4-notifyd",
 "xfce4-panel",
 "xfce4-power-manager",
+"xfce4-pulseaudio-plugin",
 "xfce4-session",
 "xfce4-settings",
 "xfce4-settings-color",

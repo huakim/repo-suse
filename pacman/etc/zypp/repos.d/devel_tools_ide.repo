@@ -1,0 +1,9 @@
+[devel_tools_ide]
+name=Various IDEs (openSUSE_Factory)
+enabled=1
+autorefresh=0
+baseurl=https://download.opensuse.org/repositories/devel:/tools:/ide/openSUSE_Factory/
+type=rpm-md
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/devel:/tools:/ide/openSUSE_Factory/repodata/repomd.xml.key
+keeppackages=1

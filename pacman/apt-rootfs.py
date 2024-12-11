@@ -16,6 +16,12 @@ else:
 
 pkgs.extend(dnfplugins)
 
+if env.check("SELINUX"):
+    pkgs.extend((
+"selinux-policy",
+"selinux-tools"
+))
+
 if env.check('EXTRAINSTALL'):
     pkgs.extend((
 
@@ -35,8 +41,11 @@ if env.check('EXTRAINSTALL'):
 "wget",
 "which",
 "whois",
-'unrar',
-'p7zip-full'
+#'unrar',
+'p7zip-full',
+"bind-utils",
+"diffutils",
+"coreutils"
 ))
 
 # push @pkgs, qw(
@@ -50,11 +59,11 @@ pkgs.extend((
 "lsb-release",
 "wpa_supplicant",
 "NetworkManager",
-"bind-utils",
-"diffutils",
-"ca-certificates",
-"coreutils",
-"dhcp-client",
+#"bind-utils",
+#"diffutils",
+#"ca-certificates",
+#"coreutils",
+#"dhcp-client",
 #"dnf-command(config-manager)",
 #"dnf-command(versionlock)",
 "glibc",
@@ -64,8 +73,8 @@ pkgs.extend((
 "inotify-tools",
 "less",
 "lsof",
-"selinux-policy",
-"selinux-tools",
+#"selinux-policy",
+#"selinux-tools",
 "shadow",
 "sudo",
 "systemd",

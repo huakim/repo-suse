@@ -44,7 +44,9 @@ def ZYPPER_CONFIG():
         if check(CACHEONLY):
             flags.append('--no-refresh')
         if check(QUIET):
-            flags.append('-q')
+            flags.append('-qqqq')
+        else:
+            flags.append('-vvvv')
         if chstr(INSTALLROOT):
             flags.extend(('--installroot', INSTALLROOT))
 #        flags = [dnf, 'install', '--use-host-config', '--setopt', 'install_weak_deps='+str(check(RECOMMENDS))]

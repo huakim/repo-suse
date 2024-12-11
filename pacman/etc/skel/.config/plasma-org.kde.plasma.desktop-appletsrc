@@ -275,6 +275,8 @@ plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
 [Containments][84]
+ItemGeometries-1366x768=
+ItemGeometriesHorizontal=
 activityId=133d40ee-de7a-49d8-9577-e9fb4e22a9ee
 formfactor=0
 immutability=1
@@ -291,5 +293,5 @@ DialogWidth=1920
 Color=0,0,0
 
 [ScreenMapping]
-itemsOnDisabledScreens=1,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,2,desktop:/Home.desktop,desktop:/trash.desktop
-screenMapping=desktop:/local,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/home:huakim:rust,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/nekoray-4.0-beta3-2024-07-13-debian-x64,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/trash.desktop,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/warcraft3,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/Passwords.kdbx,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/Home.desktop,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/home:huakim:matrix,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/nekoray-4.0-beta3-2024-07-13-debian-x64.deb,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/temp,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee
+itemsOnDisabledScreens=1,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,2,desktop:/trash.desktop,desktop:/Home.desktop
+screenMapping=desktop:/nekoray-4.0-beta3-2024-07-13-debian-x64.deb,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/Home.desktop,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/Passwords.kdbx,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/home:huakim:matrix,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/warcraft3,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/trash.desktop,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/home:huakim:rust,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/local,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/temp,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee,desktop:/nekoray-4.0-beta3-2024-07-13-debian-x64,0,133d40ee-de7a-49d8-9577-e9fb4e22a9ee

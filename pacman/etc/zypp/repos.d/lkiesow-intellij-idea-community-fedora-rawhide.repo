@@ -1,0 +1,10 @@
+[copr_lkiesow_intellij-idea-community]
+name=Copr repo for intellij-idea-community owned by lkiesow
+enabled=1
+autorefresh=0
+baseurl=https://download.copr.fedorainfracloud.org/results/lkiesow/intellij-idea-community/fedora-rawhide-$basearch/
+type=rpm-md
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://download.copr.fedorainfracloud.org/results/lkiesow/intellij-idea-community/pubkey.gpg
+keeppackages=1

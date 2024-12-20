@@ -20,18 +20,18 @@ qemu=(
 "dconf-editor",
 "gnome-disk-utility",
 "gnome-remote-desktop",
-#"gnome-shell-extension-desktop-icons", #gtk4-ding",
-#"gnome-shell-extension-gsconnect",
+"gnome-shell-extension-desktop-icons", #gtk4-ding",
+"gnome-shell-extension-gsconnect",
 #"nautilus-extension-terminal",
 #"nautilus-file-roller",
-'transmission-gtk',
+#'transmission-gtk',
 #'nemo-extension-gsconnect',
 #"valent",
-#'varia',
-#'epiphany',
-#'evolution',
+'varia',
+'epiphany',
+'evolution',
 'seahorse',
-'waterfox-wayland'
+#'waterfox-wayland'
 #'Tangram'
 )
 

@@ -1,9 +1,10 @@
 [packman]
 name=Packman
-baseurl=https://mirrors.aliyun.com/packman/suse/openSUSE_Tumbleweed/
 enabled=1
+autorefresh=1
+baseurl=https://mirrors.aliyun.com/packman/suse/openSUSE_Tumbleweed/
 type=rpm-md
+priority=70
 gpgcheck=1
 gpgkey=https://ftp.fau.de/packman/suse/openSUSE_Tumbleweed/repodata/repomd.xml.key
-autorefresh=1
-priority=70
+keeppackages=1

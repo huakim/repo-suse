@@ -19,13 +19,15 @@ env=j.env
 
 if env.check("EXTRAINSTALL"):
     pkgs.extend((
+#"persepolis",
 "plasma6-mobile",
 "ktorrent",
 "kget",
 "kmenuedit6",
 "kdeconnect-kde",
 "okular",
-"neochat"
+"neochat",
+"zapzap"
 ))
 
 

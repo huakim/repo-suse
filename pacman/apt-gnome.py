@@ -20,7 +20,7 @@ qemu=(
 "dconf-editor",
 "gnome-disk-utility",
 "gnome-remote-desktop",
-"gnome-shell-extension-desktop-icons", #gtk4-ding",
+#"gnome-shell-extension-desktop-icons", #gtk4-ding",
 "gnome-shell-extension-gsconnect",
 #"nautilus-extension-terminal",
 #"nautilus-file-roller",
@@ -32,7 +32,7 @@ qemu=(
 'evolution',
 'seahorse',
 #'waterfox-wayland'
-#'Tangram'
+'Tangram'
 )
 
 if env.check('EXTRAINSTALL'):

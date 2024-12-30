@@ -23,7 +23,7 @@ qemu=(
 
 if env.check('EXTRAINSTALL'):
     pkgs.extend(qemu)
-    pkgs.extend(("nekoray", "gparted", "keepassxc"))
+    pkgs.extend(("nekoray", "gparted", "keepassxc", "gnome-disk-utility"))
 
 pkgs.extend((
 "dbus-1-x11",

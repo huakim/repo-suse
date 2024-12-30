@@ -24,6 +24,7 @@ if env.check('EXTRAINSTALL'):
 'glibc-locale',
 'xorriso',
 'mtools',
+'proxychains-ng',
 'grub2-efi',
 'grub2',
 'squashfs',
@@ -82,7 +83,7 @@ pkgs.extend((
 #"Mesa-dri",
 #"nvidia-gpu-firmware",
 #"kernel-firmware-realtek",
-"kernel-firmware-iwlwifi",
+#"kernel-firmware-iwlwifi",
 #"bluez-firmware",
 #"kernel-firmware-bluetooth"
 ))

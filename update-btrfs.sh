@@ -24,7 +24,9 @@ mount /dev/disk/by-uuid/"$j" "${updatedir}" && (
 		mount /dev/disk/by-uuid/"$j" "${smp}/bootstrap-${variant}" -o subvol=@
 		mkdir -p "${smp}/bootstrap-${variant}/home" ||:
 		mount /dev/disk/by-uuid/"$j" "${smp}/bootstrap-${variant}/home" -o subvol=@home
-                FSTAB=/etc/fstab ./bootstrap.sh "${variant}"
+                FSTAB=/etc/fstab
+                INSTALL_NEW_RECOMMENDS=yes
+                . ./bootstrap.sh "${variant}"
                 umount "${smp}/bootstrap-${variant}/home"
                 umount "${smp}/bootstrap-${variant}"
             )
@@ -35,16 +37,3 @@ mount /dev/disk/by-uuid/"$j" "${updatedir}" && (
 umount "${updatedir}"
 rmdir "${updatedir}"
 #tmpdir="$(mktemp -d "$1/.Trash-XXXXXXXXXXXXXXXXXXXXXXXXXXXXX")"
-
-
-
-
-
-
-
-
-
-
-
-
-

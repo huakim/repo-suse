@@ -1,8 +1,0 @@
-[NVIDIA]
-enabled=1
-autorefresh=1
-url = dir:/usr/share/zypp/local/service/NVIDIA
-type = ris
-repo_1=NVIDIA:repo-non-free
-repo_1_enabled=1
-repo_1_autorefresh=1

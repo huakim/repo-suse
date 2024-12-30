@@ -1,7 +1,0 @@
-[openSUSE:repo-oss-debug]
-name=repo-oss-debug
-enabled=0
-autorefresh=1
-baseurl=http://cdn.opensuse.org/debug/tumbleweed/repo/oss
-keeppackages=1
-service=openSUSE

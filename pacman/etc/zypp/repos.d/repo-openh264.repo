@@ -1,5 +1,5 @@
 [repo-openh264]
 enabled=1
 autorefresh=0
-baseurl=https://download.opensuse.org/repositories/multimedia:libs:cisco-openh264/openSUSE_Tumbleweed/
+baseurl=http://codecs.opensuse.org/openh264/openSUSE_Tumbleweed
 keeppackages=1

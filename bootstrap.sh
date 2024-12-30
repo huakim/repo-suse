@@ -39,9 +39,6 @@ i "${idir}" "${smp}"
 #chroot "$dir" /bin/bash
 #chroot "$dir" /bin/bash "/${idir}/pacman/aptat.sh"
 INSTALLROOT="${dir}" CACHEDIR="${smp}/pacman/var/cache/zypp" python3 "${smp}/pacman/apt-$1.py"
-if [ -n "${INSTALL_NEW_RECOMMENDS}" ]; then
-  zypper -C "${smp}/pacman/var/cache/zypp" --non-interactive -vvv --gpg-auto-import-keys install-new-recommends
-fi
 #i extra "${smp}"
 #chroot . /bin/bash
 #chroot . /bin/bash "/extra/pacman/apt-${1}.py"
@@ -49,6 +46,10 @@ fi
 chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/copy.sh"
 chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/setup.sh"
 chroot "${dir}" /usr/bin/env "DEFAULTUSER=${DEFAULTUSER}" bash "/${idir}/pacman/user.sh"
+
+if [ -n "${INSTALL_NEW_RECOMMENDS}" ]; then
+  chroot "${dir}" /usr/bin/env zypper -C "${smp}/pacman/var/cache/zypp" --auto-agree-with-licenses --non-interactive -vvv --gpg-auto-import-keys install-new-recommends
+fi
 #chroot "${dir}" /usr/bin/env "DEFAULTUSER=${DEFAULTUSER}" bash "/${idir}/pacman/tricks.sh"
 #chroot . /sbin/runuser -u lenovo -c 'cd /extra/home/lenovo; ./txt.sh'
 #DRACUT_ARGS="${DRACUT_ARGS:---force-drivers usb_storage}"

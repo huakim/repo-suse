@@ -13,8 +13,8 @@ if pkgs[0] == 'zypper':
 
 if env.check('EXTRAINSTALL'):
     pkgs.extend((
-'java-23',
-'java-23-devel',
+'java',
+'java-devel',
 'osckit',
 'luajit',
 'gcc-c++',

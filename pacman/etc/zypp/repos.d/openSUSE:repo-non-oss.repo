@@ -1,0 +1,8 @@
+[openSUSE:repo-non-oss]
+name=repo-non-oss
+enabled=1
+autorefresh=1
+baseurl=http://cdn.opensuse.org/tumbleweed/repo/non-oss
+type=rpm-md
+keeppackages=1
+service=openSUSE

@@ -1,0 +1,7 @@
+[openSUSE:repo-oss-source]
+name=repo-oss-source
+enabled=0
+autorefresh=1
+baseurl=http://cdn.opensuse.org/source/tumbleweed/repo/oss
+keeppackages=1
+service=openSUSE

@@ -1,0 +1,8 @@
+[openSUSE:update-tumbleweed]
+name=update-tumbleweed
+enabled=1
+autorefresh=1
+baseurl=http://cdn.opensuse.org/update/tumbleweed
+type=rpm-md
+keeppackages=1
+service=openSUSE

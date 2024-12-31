@@ -33,13 +33,14 @@ def ZYPPER_CONFIG():
         DOWNLOADONLY=env('DOWNLOADONLY')
         CACHEDIR=env('CACHEDIR')
         LIBDIR=env('LIBDIR')
+        FORCE=env
         RELEASEVER=env('RELEASEVER')
         CACHEONLY=env('CACHEONLY')
         flags = ['zypper']
-        if not INTERACTIVE:
+        if not check(INTERACTIVE):
             flags.extend(('--non-interactive',
             '--gpg-auto-import-keys'))
-        if NOGPGCHECK:
+        if check(NOGPGCHECK):
             flags.append('--no-gpg-checks')
         if check(CACHEONLY):
             flags.append('--no-refresh')
@@ -62,7 +63,7 @@ def ZYPPER_CONFIG():
             '--allow-arch-change',
             '--allow-vendor-change',
             '--auto-agree-with-licenses'))
-        if NOGPGCHECK:
+        if check(NOGPGCHECK):
             flags.append('--allow-unsigned-rpm')
    #     if check(DEBUGONLY):
    #         flags.append('--dry-run')
@@ -75,6 +76,8 @@ def ZYPPER_CONFIG():
             flags.append('only')
         else:
             flags.append('in-advance')
+        if check(FORCE):
+            flags.extend(('--force', '--force-resolution'))
         return flags
 
 def DNF_CONFIG():

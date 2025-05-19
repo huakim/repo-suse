@@ -1,9 +1,19 @@
 updateInfoAdded=true
 
+[dolphin_detailsmodesettings.upd]
+ctime=1742319150
+done=rename-leading-padding,rename-side-padding,move-content-display
+mtime=1741663275
+
+[dolphin_statusandlocationbarssettings.upd]
+ctime=1742319150
+done=move-content-display,25.04-convert-bool-showstatusbar-to-enum-showstatusbar
+mtime=1741663275
+
 [gtkconfig.upd]
-ctime=1733916643
-done=gtk_theme,dont_use_gtk_css_for_window_decorations,remove_deprecated_gtk4_option
-mtime=1732635946
+ctime=1742319150
+done=gtk_theme,dont_use_gtk_css_for_window_decorations,remove_deprecated_gtk4_option,25.04-convert-bool-showstatusbar-to-enum-showstatusbar
+mtime=1741651200
 
 [krunnerglobalshortcuts2.upd]
 ctime=1733916705
@@ -16,36 +26,46 @@ done=5.22KRunnerGlobalShortcuts,5.21KRunnerHistory
 mtime=1732636065
 
 [kwin.upd]
-ctime=1733916703
+ctime=1742319127
 done=5.21KRunnerHistory,kwin-6.0-reset-active-mouse-screen,kwin-6.0-delete-desktop-switching-shortcuts,kwin-6.0-remove-breeze-tabbox-default,kwin-6.1-remove-gridview-expose-shortcuts
-mtime=1732726671
+mtime=1741700518
 
 [migrate-calendar-to-plugin-id.upd]
-ctime=1733916705
+ctime=1742319133
 done=kwin-6.1-remove-gridview-expose-shortcuts,migrate-calendar-plugins
-mtime=1732636065
+mtime=1741651200
+
+[plasma-systemmonitor.upd]
+ctime=1742319150
+done=memory-column
+mtime=1741651200
 
 [plasma6.0-remove-dpi-settings.upd]
-ctime=1733916705
-done=migrate-calendar-plugins,plasma6.0-remove-dpi-settings
-mtime=1732636065
+ctime=1742319133
+done=migrate-calendar-plugins,plasma6.0-remove-dpi-settings,memory-column
+mtime=1741651200
 
 [plasma6.0-remove-old-shortcuts.upd]
-ctime=1733916705
+ctime=1742319133
 done=plasma6.0-remove-dpi-settings,plasma6.0-remove-old-shortcuts
-mtime=1732636065
+mtime=1741651200
+
+[plasma6.3-update-clipboard-database-2-to-3.upd]
+ctime=1742319133
+done=plasma6.3-update-clipboard-database-2-to-3
+mtime=1741651200
 
 [plasmashell-6.0-keep-custom-position-of-panels.upd]
-ctime=1733916705
-done=plasma6.0-remove-old-shortcuts,plasmashell-6.0-keep-custom-position-of-panels
-mtime=1732636065
+ctime=1742319133
+done=plasma6.0-remove-old-shortcuts,plasmashell-6.0-keep-custom-position-of-panels,plasma6.3-update-clipboard-database-2-to-3
+mtime=1741651200
 
 [plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels.upd]
-ctime=1733916705
+ctime=1742319133
 done=plasmashell-6.0-keep-custom-position-of-panels,plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels
-mtime=1732636065
+mtime=1741651200
 
 [spectacle.upd]
-ctime=1733916707
+ctime=1742319150
 done=plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panels,24.02.0-video_format,24.02.0-keep_old_save_location,24.02.0-rename_settings,24.02.0-keep_old_filename_templates,24.05.2-change_placeholder_format
-mtime=1730803464
+mtime=1741651200

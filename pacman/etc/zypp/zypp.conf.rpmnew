@@ -1,11 +1,20 @@
 ## Configuration file for software management
 ## /etc/zypp/zypp.conf
 ##
-## Boolean values are 0 1 yes no on off true false
-
+## - Boolean values are 0 1 yes no on off true false
+## - Environment variables may overwrite corresponding config values
 
 [main]
-
+##
+## If zypp is locked by another process this is the number of seconds to wait
+## for the lock to become available. A negative value will wait forever. If the
+## lock can not be acquired within the specified time an exception is raised.
+##
+## Valid values: number
+## Default value: 0
+## Environment variable: ZYPP_LOCK_TIMEOUT
+##
+# lock_timeout = 0
 
 ##
 ## Override the detected architecture
@@ -208,7 +217,8 @@
 ## Whether to consider using a .delta.rpm when downloading a package
 ##
 ## Valid values: boolean
-## Default value: true
+## Default value: false
+##                true on SUSE-15.6 and older
 ##
 ## Using a delta rpm will decrease the download size for package updates
 ## since it does not contain all files of the package but only the binary
@@ -216,7 +226,7 @@
 ## is an expensive operation (memory,CPU). If your network connection is
 ## not too slow, you benefit from disabling .delta.rpm.
 ##
-# download.use_deltarpm = true
+# download.use_deltarpm = false
 
 ##
 ## Whether to consider using a deltarpm even when rpm is local
@@ -274,12 +284,12 @@
 ## Valid values: boolean
 ## Default value: true
 ##
-## The media backend can rewrite download requests to the geographically closest availble mirror.
+## The media backend can rewrite download requests to the geographically closest available mirror.
 ## Which exact mirror is used will be determined by requesting a "geoip" file from download.opensuse.org
 ## via a HTTP GET request to https://download.opensuse.org/geoip , the server will use the clients IP to
 ## determine the closest mirror if available.
 ## Some specific files are however excluded from this redirection due to security reasons, especially the
-## repo metdata index and it's key and checksum files: repomd.xml, repomd.xml.key and repomd.xml.asc
+## repo metadata index and it's key and checksum files: repomd.xml, repomd.xml.key and repomd.xml.asc
 ##
 ## download.use_geoip_mirror = true
 
@@ -443,17 +453,12 @@
 
 ##
 ## EXPERTS ONLY: TUNE DISTRIBUTION UPGRADE (DUP)
-## Set whether to allow changing the packages vendor upon DUP. If you
-## are following a continuous distribution like Tumbleweed or Factory
-## where you use 'zypper dup --no-allow-vendor-change' quite frequently,
-## you may indeed benefit from disabling the VendorChange. Packages from
-## OBS repos will then be kept rather than being overwritten by Tumbleweeds
-## version.
+## Set whether to allow changing the packages vendor upon DUP.
 ##
 ## Valid values:  boolean
-## Default value: true
+## Default value: false (was true in Code12, libzypp-16.x)
 ##
-# solver.dupAllowVendorChange = true
+# solver.dupAllowVendorChange = false
 
 ##
 ## EXPERTS ONLY: Cleanup when deleting packages. Whether the solver should
@@ -535,9 +540,9 @@
 ## the string must start with "provides:" immediately followed by the capability.
 ##
 ## Example:
-##	kernel				- just packages whith name 'kernel'
+##	kernel				- just packages with name 'kernel'
 ##	provides:multiversion(kernel)   - all packages providing 'multiversion(kernel)'
-##					  (kenel and kmp packages should do this)
+##					  (kernel and kmp packages should do this)
 ## Valid values:
 ##	Comma separated list of packages.
 ##
@@ -595,31 +600,6 @@ multiversion.kernels = latest,latest-1,running
 ## Default value: true
 ##
 # locksfile.apply = true
-
-##
-## Where update items are stored
-## (example: scripts, messages)
-##
-## Valid values: path to directory
-## Default value: /var/adm
-##
-# update.datadir = /var/adm
-
-##
-## Where update messages are stored
-##
-## Valid values: path to directory
-## Default value: {update.datadir}/update-messages
-##
-# update.messagesdir = /var/adm/update-messages
-
-##
-## Where update scripts are stored
-##
-## Valid values: path to directory
-## Default value: {update.datadir}/update-scripts
-##
-# update.scriptsdir = /var/adm/update-scripts
 
 ##
 ## Command to be invoked to send update messages.

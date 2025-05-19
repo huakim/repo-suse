@@ -1,9 +1,0 @@
-[home_zzndb_Qv2ray]
-name=Project for Qv2ray{,-preview} (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/home:/zzndb:/Qv2ray/openSUSE_Tumbleweed/
-type=rpm-md
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/zzndb:/Qv2ray/openSUSE_Tumbleweed/repodata/repomd.xml.key
-keeppackages=1

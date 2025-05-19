@@ -1,4 +1,5 @@
 etc/bash
+etc/xonsh
 etc/default/lxc-net
 etc/hdparm.conf
 etc/modprobe.d
@@ -17,3 +18,4 @@ etc/tor
 usr/local/bin
 usr/share/lxc/templates/lxc-salt_tarball
 usr/share/X11/xkb
+etc/systemd/system/relabel-selinux.service

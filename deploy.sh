@@ -108,7 +108,9 @@ PARTUUID=${EXTRA_PARTITION} /extra              auto    defaults 0 0
 
 )
 
-FSTAB="${smp}/fstab" ${smp}/bootstrap.sh "$1"
+FSTAB="${smp}/fstab"
+FORCE=yes
+. ${smp}/bootstrap.sh "$1"
 
 . "${smp}/options"
 if [[ -n "${EFI_PARTITION}" ]]

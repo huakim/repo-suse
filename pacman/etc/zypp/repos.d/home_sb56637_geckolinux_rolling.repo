@@ -1,9 +1,0 @@
-[home_sb56637_geckolinux_rolling]
-name=GeckoLinux ROLLING packages (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/home:/sb56637:/geckolinux:/rolling/openSUSE_Tumbleweed/
-type=rpm-md
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/sb56637:/geckolinux:/rolling/openSUSE_Tumbleweed/repodata/repomd.xml.key
-keeppackages=1

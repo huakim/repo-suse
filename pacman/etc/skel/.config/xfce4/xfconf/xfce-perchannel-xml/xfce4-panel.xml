@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-panel" version="1.0">
   <property name="configver" type="int" value="2"/>
@@ -51,11 +51,15 @@
     </property>
     <property name="plugin-3" type="string" value="systray">
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “tp-link_1ca1” active: tp-link_1ca1 (81%)"/>
+        <value type="string" value="no network connection"/>
         <value type="string" value="network"/>
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="xfce4-power-manager"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="chrome_status_icon_1"/>
+        <value type="string" value="nekoray"/>
         <value type="string" value="nm-applet"/>
       </property>
       <property name="square-icons" type="bool" value="true"/>
@@ -99,13 +103,16 @@
       <property name="button-icon" type="string" value="applications-other"/>
       <property name="position-categories-alternate" type="bool" value="false"/>
       <property name="recent" type="array">
+        <value type="string" value="xfce4-terminal-emulator.desktop"/>
+        <value type="string" value="xfce-wm-settings.desktop"/>
+        <value type="string" value="xfce-wmtweaks-settings.desktop"/>
+        <value type="string" value="xfce-keyboard-settings.desktop"/>
+        <value type="string" value="org.keepassxc.KeePassXC.desktop"/>
+        <value type="string" value="chromium-browser.desktop"/>
+        <value type="string" value="nekoray.desktop"/>
+        <value type="string" value="xfce-mouse-settings.desktop"/>
         <value type="string" value="thunar.desktop"/>
         <value type="string" value="xfce4-color-settings.desktop"/>
-        <value type="string" value="xfce4-taskmanager.desktop"/>
-        <value type="string" value="xfce4-terminal-emulator.desktop"/>
-        <value type="string" value="xfce4-mime-settings.desktop"/>
-        <value type="string" value="xfce-ui-settings.desktop"/>
-        <value type="string" value="xfce-keyboard-settings.desktop"/>
       </property>
     </property>
     <property name="plugin-11" type="string" value="tasklist">

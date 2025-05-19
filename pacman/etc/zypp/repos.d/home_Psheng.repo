@@ -1,8 +1,0 @@
-[home_Psheng]
-name=A personal software repository (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/home:/Psheng/openSUSE_Tumbleweed/
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/Psheng/openSUSE_Tumbleweed/repodata/repomd.xml.key
-keeppackages=1

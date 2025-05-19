@@ -2,6 +2,7 @@
 deploy.sh
 update-btrfs.sh
 bootstrap.sh
+restorecon.sh
 chbootstrap.sh
 commit-extra.sh
 copy-extra.sh

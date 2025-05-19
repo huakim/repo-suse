@@ -1,6 +1,4 @@
 #!/bin/bash
-
-#!/bin/bash
 export XDG_CURRENT_DESKTOP=XFCE
 function usage() {
     nroff -mandoc <<-EOF | less

@@ -1,0 +1,9 @@
+[KDE_Frameworks]
+name=KDE Frameworks and Plasma (openSUSE_Tumbleweed)
+enabled=1
+autorefresh=0
+baseurl=https://download.opensuse.org/repositories/KDE:/Frameworks/openSUSE_Tumbleweed/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/KDE:/Frameworks/openSUSE_Tumbleweed/repodata/repomd.xml.key
+keeppackages=1
+priority=95

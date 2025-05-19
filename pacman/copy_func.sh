@@ -46,5 +46,5 @@ parsevar(){
 }
 
 parsefile(){
-    sed -n '/^[[:space:]]*#/!p' "$dir$1" | parse "$2"
+    sed -n '/^[[:space:]]*#/!{/^[[:space:]]*$/!p}' "$dir$1" | parse "$2"
 }

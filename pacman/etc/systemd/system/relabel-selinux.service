@@ -1,0 +1,16 @@
+[Unit]
+Description=Relabel SELinux Context and Set Enforcing Mode
+DefaultDependencies=no
+After=local-fs.target
+
+[Service]
+Type=oneshot
+#ExecStart=/sbin/semanage fcontext -a -e /
+ExecStart=/sbin/restorecon -Rv /
+ExecStartPost=/bin/sed -i "s/^SELINUX=.*/SELINUX=enforcing/" /etc/selinux/config
+ExecStartPost=/bin/systemctl disable relabel-selinux.service
+ExecStartPost=/sbin/setenforce 1 
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[copr:copr.fedorainfracloud.org:timlau:yumex-ng]
+name=Copr repo for yumex-ng owned by timlau
+baseurl=https://download.copr.fedorainfracloud.org/results/timlau/yumex-ng/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/timlau/yumex-ng/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1

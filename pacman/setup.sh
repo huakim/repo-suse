@@ -30,6 +30,8 @@ ds(){
 }
 
 mv /usr/lib/modprobe.d/50-blacklist-rndis.conf{,.disabled}
+#sed -i "s/^SELINUX=.*/SELINUX=enforcing/" /etc/selinux/config
+#systemctl enable relabel-selinux
 systemctl enable NetworkManager
 systemctl disable NetworkManager-wait-online
 #systemctl enable NetworkManager
@@ -46,7 +48,7 @@ kver="$(ls /lib/modules)"
 
 $lT ../usr/share/zoneinfo/Etc/GMT-3 /etc/localtime
 $lT "../usr/lib/modules/$kver/vmlinuz" /boot/vmlinuz
-$lT "initrd-$kver" /boot/initrd
+$lT "initramfs-$kver.img" /boot/initrd
 
 uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/gnome-terminal 25
 uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/xfce4-terminal 25

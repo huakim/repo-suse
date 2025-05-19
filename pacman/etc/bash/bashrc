@@ -60,7 +60,7 @@ fi
 # The following block is surrounded by two delimiters.
 # These delimiters must not be modified. Thanks.
 # START KALI CONFIG VARIABLES
-PROMPT_ALTERNATIVE=twoline
+PROMPT_ALTERNATIVE="${PROMPT_ALTERNATIVE:-twoline}"
 NEWLINE_BEFORE_PROMPT=yes
 # STOP KALI CONFIG VARIABLES
 
@@ -129,13 +129,15 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+
 # my custom aliases
-alias aboutos='neofetch'
-alias aboutoscolor='neofetch | lolcat'
+alias aboutos='fastfetch'
+alias aboutoscolor='fastfetch | lolcat'
 alias off='sudo poweroff'
 alias reboot='sudo reboot'
-alias update='sudo apt update'
-alias upgrade='sudo apt upgrade -y'
+
+#alias update='sudo dnf --refresh makecache'
+#alias upgrade='sudo dnf --refresh update -y'
 
 alias bashrc='source ~/.bashrc'
 alias start-jupyter='source jupyterenv/bin/activate && jupyter notebook'

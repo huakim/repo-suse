@@ -1,8 +1,8 @@
 #!/bin/sh
 smp="$(realpath $(dirname ${0}))"
 cd "${smp}"
-
-j="$(findmnt / -o uuid -n)"
+ROOT_FILESYSTEM="${ROOT_FILESYSTEM:-/}"
+j="$(findmnt "${ROOT_FILESYSTEM}" -o uuid -n)"
 is_btrfs=true
 
 variant="${1}"
@@ -27,6 +27,7 @@ mount /dev/disk/by-uuid/"$j" "${updatedir}" && (
                 FSTAB=/etc/fstab
                 INSTALL_NEW_RECOMMENDS=yes
                 . ./bootstrap.sh "${variant}"
+                systemd-nspawn -D "${smp}/bootstrap-${variant}" /bin/bash -x -c 'mount -o remount,rw /sys/fs/selinux; restorecon -Rv /home/*'
                 umount "${smp}/bootstrap-${variant}/home"
                 umount "${smp}/bootstrap-${variant}"
             )
@@ -35,5 +36,6 @@ mount /dev/disk/by-uuid/"$j" "${updatedir}" && (
 )
 
 umount "${updatedir}"
+umount "${updatedir}" -l
 rmdir "${updatedir}"
 #tmpdir="$(mktemp -d "$1/.Trash-XXXXXXXXXXXXXXXXXXXXXXXXXXXXX")"

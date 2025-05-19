@@ -1,1 +1,2 @@
+#!/bin/sh
 nim -d:release --opt:size  compile -o:$2 $1 && strip -s $2

@@ -1,0 +1,12 @@
+[copr:copr.fedorainfracloud.org:huakim:kde-plasma]
+name=Copr repo for kde-plasma owned by huakim
+baseurl=https://download.copr.fedorainfracloud.org/results/huakim/kde-plasma/fedora-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/huakim/kde-plasma/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+module_hotfixes=1
+priority=1

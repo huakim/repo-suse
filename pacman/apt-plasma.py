@@ -86,7 +86,7 @@ pkgs.extend((
 'plasma6-pa',
 'plasma6-sddm-theme-openSUSE',
 'plasma6-session-x11',
-'plasma6-settings',
+'systemsettings6',
 'plasma6-session',
 'plasma6-systemmonitor',
 #'plasma6-theme-stone',

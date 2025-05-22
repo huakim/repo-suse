@@ -1,4 +1,5 @@
 #!/bin/sh
+
 dir="$(realpath $(dirname $0))/"
 
 export HOME="/etc/skel"
@@ -47,8 +48,8 @@ ds kaccess
 kver="$(ls /lib/modules)"
 
 $lT ../usr/share/zoneinfo/Etc/GMT-3 /etc/localtime
-$lT "../usr/lib/modules/$kver/vmlinuz" /boot/vmlinuz
-$lT "initramfs-$kver.img" /boot/initrd
+$lT "vmlinuz-${kver}" /boot/vmlinuz
+$lT "initrd-${kver}" /boot/initrd
 
 uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/gnome-terminal 25
 uP /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/xfce4-terminal 25

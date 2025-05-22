@@ -145,6 +145,8 @@ else:
     pkgs = [key]
     dnf = configs.get(key)
 
+pkgs.append('bash')
+
 def load(*a):
     pkgs.sort()
     if check(env('SHOWONLY')):

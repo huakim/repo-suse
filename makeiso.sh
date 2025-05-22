@@ -82,7 +82,7 @@ function b_o_o_t{
    initrd /LiveOS/initrd.img
  }
 }
-b_o_o_t 'Boot to ram' rd.live.ram=1 enforcing=0
+b_o_o_t 'Boot to ram' rd.live.toram=1 enforcing=0
 b_o_o_t 'Live boot' enforcing=0
 EOF
 

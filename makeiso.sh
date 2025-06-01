@@ -37,7 +37,7 @@ cd "bootstrap-$1"
 i extra/repo "${smp}"
 
 chroot "${PWD}" /bin/bash /extra/repo/pacman/copy-live.sh
-chroot "${PWD}" /bin/bash /extra/repo/pacman/setup-live.sh
+chroot "${PWD}" /bin/env DEFAULTUSER=live bash /extra/repo/pacman/setup-live.sh
 
 umount extra/repo dev proc sys
 cd ..
@@ -82,7 +82,7 @@ function b_o_o_t{
    initrd /LiveOS/initrd.img
  }
 }
-b_o_o_t 'Boot to ram' rd.live.toram=1 enforcing=0
+b_o_o_t 'Boot to ram' rd.live.ram=1 enforcing=0
 b_o_o_t 'Live boot' enforcing=0
 EOF
 

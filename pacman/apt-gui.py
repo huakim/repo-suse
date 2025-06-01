@@ -85,7 +85,7 @@ pkgs.extend((
 'gstreamer-plugin-openh264',
 'pipewire-aptx',
 'libavcodec61',
-'libavcodec60',
+#'libavcodec60',
 'libfdk-aac2',
 'dav1d',
 ))

@@ -1,9 +1,0 @@
-[utilities]
-name=all the small tools for the shell (openSUSE_Factory)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/utilities/openSUSE_Factory/
-type=rpm-md
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/utilities/openSUSE_Factory/repodata/repomd.xml.key
-keeppackages=1

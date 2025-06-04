@@ -4,6 +4,7 @@ alias sudo='WAYLAND_DISPLAY="$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" sudo '
 export CPLUS_INCLUDE_PATH=/usr/include/c++/14/$(uname -p)-suse-linux:/usr/include/c++/14
 
 if [[ -f /etc/environment ]]
+then
   set -a 
   . /etc/environment
 fi

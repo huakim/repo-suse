@@ -75,7 +75,8 @@ pkgs.extend((
 
 #);
 
-pkgs.extend((
+if env.check("SKIPKERNEL"):
+    pkgs.extend((
 #"intel-compute-runtime",
 "kernel-default",
 "kexec-tools",

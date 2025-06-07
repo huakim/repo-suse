@@ -12,11 +12,14 @@ if pkgs[0] == 'zypper':
     pkgs.append('yast2-packager')
 
 if env.check("LIVEINSTALL"):
-    pkgs.extend((
-"rEFInd",
-#"grub2",
-#"grub2-efi"
-))
+    pkgs.append('grub2')
+    for i in ['', '-extras']:
+        for u in ['x86_64', 'i386']:
+            for c in ['efi', 'xen', 'pc']:
+                if c == 'pc':
+                    if u != 'i386':
+                        continue
+                pkgs.append('grub2-' + u + '-' + c + i)
 
 if env.check('EXTRAINSTALL'):
     pkgs.extend((

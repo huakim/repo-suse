@@ -13,8 +13,9 @@ if pkgs[0] == 'zypper':
 
 if env.check("LIVEINSTALL"):
     pkgs.extend((
-"grub2",
-"grub2-efi"
+"rEFInd",
+#"grub2",
+#"grub2-efi"
 ))
 
 if env.check('EXTRAINSTALL'):

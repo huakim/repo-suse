@@ -33,7 +33,7 @@ cd "bootstrap-$1"
 #i dev
 #i proc
 #i sys
-#alias chroot='systemd-nspawn -D '
+alias chroot='systemd-nspawn -D '
 
 i extra/repo "${smp}"
 

@@ -1,5 +1,7 @@
 #!/bin/sh
+
 smp="$(realpath $(dirname ${0}))"
+(
 cd "${smp}"
 ROOT_FILESYSTEM="${ROOT_FILESYSTEM:-/}"
 j="$(findmnt "${ROOT_FILESYSTEM}" -o uuid -n)"
@@ -36,6 +38,7 @@ mount /dev/disk/by-uuid/"$j" "${updatedir}" && (
 )
 
 umount "${updatedir}"
+)
 umount "${updatedir}" -l
 rmdir "${updatedir}"
 #tmpdir="$(mktemp -d "$1/.Trash-XXXXXXXXXXXXXXXXXXXXXXXXXXXXX")"

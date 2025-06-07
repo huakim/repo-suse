@@ -11,6 +11,12 @@ env=j.env
 if pkgs[0] == 'zypper':
     pkgs.append('yast2-packager')
 
+if env.check("LIVEINSTALL"):
+    pkgs.extend((
+"grub2",
+"grub2-efi"
+))
+
 if env.check('EXTRAINSTALL'):
     pkgs.extend((
 'java',

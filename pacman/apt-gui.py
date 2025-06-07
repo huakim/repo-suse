@@ -15,19 +15,24 @@ if env.check('LIVEINSTALL'):
     pkgs.append('calamares')
 
 qemu=(
-'libvirt',
-'qemu-x86',
-'virt-manager',
-'xterm',
+    'libvirt',
+    'qemu-x86',
+    'virt-manager',
+    'xterm',
 )
 
 if env.check('EXTRAINSTALL'):
     pkgs.extend(qemu)
-    pkgs.extend(("nekoray", "gparted", "keepassxc", "gnome-disk-utility"))
+    pkgs.extend((
+        "nekoray", 
+        "code", 
+        "keepassxc", 
+        "gnome-disk-utility"
+))
 
 pkgs.extend((
 "dbus-1-x11",
-#"gparted",
+"gparted",
 #"generic-logos",
 "google-roboto-mono-fonts",
 "google-opensans-fonts",

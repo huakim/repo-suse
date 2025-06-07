@@ -75,7 +75,7 @@ pkgs.extend((
 
 #);
 
-if env.check("SKIPKERNEL"):
+if not env.check("SKIPKERNEL"):
     pkgs.extend((
 #"intel-compute-runtime",
 "kernel-default",

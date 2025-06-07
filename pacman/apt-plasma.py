@@ -17,7 +17,7 @@ env=j.env
 
 if env.check("LIVEINSTALL"):
     pkgs.extend((
-"calamares"
+"calamares",
 ))
 
 

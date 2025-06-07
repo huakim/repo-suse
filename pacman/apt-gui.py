@@ -26,6 +26,7 @@ if env.check('EXTRAINSTALL'):
     pkgs.extend((
         "nekoray", 
         "code", 
+        "wine",
         "keepassxc", 
         "gnome-disk-utility"
 ))

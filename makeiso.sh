@@ -39,6 +39,8 @@ i extra/repo "${smp}"
 
 chroot "${PWD}" /bin/bash /extra/repo/pacman/copy-live.sh
 chroot "${PWD}" /bin/bash /extra/repo/pacman/setup-live.sh
+chroot "${PWD}" /bin/rm /root
+chroot "${PWD}" /bin/cp -Rfv /etc/skel /root
 
 umount extra/repo dev proc sys
 cd ..

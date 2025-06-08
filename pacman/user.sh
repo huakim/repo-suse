@@ -29,15 +29,16 @@ usermod -u 0 "$root"
 usermod -d "/home/$user" "$user"
 usermod -d "/$root" "$root"
 rm -R "/$root"
-groupadd netdev
-groupadd plugdev
-groupadd docker
-groupadd mock
+
+
+for i in  lp video network storage mock docker plugdev netdev audio
+do
+ groupadd "${i}"
+ usermod -a "$user" -G "${i}"
+done
+
 groupadd "$admin"
-usermod -a "$user" -G netdev
-usermod -a "$user" -G plugdev
-usermod -a "$user" -G docker
-usermod -a "$user" -G mock
+
 usermod -a "$user" -G "$admin"
 usermod -s "$shell" "$user"
 usermod -s "$shell" "$root"

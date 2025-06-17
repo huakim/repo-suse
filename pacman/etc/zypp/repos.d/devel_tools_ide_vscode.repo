@@ -2,5 +2,5 @@
 enabled=1
 autorefresh=0
 baseurl=https://download.opensuse.org/repositories/devel:/tools:/ide:/vscode/openSUSE_Tumbleweed
+type=rpm-md
 keeppackages=1
-keepcache=1

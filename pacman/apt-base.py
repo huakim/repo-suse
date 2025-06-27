@@ -30,6 +30,7 @@ if env.check('EXTRAINSTALL'):
 'gcc-c++',
 'nim',
 'tor',
+'maven',
 'obfs4',
 'glibc-locale',
 'xorriso',

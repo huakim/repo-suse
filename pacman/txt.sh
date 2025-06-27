@@ -87,6 +87,7 @@ flink .config/KDE/neochat.conf
 link .config/ZapZap
 link .config/VSCodium
 clone .config/VSCodium .config/VSCode
+clone .config/VSCodium .config/Code
 link .config/nekoray
 link .config/chromium
 link .config/clangd
@@ -98,6 +99,8 @@ link .config/falkon
 link .config/libreoffice
 link .vscode-oss
 clone .vscode-oss .vscode
+link .varia
+link .xdm-app-data
 link .eclipse
 link .egradle
 link .composer

@@ -80,7 +80,7 @@ pkgs.extend((
 ))
 
 #codecs
-pkgs.extend((
+codecs=(
 'ffmpeg',
 'gstreamer-plugins-good',
 'gstreamer-plugins-good-extra',
@@ -94,7 +94,8 @@ pkgs.extend((
 #'libavcodec60',
 'libfdk-aac2',
 'dav1d',
-))
+)
+
 
 if __name__ == '__main__':
     main()

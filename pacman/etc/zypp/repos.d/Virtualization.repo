@@ -1,6 +1,6 @@
 [Virtualization]
 name=Virtualization (openSUSE_Tumbleweed)
-enabled=1
+enabled=0
 autorefresh=0
 baseurl=https://download.opensuse.org/repositories/Virtualization/openSUSE_Tumbleweed/
 gpgcheck=1

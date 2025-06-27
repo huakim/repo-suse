@@ -1,6 +1,7 @@
 etc/bash
 etc/xonsh
 etc/default/lxc-net
+etc/default/grub
 etc/hdparm.conf
 etc/modprobe.d
 etc/modules-load.d

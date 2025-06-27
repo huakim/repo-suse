@@ -81,12 +81,12 @@ cat <<EOF > "${dir}/grub.cfg"
 function b_o_o_t{
  menuentry "\${@}"{
    shift
-   linux /LiveOS/vmlinuz root=live:LABEL="${label}" rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1 "\${@}"
+   linux /LiveOS/vmlinuz root=live:LABEL="${label}" security=selinux selinux=1 enforcing=0 rd.live.image rd.live.dir=/LiveOS rd.live.squashfs=squashfs.img acpi_osi=Linux psi=1 "\${@}"
    initrd /LiveOS/initrd.img
  }
 }
-b_o_o_t 'Boot to ram' rd.live.ram=1 enforcing=0
-b_o_o_t 'Live boot' enforcing=0
+b_o_o_t 'Boot to ram' rd.live.ram=1
+b_o_o_t 'Live boot'
 EOF
 
 grub2-mkrescue -v -o "liveiso-$1.iso" -V "${label}" "${iso}"

@@ -23,15 +23,19 @@ if env.check("LIVEINSTALL"):
 
 if env.check("EXTRAINSTALL"):
     pkgs.extend((
-#"persepolis",
 "plasma6-mobile",
-"ktorrent",
-"kget",
+"varia",
 "kmenuedit6",
 "kdeconnect-kde",
 "okular",
 "neochat",
-"zapzap"
+"webapp-manager",
+"zapzap",
+'plasma6-session-x11',
+'gtk2-metatheme-yaru-mate',
+'gtk3-metatheme-yaru-mate',
+'gtk4-metatheme-yaru-mate',
+'kwin6-x11'
 ))
 
 
@@ -45,10 +49,6 @@ pkgs.extend((
 #'calamares',
 'colord-kde',
 'dolphin',
-'gtk2-metatheme-yaru-mate',
-'gtk3-metatheme-yaru-mate',
-'gtk4-metatheme-yaru-mate',
-#'gnome-disk-utility',
 'gwenview',
 'haruna',
 'pavucontrol-qt',
@@ -69,17 +69,7 @@ pkgs.extend((
 'kio-fuse',
 #'kmenuedit6',
 'konsole',
-#'kscreen',
-#'ktorrent',
-#'kwayland-integration',
 'kwin6',
-'kwin6-x11',
-#'kwin-x11',
-#'materia-gtk-theme',
-#'materia-kde',
-#'lightdm',
-#'lightdm-settings',
-#'okular',
 'pam_kwallet6',
 'plasma6-desktop',
 #'plasma6-drkonqi',
@@ -89,7 +79,6 @@ pkgs.extend((
 'plasma6-nm-openvpn',
 'plasma6-pa',
 'plasma6-sddm-theme-openSUSE',
-'plasma6-session-x11',
 'systemsettings6',
 'plasma6-session',
 'plasma6-systemmonitor',

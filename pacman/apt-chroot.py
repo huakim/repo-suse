@@ -156,6 +156,9 @@ def load(*a):
         flags = dnf()
         flags.extend(a)
         flags.extend(pkgs)
+        spawn = env('SPAWN')
+        if chstr(spawn):
+            flags = ['systemd-nspawn', '-D', spawn, *flags]
         print (flags)
         if not check(env('DEBUGONLY')): subprocess.run(flags)
 

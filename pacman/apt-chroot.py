@@ -13,7 +13,7 @@ def chstr(a):
         return True
 
 def check(a):
-    if not chstr(a) or a == 'None' or a == 'False' or a == '0':
+    if not chstr(a) or a == 'None' or a == 'False' or a == '0' or a == 'no' or a == 'n':
         return False
     else:
         return True

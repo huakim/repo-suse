@@ -1,0 +1,10 @@
+[packages-microsoft-com-prod]
+name=Microsoft Production
+enabled=1
+autorefresh=0
+baseurl=https://packages.microsoft.com/opensuse/15/prod/
+type=rpm-md
+gpgcheck=1
+repo_gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+keeppackages=1

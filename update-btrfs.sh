@@ -11,13 +11,15 @@ variant="${1}"
 updatedir="${smp}/update-${variant}"
 mkdir -p "${updatedir}" ||:
 
-mount /dev/disk/by-uuid/"$j" "${updatedir}" && (
+if mount /dev/disk/by-uuid/"$j" "${updatedir}"
+then
     if [[ -d "${updatedir}/@" ]]
     then
         tmpdir="$(mktemp -d "${updatedir}/.Trash-XXXXXXXXXXXXXXXXXXXXXXXXXXXXX")"
         if [[ -d "${updatedir}/@backup/repo" ]]
         then
-            btrfs sub cr "${tmpdir}/@example" && (
+            if btrfs sub cr "${tmpdir}/@example"
+            then
                 mv "${updatedir}/@" "${tmpdir}/@"
                 mv "${updatedir}/@home" "${tmpdir}/@home"
 		btrfs sub cr "${updatedir}/@"
@@ -32,12 +34,14 @@ mount /dev/disk/by-uuid/"$j" "${updatedir}" && (
                 systemd-nspawn -D "${smp}/bootstrap-${variant}" /bin/bash -x -c 'mount -o remount,rw /sys/fs/selinux; restorecon -Rv /home/*'
                 umount "${smp}/bootstrap-${variant}/home"
                 umount "${smp}/bootstrap-${variant}"
-            )
+                exit
+            fi
         fi
     fi
-)
+fi
 
 umount "${updatedir}"
+exit
 )
 umount "${updatedir}" -l
 rmdir "${updatedir}"

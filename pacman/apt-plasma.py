@@ -23,7 +23,7 @@ if env.check("LIVEINSTALL"):
 
 if env.check("EXTRAINSTALL"):
     pkgs.extend((
-"plasma6-mobile",
+#"plasma6-mobile",
 "varia",
 "kmenuedit6",
 "kdeconnect-kde",
@@ -32,9 +32,9 @@ if env.check("EXTRAINSTALL"):
 "webapp-manager",
 "zapzap",
 'plasma6-session-x11',
-'gtk2-metatheme-yaru-mate',
-'gtk3-metatheme-yaru-mate',
-'gtk4-metatheme-yaru-mate',
+#'gtk2-metatheme-yaru-mate',
+#'gtk3-metatheme-yaru-mate',
+#'gtk4-metatheme-yaru-mate',
 'kwin6-x11',
 'remmina-plugin-kwallet'
 ))

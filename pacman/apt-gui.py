@@ -29,7 +29,7 @@ if env.check('EXTRAINSTALL'):
         "remmina",
         "remmina-plugin-vnc",
         "remmina-plugin-rdp",
-        "wine",
+        "wine-wow64",
         "keepassxc", 
         "gnome-disk-utility"
 ))

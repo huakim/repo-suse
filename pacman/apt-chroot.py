@@ -37,7 +37,7 @@ def ZYPPER_CONFIG():
         DOWNLOADONLY=env('DOWNLOADONLY')
         CACHEDIR=env('CACHEDIR')
         LIBDIR=env('LIBDIR')
-        FORCE=env
+        FORCE=env('FORCE')
         RELEASEVER=env('RELEASEVER')
         CACHEONLY=env('CACHEONLY')
         flags = ['zypper']
@@ -152,14 +152,14 @@ else:
 pkgs.append('bash')
 
 def load(*a):
-    pkgs.sort()
+    packages = list(set([*pkgs, *a]))
+    packages.sort()
     if check(env('SHOWONLY')):
-        for i in pkgs:
+        for i in packages:
             print(i)
     else:
         flags = dnf()
-        flags.extend(a)
-        flags.extend(pkgs)
+        flags.extend(packages)
         spawn = env('SPAWN')
         if chstr(spawn):
             flags = ['systemd-nspawn', '-D', spawn, *flags]

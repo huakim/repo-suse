@@ -13,8 +13,12 @@ def chstr(a):
         return True
 
 def check(a):
-    if not chstr(a) or a == 'None' or a == 'False' or a == '0' or a == 'no' or a == 'n':
+    if not chstr(a):
         return False
+    a = str(a)
+    for i in ['none', 'false', '0', 'nil']:
+        if i.startswith(a):
+             return False
     else:
         return True
 

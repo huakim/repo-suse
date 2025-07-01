@@ -35,7 +35,8 @@ if env.check("EXTRAINSTALL"):
 'gtk2-metatheme-yaru-mate',
 'gtk3-metatheme-yaru-mate',
 'gtk4-metatheme-yaru-mate',
-'kwin6-x11'
+'kwin6-x11',
+'remmina-plugin-kwallet'
 ))
 
 

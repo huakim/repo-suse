@@ -26,6 +26,9 @@ if env.check('EXTRAINSTALL'):
     pkgs.extend((
         "nekoray", 
         "code", 
+        "remmina",
+        "remmina-plugin-vnc",
+        "remmina-plugin-rdp",
         "wine",
         "keepassxc", 
         "gnome-disk-utility"

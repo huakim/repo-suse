@@ -1,14 +1,17 @@
 #!/bin/sh
 
 smp="$(realpath $(dirname ${0}))"
+
+variant="${1}"
+updatedir="${smp}/update-${variant}"
+bootstrapdir="${smp}/bootstrap-${variant}"
+
 (
 cd "${smp}"
 ROOT_FILESYSTEM="${ROOT_FILESYSTEM:-/}"
 j="$(findmnt "${ROOT_FILESYSTEM}" -o uuid -n)"
 is_btrfs=true
 
-variant="${1}"
-updatedir="${smp}/update-${variant}"
 mkdir -p "${updatedir}" ||:
 
 if mount /dev/disk/by-uuid/"$j" "${updatedir}"
@@ -16,26 +19,23 @@ then
     if [[ -d "${updatedir}/@" ]]
     then
         tmpdir="$(mktemp -d "${updatedir}/.Trash-XXXXXXXXXXXXXXXXXXXXXXXXXXXXX")"
-        if [[ -d "${updatedir}/@backup/repo" ]]
+        if btrfs sub cr "${tmpdir}/@example"
         then
-            if btrfs sub cr "${tmpdir}/@example"
-            then
                 mv "${updatedir}/@" "${tmpdir}/@"
                 mv "${updatedir}/@home" "${tmpdir}/@home"
 		btrfs sub cr "${updatedir}/@"
 		btrfs sub cr "${updatedir}/@home"
-		mkdir -p "${smp}/bootstrap-${variant}" ||:
-		mount /dev/disk/by-uuid/"$j" "${smp}/bootstrap-${variant}" -o subvol=@
-		mkdir -p "${smp}/bootstrap-${variant}/home" ||:
-		mount /dev/disk/by-uuid/"$j" "${smp}/bootstrap-${variant}/home" -o subvol=@home
+		mkdir -p "${bootstrapdir}" ||:
+		mount /dev/disk/by-uuid/"$j" "${bootstrapdir}" -o subvol=@
+		mkdir -p "${bootstrapdir}/home" ||:
+		mount /dev/disk/by-uuid/"$j" "${bootstrapdir}/home" -o subvol=@home
                 FSTAB=/etc/fstab
                 INSTALL_NEW_RECOMMENDS=yes
                 . ./bootstrap.sh "${variant}"
-                systemd-nspawn -D "${smp}/bootstrap-${variant}" /bin/bash -x -c 'mount -o remount,rw /sys/fs/selinux; restorecon -Rv /home/*'
-                umount "${smp}/bootstrap-${variant}/home"
-                umount "${smp}/bootstrap-${variant}"
+                systemd-nspawn -D "${bootstrapdir}" /bin/bash -x -c 'mount -o remount,rw /sys/fs/selinux; restorecon -Rv /home/*'
+                umount "${bootstrapdir}/home"
+                umount "${bootstrapdir}"
                 exit
-            fi
         fi
     fi
 fi
@@ -43,6 +43,8 @@ fi
 umount "${updatedir}"
 exit
 )
-umount "${updatedir}" -l
-rmdir "${updatedir}"
+umount "${updatedir}"
+umount "${bootstrapdir}"
+rmdir  "${updatedir}"
+rmdir  "${bootstrapdir}"
 #tmpdir="$(mktemp -d "$1/.Trash-XXXXXXXXXXXXXXXXXXXXXXXXXXXXX")"

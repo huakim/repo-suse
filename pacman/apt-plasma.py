@@ -32,9 +32,6 @@ if env.check("EXTRAINSTALL"):
 "webapp-manager",
 "zapzap",
 'plasma6-session-x11',
-#'gtk2-metatheme-yaru-mate',
-#'gtk3-metatheme-yaru-mate',
-#'gtk4-metatheme-yaru-mate',
 'kwin6-x11',
 'remmina-plugin-kwallet'
 ))
@@ -45,6 +42,9 @@ pkgs.extend((
 #'plasma-nm-openvpn',
 #'accountsservice',
 'ark',
+'gtk2-metatheme-yaru-mate',
+'gtk3-metatheme-yaru-mate',
+'gtk4-metatheme-yaru-mate',
 'bluedevil6',
 'breeze-gtk',
 #'calamares',

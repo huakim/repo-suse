@@ -9,7 +9,7 @@ main=j.main
 env=j.env
 
 if pkgs[0] == 'zypper':
-    pkgs.append('yast2-packager')
+    pkgs.extend(['yast2-' + i for i in ['packager', 'bootloader', 'users']])
 
 if env.check("LIVEINSTALL"):
     pkgs.append('grub2')
@@ -29,6 +29,7 @@ if env.check('EXTRAINSTALL'):
 'luajit',
 'gcc-c++',
 'nim',
+'clang',
 'tor',
 'maven',
 'obfs4',
@@ -63,6 +64,7 @@ pkgs.extend((
 "exfatprogs",
 #"efibootmgr",
 "ntfs-3g",
+"dislocker",
 "ntfsprogs",
 "pam",
 "pam-config",
@@ -81,6 +83,10 @@ pkgs.extend((
 #'grub2-efi',
 #'grub2',
 #'squashfs'
+"selinux-policy-targeted",
+"selinux-targeted-setup",
+"selinux-tools",
+"selinux-autorelabel"
 ))
 #push @pkgs, qw(
 
@@ -89,7 +95,7 @@ pkgs.extend((
 if not env.check("SKIPKERNEL"):
     pkgs.extend((
 #"intel-compute-runtime",
-"kernel-default",
+"kernel-longterm",
 "kexec-tools",
 #"Mesa",
 #"Mesa-dri",

@@ -84,7 +84,7 @@ pkgs.extend((
 'plasma6-session',
 'plasma6-systemmonitor',
 #'plasma6-theme-stone',
-'plasma6-wayland-protocols',
+#'plasma6-wayland-protocols',
 #'plasma6-workspace-wayland',
 'plasma6-workspace',
 #'qt5-qdbusviewer',

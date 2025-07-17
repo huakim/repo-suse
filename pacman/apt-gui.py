@@ -16,9 +16,10 @@ if env.check('LIVEINSTALL'):
 
 qemu=(
     'libvirt',
-    'qemu-x86',
+    'qemu',
     'virt-manager',
     'xterm',
+    'qemu-ui-gtk'
 )
 
 if env.check('EXTRAINSTALL'):
@@ -29,8 +30,10 @@ if env.check('EXTRAINSTALL'):
         "remmina",
         "remmina-plugin-vnc",
         "remmina-plugin-rdp",
-        "wine-wow64",
+        "winetricks",
+	'wine-stable-wow64',
         "keepassxc", 
+        "waydroid-image",
         "gnome-disk-utility"
 ))
 

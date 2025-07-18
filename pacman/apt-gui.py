@@ -19,7 +19,12 @@ qemu=(
     'qemu',
     'virt-manager',
     'xterm',
-    'qemu-ui-gtk'
+    'qemu-ui-gtk',
+    'qemu-hw-display-virtio-gpu',
+    'qemu-hw-display-virtio-vga',
+    'qemu-hw-display-virtio-gpu-pci',
+    'qemu-vhost-user-gpu',
+    'qemu-spice'
 )
 
 if env.check('EXTRAINSTALL'):

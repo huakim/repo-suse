@@ -1,8 +1,0 @@
-[home_kimi_zoom]
-name=Zoom (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=0
-baseurl=https://download.opensuse.org/repositories/home:/kimi:/zoom/openSUSE_Tumbleweed/
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/kimi:/zoom/openSUSE_Tumbleweed/repodata/repomd.xml.key
-keeppackages=1

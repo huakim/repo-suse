@@ -95,7 +95,7 @@ pkgs.extend((
 if not env.check("SKIPKERNEL"):
     pkgs.extend((
 #"intel-compute-runtime",
-"kernel-longterm",
+"kernel-default",
 "kexec-tools",
 #"Mesa",
 #"Mesa-dri",

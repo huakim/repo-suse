@@ -39,6 +39,7 @@ alias chroot='systemd-nspawn -D '
 #chroot "$dir" /bin/bash
 #chroot "$dir" /bin/bash "/${idir}/pacman/aptat.sh"
 
+DOWNLOADONLY=yes INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-chroot.py" sed bash rpm coreutils
 DOWNLOADONLY=no INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-chroot.py" sed bash rpm coreutils
 
 if [[ "${1}" != chroot ]]

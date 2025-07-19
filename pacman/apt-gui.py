@@ -38,6 +38,9 @@ if env.check('EXTRAINSTALL'):
         "winetricks",
 	'wine-stable-wow64',
         "keepassxc", 
+        "anbox-modules",
+        "anbox-kmp",
+        "anbox-ueficert",
         "waydroid-image",
         "gnome-disk-utility"
 ))

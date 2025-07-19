@@ -1,4 +1,4 @@
-[repo-oss]
+[ix86-repo-oss]
 name=openSUSE-Tumbleweed-Oss
 enabled=1
 autorefresh=1

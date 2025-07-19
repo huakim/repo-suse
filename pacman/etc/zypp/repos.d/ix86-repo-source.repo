@@ -1,4 +1,4 @@
-[repo-source]
+[ix86-repo-source]
 name=openSUSE-Tumbleweed-Source
 enabled=0
 autorefresh=1

@@ -119,25 +119,37 @@ echo "PARTUUID=${EFI_PARTITION} /boot/efi vfat umask=077 0 2" >> "${smp}/fstab"
 efidir="${dir}/boot/efi"
 mkdir -p "${efidir}"
 mount /dev/disk/by-partuuid/$EFI_PARTITION "${efidir}"
-refind-install --root "${dir}"
-for i in refind BOOT
-do
-    confdir="${efidir}/EFI/${i}"
-    if [[ -d "${confdir}" ]]
-    then
-        conf="${confdir}/refind.conf"
-        icon="${confdir}/icons/os_suse.png"
-    fi
-done
+
+MACHINE_TYPE=`uname -m`
+
+if [[ "$MACHINE_TYPE" == "i686" ]]
+then
+MACHINE_TYPE=i386
+fi
+
+if [[ "$MACHINE_TYPE" == "i586" ]]
+then
+MACHINE_TYPE=i386
+fi
+
+if [[ "$MACHINE_TYPE" == "i486" ]]
+then
+MACHINE_TYPE=i386
+fi
+
+grub2-install --efi-directory "${efidir}" --boot-directory "${efidir}" --removable --target="${MACHINE_TYPE}-efi"
+conf="${efidir}/grub2/grub.cfg"
+
+ROOT_UUID=$(blkid | grep "$ROOT_PARTITION" | awk -F ' ' '{print $2}' | sed 's/UUID="//;s/"//')
+
 cat << EOF > "$conf"
 menuentry SuSE {
-icon ${icon}
-volume $ROOT_PARTITION
-loader $rootdir/boot/vmlinuz
-initrd $rootdir/boot/initrd
-options "${OPTIONS}"
+search --fs-uuid --set=root ${ROOT_UUID}
+linux ${rootdir}/boot/vmlinuz ${OPTIONS}
+initrd ${rootdir}/boot/initrd
 }
 EOF
+
 umount "${efidir}"
 umount "${dir}"
 fi

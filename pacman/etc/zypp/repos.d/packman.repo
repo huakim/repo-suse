@@ -7,3 +7,4 @@ gpgcheck=1
 gpgkey=https://ftp.fau.de/packman/suse/openSUSE_Tumbleweed/repodata/repomd.xml.key
 autorefresh=1
 priority=70
+keeppackages=1

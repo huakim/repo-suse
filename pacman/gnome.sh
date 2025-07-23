@@ -21,7 +21,7 @@ $gs $v webextensions-active "['Dark Mode']"
 desktop=org.gnome.desktop
 v=$desktop.background
 $gs $v picture-options 'none'
-$gs $v primary-color '#000000'
+$gs $v primary-color '#130018'
 
 $gs $desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'us+rus')]"
 
@@ -79,24 +79,21 @@ e=$v.gtk4-ding
 $gs $e icon-size 'small'
 
 e=$v.dash-to-dock
-$gs $e show-trash false
-$gs $e show-mounts-only-mounted false
-$gs $e show-mounts false
-$gs $e height-fraction 0.9
-$gs $e extend-height false
-$gs $e dock-position 'BOTTOM'
-$gs $e dock-fixed true
-$gs $e dash-max-icon-size 27
-$gs $e custom-theme-shrink true
-$gs $e apply-custom-theme true
-$gs $e animation-time 0
-#$gs $e animate-show-apps true
 $gs $e always-center-icons true
+$gs $e animation-time 0
+$gs $e apply-custom-theme true
 $gs $e autohide true
 $gs $e autohide-in-fullscreen true
-$gs $e intellihide-mode 'FOCUS_APPLICATION_WINDOWS'
+$gs $e custom-theme-shrink true
+$gs $e dash-max-icon-size 27
+$gs $e dock-fixed false
+$gs $e dock-position 'BOTTOM'
+$gs $e extend-height false
 $gs $e intellihide true
-#$gs $e intellihide-mode 'ALWAYS_ON_TOP'
+$gs $e intellihide-mode true
+$gs $e show-mounts false
+$gs $e show-mounts-only-mounted false
+$gs $e show-trash false
 
 v=org.nemo.preferences
 $gs $v show-hidden-files true

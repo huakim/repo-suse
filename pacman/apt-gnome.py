@@ -29,11 +29,11 @@ qemu=(
 'varia',
 'valent',
 #'ungoogled-chromium',
-'epiphany',
-'evolution',
-'seahorse',
+#'epiphany',
+#'evolution',
+'seahorse'
 #'waterfox-wayland'
-'Tangram'
+#'Tangram'
 )
 
 if env.check('EXTRAINSTALL'):
@@ -68,7 +68,7 @@ pkgs.extend((
 "gnome-shell-extension-appindicator",
 "gnome-shell-extension-unite",
 "gnome-shell-extension-dash-to-dock",
-#"gnome-shell-extension-desktop-icons",#gtk4-ding",
+"gnome-shell-extension-desktop-icons", #gtk4-ding",
 #"gnome-shell-extension-gsconnect",
 "gnome-system-monitor",
 #"nautilus-extension-terminal",
@@ -80,7 +80,7 @@ pkgs.extend((
 #"keepassxc",
 "libnma",
 "libgnomesu",
-"nemo",
+"nautilus",
 #"nautilus-gsconnect",
 "pavucontrol",
 "polkit-gnome",

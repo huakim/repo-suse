@@ -4,4 +4,4 @@ enabled=1
 autorefresh=1
 baseurl=http://download.opensuse.org/ports/i586/tumbleweed/repo/oss/
 path=/
-keeppackages=0
+keeppackages=1

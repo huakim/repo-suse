@@ -30,7 +30,7 @@ if env.check("EXTRAINSTALL"):
 "okular",
 "neochat",
 "webapp-manager",
-"zapzap",
+#"zapzap",
 'plasma6-session-x11',
 'kwin6-x11',
 'remmina-plugin-kwallet'
@@ -69,7 +69,7 @@ pkgs.extend((
 'kio-extras',
 'kio-fuse',
 #'kmenuedit6',
-'konsole',
+'xfce4-terminal',
 'kwin6',
 'pam_kwallet6',
 'plasma6-desktop',
@@ -98,12 +98,12 @@ pkgs.extend((
 'xdg-desktop-portal-kde'
 ))
 
-pkgs.extend((
+#pkgs.extend((
 #'kmail-account-wizard',
 #'qt5-qtwebengine-devtools',
-'falkon',
+#'falkon',
 #'kmail'
-))
+#))
 
 if __name__ == '__main__':
     main()

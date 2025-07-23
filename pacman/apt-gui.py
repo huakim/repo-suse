@@ -36,12 +36,14 @@ if env.check('EXTRAINSTALL'):
         "remmina-plugin-vnc",
         "remmina-plugin-rdp",
         "winetricks",
-	'wine-stable-wow64',
+	'wine-stable',
         "keepassxc", 
         "anbox-modules",
         "anbox-kmp",
         "anbox-ueficert",
         "waydroid-image",
+        "ungoogled-chromium",
+        "webapp-manager",
         "gnome-disk-utility"
 ))
 

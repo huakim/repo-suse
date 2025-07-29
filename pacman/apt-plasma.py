@@ -15,12 +15,6 @@ pkgs=j.pkgs
 main=j.main
 env=j.env
 
-if env.check("LIVEINSTALL"):
-    pkgs.extend((
-"calamares",
-))
-
-
 if env.check("EXTRAINSTALL"):
     pkgs.extend((
 #"plasma6-mobile",

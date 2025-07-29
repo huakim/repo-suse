@@ -109,7 +109,7 @@ f'gstreamer-plugins-{a}{b}' for a, b in zip([
 ], ['', '-32bit'])
 ],
 'pipewire-aptx',
-'libavcodec61',
+#'libavcodec61',
 #'libavcodec60',
 'libfdk-aac2',
 'dav1d',

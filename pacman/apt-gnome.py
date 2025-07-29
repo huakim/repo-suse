@@ -94,6 +94,7 @@ pkgs.extend((
 #'thunar',
 #'thunar-plugin-archive',
 #'thunar-volman',
+"gnome-keyring-pam",
 "xfce4-terminal",
 "xdg-desktop-portal-gtk"
 ))

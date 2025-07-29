@@ -38,10 +38,10 @@ if env.check('EXTRAINSTALL'):
         "winetricks",
 	'wine-stable',
         "keepassxc", 
-        "anbox-modules",
-        "anbox-kmp",
-        "anbox-ueficert",
-        "waydroid-image",
+#        "anbox-modules",
+#        "anbox-kmp",
+#        "anbox-ueficert",
+#        "waydroid-image",
         "ungoogled-chromium",
         "webapp-manager",
         "gnome-disk-utility"
@@ -98,13 +98,16 @@ pkgs.extend((
 #codecs
 codecs=(
 'ffmpeg',
-'gstreamer-plugins-good',
-'gstreamer-plugins-good-extra',
-'gstreamer-plugins-bad',
-'gstreamer-plugins-base',
-'gstreamer-plugins-ugly',
-'gstreamer-plugins-libav',
-'gstreamer-plugin-openh264',
+*[
+f'gstreamer-plugins-{a}{b}' for a, b in zip([
+'good',
+'good-extra',
+'bad',
+'base',
+'ugly',
+'libav'
+], ['', '-32bit'])
+],
 'pipewire-aptx',
 'libavcodec61',
 #'libavcodec60',
@@ -112,6 +115,7 @@ codecs=(
 'dav1d',
 )
 
+pkgs.extend(codecs)
 
 if __name__ == '__main__':
     main()

@@ -89,6 +89,7 @@ link .config/VSCodium
 clone .config/VSCodium .config/VSCode
 clone .config/VSCodium .config/Code
 link .config/nekoray
+clone .config/nekoray .config/Throne
 link .config/chromium
 link .config/clangd
 link .config/azahar-emu

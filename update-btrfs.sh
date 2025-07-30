@@ -18,7 +18,7 @@ if mount /dev/disk/by-uuid/"$j" "${updatedir}"
 then
     if [[ -d "${updatedir}/@" ]]
     then
-        tmpdir="$(mktemp -d "${updatedir}/.Trash_$(date +"%Y-%m-%d_%H.%M.%S.%8N_%a")_XXXXXXXXXXXXXXXXXXXXXXXXXXXXX")"
+        tmpdir="$(mktemp -d "${updatedir}/.Trash_$(date +"%Y-%m-%d_%H.%M.%S.%8N_%a")_XXXX")"
         if btrfs sub cr "${tmpdir}/@example"
         then
                 mv "${updatedir}/@" "${tmpdir}/@"

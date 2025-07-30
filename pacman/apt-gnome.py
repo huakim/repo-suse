@@ -71,7 +71,7 @@ pkgs.extend((
 "gnome-shell-extension-desktop-icons", #gtk4-ding",
 #"gnome-shell-extension-gsconnect",
 "gnome-system-monitor",
-#"nautilus-extension-terminal",
+"nautilus-extension-terminal",
 "gnome-themes-extras",
 "gnome-tweaks",
 "gvfs",
@@ -95,7 +95,7 @@ pkgs.extend((
 #'thunar-plugin-archive',
 #'thunar-volman',
 "gnome-keyring-pam",
-"xfce4-terminal",
+"gnome-terminal",
 "xdg-desktop-portal-gtk"
 ))
 

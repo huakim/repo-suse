@@ -29,12 +29,12 @@ v=$desktop.interface
 $gs $v clock-show-seconds true
 $gs $v color-scheme 'prefer-dark'
 $gs $v cursor-theme 'Adwaita'
-$gs $v document-font-name 'Ubuntu Medium 11'
+$gs $v document-font-name 'Serif 11'
 $gs $v enable-animations false
-$gs $v font-name 'Ubuntu 11'
+$gs $v font-name 'Open Sans 11'
 $gs $v gtk-theme 'Adwaita-dark'
 $gs $v icon-theme 'Adwaita'
-$gs $v monospace-font-name 'Ubuntu Mono 11'
+$gs $v monospace-font-name 'Roboto Mono 12'
 
 peripherals=$desktop.peripherals
 v=$peripherals.keyboard

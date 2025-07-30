@@ -30,7 +30,7 @@ qemu=(
 if env.check('EXTRAINSTALL'):
     pkgs.extend(qemu)
     pkgs.extend((
-        "nekoray", 
+        "Throne", 
         "code", 
         "remmina",
         "remmina-plugin-vnc",
@@ -57,6 +57,7 @@ pkgs.extend((
 #"libopenh264-7",
 "pipewire",
 "pipewire-pulseaudio",
+'ubuntu-fonts',
 #"pipewire-media-session",
 #"plymouth",
 "pulseaudio-utils",

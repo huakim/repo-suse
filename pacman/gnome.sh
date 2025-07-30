@@ -70,7 +70,7 @@ $gs $v night-light-schedule-from 0
 $gs $v night-light-schedule-to 0
 
 v=org.gnome.shell
-$gs $v enabled-extensions "['Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'gtk4-ding@smedius.gitlab.com', 'gsconnect@andyholmes.github.io']"
+$gs $v enabled-extensions "['Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io']"
 $gs $v favorite-apps "[]"
 
 v=$v.extensions

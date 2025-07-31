@@ -75,8 +75,14 @@ $gs $v favorite-apps "[]"
 
 v=$v.extensions
 e=$v.gtk4-ding
-#$gs $e free-position-icons false
 $gs $e icon-size 'small'
+
+
+e=$v.ding
+$gs $e show-home false
+$gs $e show-trash false
+$gs $e show-volumes false
+$gs $e add-volumes-opposite false
 
 e=$v.dash-to-dock
 $gs $e always-center-icons true

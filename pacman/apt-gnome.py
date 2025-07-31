@@ -31,6 +31,8 @@ qemu=(
 #'ungoogled-chromium',
 #'epiphany',
 #'evolution',
+"fractal",
+"secrets",
 'seahorse'
 #'waterfox-wayland'
 #'Tangram'
@@ -84,8 +86,8 @@ pkgs.extend((
 #"nautilus-gsconnect",
 "pavucontrol",
 "polkit-gnome",
-"QGnomePlatform-qt5",
-"QGnomePlatform-qt6",
+#"QGnomePlatform-qt5",
+#"QGnomePlatform-qt6",
 #"redshift",
 #"remmina",
 #"remmina-plugins-rdp",
@@ -94,6 +96,8 @@ pkgs.extend((
 #'thunar',
 #'thunar-plugin-archive',
 #'thunar-volman',
+"qt6-platformtheme-gtk3",
+"libqt5-qtbase-platformtheme-gtk3",
 "gnome-keyring-pam",
 "gnome-terminal",
 "xdg-desktop-portal-gtk"

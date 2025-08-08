@@ -1,6 +1,6 @@
 #!/bin/sh
 user="${DEFAULTUSER:-asus}"
-password='$6$iA6fDx4yzWKxy7tM$JShiydfJpce4mO28LD8pECBWFLjSG.ZMrqXFGS8pztB9T6I72NzZNBJ9PS08/xw2QLkJoJ92tAGqPZxSVv8xn1'
+password='$6$PGb.rLoofp3O3Y5a$.s0O0U2qeP3N5EIV/WawfM5.kgd9EWHY9gJxGZxBT60uY9/4qjDXtm6NB80l0OunLuvgOsc673CUKnTNoL/Qr0'
 password="${DEFAULTPASSWORD:-$password}"
 admin='wheel'
 root='root'

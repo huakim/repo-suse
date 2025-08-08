@@ -1,9 +1,8 @@
 [Java_bootstrap]
 name=Attic project for packages that are needed to bootstrap java without java (openSUSE_Tumbleweed)
-enabled=0
+enabled=1
 autorefresh=0
 baseurl=https://download.opensuse.org/repositories/Java:/bootstrap/openSUSE_Tumbleweed/
-type=rpm-md
 gpgcheck=1
 gpgkey=https://download.opensuse.org/repositories/Java:/bootstrap/openSUSE_Tumbleweed/repodata/repomd.xml.key
 keeppackages=1

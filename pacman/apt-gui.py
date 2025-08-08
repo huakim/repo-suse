@@ -30,7 +30,7 @@ qemu=(
 if env.check('EXTRAINSTALL'):
     pkgs.extend(qemu)
     pkgs.extend((
-        "Throne", 
+        "throne", 
         "code", 
         "remmina",
         "remmina-plugin-vnc",

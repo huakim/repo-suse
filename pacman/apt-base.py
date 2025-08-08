@@ -25,7 +25,7 @@ if env.check('EXTRAINSTALL'):
     pkgs.extend((
 'java',
 'java-devel',
-'osckit',
+#'osckit',
 'luajit',
 'gcc-c++',
 'nim',

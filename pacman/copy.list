@@ -8,8 +8,8 @@ etc/modules-load.d
 etc/dracut.conf.d
 etc/refractainstaller.conf
 etc/refractasnapshot.conf
-etc/sddm.conf.d
 etc/skel
+etc/sddm.conf.d
 etc/ssh/sshd_config.d
 etc/sysctl.d
 etc/systemd/logind.conf

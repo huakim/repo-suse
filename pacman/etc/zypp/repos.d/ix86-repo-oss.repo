@@ -1,7 +1,8 @@
 [ix86-repo-oss]
 name=openSUSE-Tumbleweed-Oss
 enabled=0
-autorefresh=1
+autorefresh=0
 baseurl=http://download.opensuse.org/ports/i586/tumbleweed/repo/oss/
 path=/
+type=rpm-md
 keeppackages=1

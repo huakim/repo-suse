@@ -2,16 +2,20 @@
     {
         "data": [
             {
+                "allowDdcCi": true,
                 "allowSdrSoftwareBrightness": false,
                 "autoRotation": "InTabletMode",
                 "brightness": 1,
                 "colorPowerTradeoff": "PreferEfficiency",
                 "colorProfileSource": "sRGB",
                 "connectorName": "eDP-1",
+                "detectedDdcCi": false,
                 "edidHash": "7a4f91f3a5880e1afc499d9fa580304b",
                 "edidIdentifier": "STA 24010 0 4 2021 0",
+                "edrPolicy": "always",
                 "highDynamicRange": false,
                 "iccProfilePath": "",
+                "maxBitsPerColor": 0,
                 "mode": {
                     "height": 768,
                     "refreshRate": 60000,
@@ -23,6 +27,7 @@
                 "sdrBrightness": 200,
                 "sdrGamutWideness": 0,
                 "transform": "Normal",
+                "uuid": "970fe673-e82c-41c5-b5c6-b4d4dbf03629",
                 "vrrPolicy": "Automatic",
                 "wideColorGamut": false
             },
@@ -88,7 +93,8 @@
                             "x": 0,
                             "y": 0
                         },
-                        "priority": 0
+                        "priority": 0,
+                        "replicationSource": ""
                     }
                 ]
             },
@@ -102,7 +108,8 @@
                             "x": 0,
                             "y": 0
                         },
-                        "priority": 0
+                        "priority": 0,
+                        "replicationSource": ""
                     }
                 ]
             },
@@ -116,7 +123,8 @@
                             "x": 0,
                             "y": 0
                         },
-                        "priority": -1
+                        "priority": -1,
+                        "replicationSource": ""
                     },
                     {
                         "enabled": true,
@@ -125,7 +133,8 @@
                             "x": 0,
                             "y": 0
                         },
-                        "priority": 0
+                        "priority": 0,
+                        "replicationSource": ""
                     }
                 ]
             },
@@ -139,7 +148,8 @@
                             "x": 0,
                             "y": 0
                         },
-                        "priority": 0
+                        "priority": 0,
+                        "replicationSource": ""
                     }
                 ]
             }

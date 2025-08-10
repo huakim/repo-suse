@@ -9,9 +9,11 @@ scaling-factor=1
 text-scaling-factor=1.0
 gtk-theme='Yaru-MATE-dark'
 clock-show-seconds=true
-document-font-name='Ubuntu Medium 11'
-monospace-font-name='Ubuntu Mono 11'
+document-font-name='Serif 11'
+monospace-font-name='Roboto Mono 12'
 color-scheme='prefer-dark'
+cursor-blink=true
+cursor-blink-time=1000
 
 [org/gnome/desktop/sound]
 theme-name='ocean'
@@ -22,7 +24,7 @@ theme='Adwaita'
 
 [org/gnome/desktop/background]
 picture-options='none'
-primary-color='#000000'
+primary-color='#130018'
 
 [org/gnome/desktop/input-sources]
 sources=[('xkb', 'us'), ('xkb', 'us+rus')]

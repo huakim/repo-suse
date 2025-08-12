@@ -4,7 +4,7 @@ import re
 import subprocess
 import sys
 relver=re.compile('^(.*releasever.*)$', re.MULTILINE)
-relatr=re.compile('.*=\s*(.*)')
+relatr=re.compile('.*=\\s*(.*)')
 
 def chstr(a):
     if a == None or a == False or a == 0 or a == '':
@@ -27,11 +27,16 @@ env=type('env',(), {'__call__': staticmethod(os.environ.get),
 
 pkgs = []
 
-def ZYPPER_CONFIG():
+
+def sh_opt(value):
+    return '"'+value.replace('\\', '\\\\').replace('"','\\"').replace('`','\\`').replace('$', '\\$')+'"'
+
+def ZYPPER_CONFIG(new_recommends=False):
         INSTALLROOT=env('INSTALLROOT')
         INTERACTIVE=check(env('INTERACTIVE'))
         QUIET=env('QUIET')
         NOGPGCHECK=check(env('NOGPGCHECK'))
+        INSTALL_NEW_RECOMMENDS=check(env('INSTALL_NEW_RECOMMENDS'))
         RECOMMENDS=env('RECOMMENDS')
         DOCS=env('DOCS')
         DOWNLOADONLY=env('DOWNLOADONLY')
@@ -59,20 +64,28 @@ def ZYPPER_CONFIG():
             flags.extend(('--cache-dir', CACHEDIR))
 #        if chstr(LIBDIR):
 #            flags.extend(('--setopt','persistdir='+LIBDIR))
-        flags.append('install')
+        if new_recommends:
+            flags.append('install-new-recommends')
+        else:
+            flags.append('install')
         if not INTERACTIVE:
-            flags.extend(('--no-confirm',
+            if not new_recommends:
+                flags.extend((
+                '--no-confirm',
+                '--auto-agree-with-licenses'))
+            flags.extend((
             '--allow-downgrade',
             '--allow-name-change',
             '--allow-arch-change',
-            '--allow-vendor-change',
-            '--auto-agree-with-licenses'))
+            '--allow-vendor-change'))
         if check(NOGPGCHECK):
-            flags.append('--allow-unsigned-rpm')
+            if not new_recommends:
+                flags.append('--allow-unsigned-rpm')
    #     if check(DEBUGONLY):
    #         flags.append('--dry-run')
         if check(RECOMMENDS):
-            flags.append('--recommends')
+            if not new_recommends:
+                flags.append('--recommends')
         else:
             flags.append('--no-recommends')
         flags.append('--download')
@@ -82,6 +95,11 @@ def ZYPPER_CONFIG():
             flags.append('in-advance')
         if check(FORCE):
             flags.extend(('--force', '--force-resolution'))
+        if not new_recommends:
+            if INSTALL_NEW_RECOMMENDS:
+                return [ 'bash', '-c', ' '.join(
+                    [sh_opt(i) for i in flags]) + ' "${@}" ; ' + ' '.join(
+                    [sh_opt(i) for i in ZYPPER_CONFIG(True)]) ]
         return flags
 
 def DNF_CONFIG():

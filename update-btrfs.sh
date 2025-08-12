@@ -29,8 +29,8 @@ then
 		mount /dev/disk/by-uuid/"$j" "${bootstrapdir}" -o subvol=@
 		mkdir -p "${bootstrapdir}/home" ||:
 		mount /dev/disk/by-uuid/"$j" "${bootstrapdir}/home" -o subvol=@home
-                FSTAB=/etc/fstab
-                INSTALL_NEW_RECOMMENDS=yes
+                export FSTAB=/etc/fstab
+                export INSTALL_NEW_RECOMMENDS=yes
                 . ./bootstrap.sh "${variant}"
                 systemd-nspawn -D "${bootstrapdir}" /bin/bash -x -c 'mount -o remount,rw /sys/fs/selinux; restorecon -Rv /home/*'
                 umount "${bootstrapdir}/home"

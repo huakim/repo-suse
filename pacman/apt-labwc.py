@@ -6,23 +6,21 @@ env=j.env
 
 if env.check("EXTRAINSTALL"):
     pkgs.extend((
-"waterfox-kde",
-"keepassxc",
+"secrets",
 "transmission-gtk",
 "xreader",
-"valent"
+"valent",
+"seahorse",
+"fractal"
 ))
 
 pkgs.extend((
-#"adwaita-qt5",
-#"adwaita-qt6",
+"adwaita-qt5",
+"adwaita-qt6",
 "adwaita-xfce-icon-theme",
 "NetworkManager-gnome",
 "dbus-1-daemon",
 "geany",
-"gtk2-metatheme-adwaita",
-"gtk3-metatheme-adwaita",
-#"gtk4-metatheme-adwaita",
 #"epiphany",
 #"evolution",
 "gnome-themes-extras",
@@ -34,14 +32,11 @@ pkgs.extend((
 'polkit-gnome',
 "menulibre",
 "mugshot",
-"kvantum-manager",
-"kvantum-qt5",
-"kvantum-qt6",
-#"qt5ct",
-#"qt6ct",
+"qt5ct",
+"qt6ct",
 "eog",
-"vlc",
-"sddm-qt6",
+"parole",
+"lightdm-slick-greeter",
 "sfwbar",
 "thunar",
 "thunar-archive-plugin",
@@ -59,7 +54,11 @@ pkgs.extend((
 "xfce4-screenshooter",
 "xfce4-taskmanager",
 "xfwm4",
-"xwayland"
+"xwayland",
+'gnome-keyring-pam',
+'gtk4-metatheme-yaru-mate',
+'gtk3-metatheme-yaru-mate',
+'gtk2-metatheme-yaru-mate'
 ))
 
 if __name__ == '__main__': 

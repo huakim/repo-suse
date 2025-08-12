@@ -3,6 +3,7 @@
 smp="$(realpath $(dirname ${0}))"
 cd "${smp}"
 dir="${smp}/bootstrap-${1}"
+export INSTALLATION_VARIANT="${1}"
 #echo "INSTALLATION DIRECTORY: ${dir}"
 
 if ! [ -d "${dir}" ]; then
@@ -39,6 +40,8 @@ alias chroot='systemd-nspawn -D '
 #chroot "$dir" /bin/bash
 #chroot "$dir" /bin/bash "/${idir}/pacman/aptat.sh"
 
+
+
 DOWNLOADONLY=yes INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-chroot.py" sed bash rpm coreutils
 DOWNLOADONLY=no INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-chroot.py" sed bash rpm coreutils
 
@@ -67,9 +70,9 @@ i "${dir}/${idir}" "${smp}"
 #chroot . /bin/bash "/extra/pacman/apt-${1}.py"
 #chroot "${dir}" /bin/bash
 
-chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/copy.sh"
-chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/setup.sh"
-chroot "${dir}" /usr/bin/env "DEFAULTUSER=${DEFAULTUSER}" "USEDEFAULTS=yes" bash "/${idir}/pacman/user.sh"
+chroot "${dir}" /usr/bin/env "$(env)" bash "/${idir}/pacman/copy.sh"
+chroot "${dir}" /usr/bin/env "$(env)" bash "/${idir}/pacman/setup.sh"
+chroot "${dir}" /usr/bin/env "$(env)" "DEFAULTUSER=${DEFAULTUSER}" "USEDEFAULTS=yes" bash "/${idir}/pacman/user.sh"
 
 #if [ -n "${INSTALL_NEW_RECOMMENDS}" ]; then
 #  chroot "${dir}" /usr/bin/env zypper -C "${smp}/pacman/var/cache/zypp" --auto-agree-with-licenses --non-interactive -vvv --gpg-auto-import-keys install-new-recommends

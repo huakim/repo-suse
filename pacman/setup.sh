@@ -17,6 +17,16 @@ uP(){
     fi
 }
 
+if [[ "${INSTALLATION_VARIANT}" == labwc ]]; then
+  mkdir -pv /etc/environment.d
+  cat << EOF > /etc/environment.d/theme.conf
+QT_SCALE_FACTOR=0.9
+QT_FONT_DPI=96
+QT_QPA_PLATFORMTHEME=qt6ct
+GTK_THEME=Yaru-MATE-dark
+EOF
+fi
+
 #localectl set-locale en_US.UTF-8
 #localectl set-keymap us
 

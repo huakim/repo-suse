@@ -83,6 +83,7 @@ pkgs.extend((
 #'grub2-efi',
 #'grub2',
 #'squashfs'
+"patterns-base-selinux",
 "selinux-policy-targeted",
 "selinux-targeted-setup",
 "selinux-tools",

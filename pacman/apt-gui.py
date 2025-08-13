@@ -37,6 +37,7 @@ if env.check('EXTRAINSTALL'):
         "remmina-plugin-rdp",
         "winetricks",
 	'wine-stable',
+        "plymouth-dracut",
 #        "anbox-modules",
 #        "anbox-kmp",
 #        "anbox-ueficert",

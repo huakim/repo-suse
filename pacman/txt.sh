@@ -60,7 +60,7 @@ link ".android"
 link ".anydesk"
 link "perl5"
 link rpmbuild
-link Androids
+link Android
 link .cargo
 link .npm
 #link .cache/accountwizard

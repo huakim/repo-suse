@@ -94,7 +94,9 @@ def ZYPPER_CONFIG(new_recommends=False):
         else:
             flags.append('in-advance')
         if check(FORCE):
-            flags.extend(('--force', '--force-resolution'))
+            flags.append('--force-resolution')
+        else:
+            flags.append('--no-force-resolution')
         if not new_recommends:
             if INSTALL_NEW_RECOMMENDS:
                 return [ 'bash', '-c', ' '.join(

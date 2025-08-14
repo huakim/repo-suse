@@ -2,6 +2,7 @@
 smp="$(realpath $(dirname ${0}))"
 cd "${smp}"
 dir="${smp}/bootstrap-${1}"
+(
 mkdir -p "${dir}"
 #ROOT_PARTITION
 #SWAP_PARTITION
@@ -20,7 +21,7 @@ t="$(mktemp -d /tmp/XXXXXXXXXXXXXXXXXXXXXXXXXXXXX)"
 (
 chmod 700 "$t"
 rm "${smp}/fstab"
-echo "OPTIONS=\"\${OPTIONS} root=PARTUUID=${ROOT_PARTITION} psi=1\"" > "${smp}/options"
+echo "OPTIONS=\"\${OPTIONS} root=PARTUUID=${ROOT_PARTITION} mitigations=auto security=selinux selinux=1 acpi_osi=Linux psi=1 intel_iommu=on\"" > "${smp}/options"
 
 if [[ -n "${SWAP_PARTITION}" ]]
 then
@@ -145,7 +146,7 @@ ROOT_UUID=$(blkid | grep "$ROOT_PARTITION" | awk -F ' ' '{print $2}' | sed 's/UU
 cat << EOF > "$conf"
 menuentry SuSE {
 search --fs-uuid --set=root ${ROOT_UUID}
-linux ${rootdir}/boot/vmlinuz ${OPTIONS}
+linux ${rootdir}/boot/vmlinuz ${OPTIONS} root=UUID="${ROOT_UUID}"
 initrd ${rootdir}/boot/initrd
 }
 EOF
@@ -163,3 +164,6 @@ mv @/home @home
 fi
 
 umount "$t/root" "$t/extra"
+)
+umount "${dir}"
+rmdir "${dir}" ||:

@@ -1,6 +1,6 @@
 [repo-oss]
 enabled=1
 autorefresh=0
-baseurl=http://download.opensuse.org/tumbleweed/repo/oss
 type=rpm-md
 keeppackages=1
+baseurl=https://cdn.opensuse.org/tumbleweed/repo/oss

@@ -1,7 +1,7 @@
 [packman]
 name=Packman
 enabled=1
-autorefresh=0
+autorefresh=1
 baseurl=https://ftp.fau.de/packman/suse/openSUSE_Tumbleweed/
 type=rpm-md
 priority=70

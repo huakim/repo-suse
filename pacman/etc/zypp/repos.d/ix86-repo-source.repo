@@ -1,0 +1,7 @@
+[ix86-repo-source]
+name=openSUSE-Tumbleweed-Source
+enabled=0
+autorefresh=0
+baseurl=https://cdn.opensuse.org/ports/i586/source/tumbleweed/repo/oss/
+path=/
+keeppackages=1

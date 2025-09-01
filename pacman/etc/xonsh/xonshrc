@@ -1,0 +1,58 @@
+#!/usr/bin/python3
+# XONSH WEBCONFIG START
+import os
+from datetime import datetime
+$PATH="/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:/usr/games:/usr/local/games"
+
+def _PROMPT_altr():
+    try:
+        return $PROMPT_ALTERNATIVE
+    except KeyError:
+        try:
+             return PROMPT_ALTERNATIVE
+        except NameError:
+             return 'twoline'
+
+def _PROMPT_func():
+    is_root = os.geteuid() == 0
+    # Get the current time in the desired format
+    time = datetime.now().strftime('%d-%m-%Y %H:%M:%S')
+    if _PROMPT_altr() == 'twoline':
+      ret = '\n{GREEN}┌──({RESET}{BOLD_BLUE}{user}@{hostname}{RESET} {BOLD_DEFAULT}time{RESET}{GREEN})-[{RESET}{BOLD_DEFAULT}{cwd}{RESET}{GREEN}]\n└─{RESET}{BOLD_BLUE}${RESET} '
+    else:
+      ret = '{BOLD_BLUE}{user}@{hostname}{RESET}:{BOLD_GREEN}{cwd}{RESET}$ '
+    ret = ret.replace('time', time)
+    if is_root:
+        ret = ret.replace('BLUE', 'RED').replace('GREEN', 'INTENSE_BLUE').replace('$', '#')
+    return ret
+
+$PROMPT = _PROMPT_func()
+
+aliases['aboutos']='fastfetch @($args)'
+aliases['aboutoscolor']='fastfetch @($args) | lolcat'
+#aliases['bashrc']='source ~/.xonshrc'
+aliases['diff']='diff --color=auto @($args)'
+aliases['egrep']='egrep --color=auto @($args)'
+aliases['fgrep']='fgrep --color=auto @($args)'
+aliases['grep']='grep --color=auto @($args)'
+aliases['ip']='ip --color=auto @($args)'
+aliases['l']='ls --color=auto -CF @($args)'
+aliases['la']='ls --color=auto -A @($args)'
+aliases['ll']='ls --color=auto -l @($args)'
+aliases['ls']='ls --color=auto @($args)'
+aliases['off']='sudo poweroff @($args)'
+aliases['reboot']='sudo reboot @($args)'
+aliases['start-jupyter']='source jupyterenv/bin/activate && jupyter notebook @($args)'
+#aliases['sudo']='WAYLAND_DISPLAY="$XDG_RUNTIME_DIR/$WAYLAND_DISPLAY" sudo @($args)'
+aliases['update']='sudo dnf --refresh makecache'
+aliases['upgrade']='sudo dnf update -y'
+
+def _git_update(args):
+    if (len(args) >= 1):
+      message = args[0]
+    else:
+      message = 'update'
+    os.system(f'git add --all; git commit -m {message}; git push;')
+aliases['git_update']=_git_update
+
+# XONSH WEBCONFIG END

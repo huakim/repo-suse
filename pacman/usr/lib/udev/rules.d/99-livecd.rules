@@ -1,0 +1,10 @@
+# Ignore the live media block devices in udisks2
+
+# The loop device for /run/initramfs/squashfs_container
+KERNEL=="loop0", ENV{UDISKS_IGNORE}="1"
+
+# The loop device for /run/rootfsbase
+KERNEL=="loop1", ENV{UDISKS_IGNORE}="1"
+
+# The Live CD itself (/run/initramfs/live)
+ENV{ID_FS_LABEL}=="*openSUSE*Live*", ENV{UDISKS_IGNORE}="1"

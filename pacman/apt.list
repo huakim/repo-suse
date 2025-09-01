@@ -1,0 +1,12 @@
+etc/dnf
+etc/zypp
+etc/pki/rpm-gpg
+var/cache/libdnf5
+var/cache/dnf
+etc/yum.repos.d
+var/cache/zypp
+var/cache/apt
+var/lib/apt
+
+
+

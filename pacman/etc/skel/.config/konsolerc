@@ -1,0 +1,14 @@
+MenuBar=Disabled
+
+[Desktop Entry]
+DefaultProfile=Default Profile.profile
+
+[General]
+ConfigVersion=1
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[UiSettings]
+ColorScheme=

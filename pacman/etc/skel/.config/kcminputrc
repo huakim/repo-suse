@@ -1,0 +1,12 @@
+[Keyboard]
+RepeatDelay=250
+RepeatRate=65
+
+[Libinput][1267][12581][ASUE1201:00 04F3:3125 Mouse]
+PointerAcceleration=-0.200
+
+[Libinput][1267][12581][ASUE1201:00 04F3:3125 Touchpad]
+DisableEventsOnExternalMouse=true
+Enabled=true
+PointerAcceleration=1.000
+PointerAccelerationProfile=2

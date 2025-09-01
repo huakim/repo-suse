@@ -1,0 +1,165 @@
+xkb_symbols "jp_ru" {
+	name[group1]="Russian (japanese phonetic)";
+	key <TLDE> { 
+		type[group1]= "PC_ALT_LEVEL2",
+		symbols[Group1] = [ ?,	?,	NoSymbol ]
+	};
+	key <AE01> { 		[ 1,	exclam ] };
+	key <AE02> { 		[ 2,	quotedbl ] };
+	key <AE03> { 		[ 3,	numbersign ] };
+	key <AE04> { 		[ 4,	dollar ] };
+	key <AE05> { 		[ 5,	percent ] };
+	key <AE06> { 		[ 6,	ampersand ] };
+	key <AE07> { 		[ 7,	apostrophe ] };
+	key <AE08> { 		[ 8,	parenleft ] };
+	key <AE09> { 		[ 9,	parenright ] };
+	key <AE10> { 		[ 0,	asciitilde ] };
+	key <AE11> { 		[ minus,	equal ] };
+	key <AE12> { 		[ asciicircum,	asciitilde ] };
+	key <BKSP> { 		[ BackSpace,	BackSpace ] };
+	key <TAB> { 		[ Tab,	ISO_Left_Tab ] };
+	key <AD01> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AD02> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AD03> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AD04> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AD05> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AD06> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AD07> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AD08> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AD09> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AD10> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AD11> { 
+		symbols[Group1] = [ ?,	?,	at,	grave ]
+	};
+	key <AD12> { 		[ ?,	?,	bracketleft,	braceleft ] };
+	key <BKSL> { 
+		symbols[Group1] = [ ?,	?,	bracketright,	braceright ]
+	};
+	key <CAPS> { 		[ Eisu_toggle,	Caps_Lock ] };
+	key <AC01> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AC02> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AC03> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AC04> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AC05> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AC06> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AC07> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AC08> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AC09> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AC10> { 
+		symbols[Group1] = [ ?,	?,	semicolon,	plus ]
+	};
+	key <AC11> { 		[ ?,	?,	colon,	asterisk ] };
+	key <RTRN> { 		[ Return ] };
+	key <LFSH> { 
+		type[group1]= "PC_ALT_LEVEL2",
+		symbols[Group1] = [ Shift_L,	ISO_Next_Group ]
+	};
+	key <AB01> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AB02> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AB03> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AB04> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AB05> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AB06> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AB07> { 
+		type[group1]= "ALPHABETIC",
+		symbols[Group1] = [ ?,	? ]
+	};
+	key <AB08> { 		[ comma,	less ] };
+	key <AB09> { 		[ period,	greater ] };
+	key <AB10> { 		[ slash,	question ] };
+	key <RTSH> { 
+		type[group1]= "PC_ALT_LEVEL2",
+		symbols[Group1] = [ Shift_R,	ISO_Next_Group ]
+	};
+	key <LCTL> { 		[ Control_L ] };
+	key <LWIN> { 
+		symbols[Group1] = [ Super_L ]
+	};
+	key <LALT> { 		[ Alt_L,	ISO_Next_Group ] };
+	key <SPCE> { 		[ space ] };
+	key <RALT> { 
+		type[group1]= "TWO_LEVEL",
+		symbols[Group1] = [ Alt_R,	ISO_Next_Group ]
+	};
+	key <RWIN> { 		[ Super_R ] };
+	key <COMP> { 		[ Menu ] };
+	key <RCTL> { 
+		type[group1]= "ONE_LEVEL",
+		symbols[Group1] = [ ISO_Level3_Shift ]
+	};
+};

@@ -1,0 +1,9 @@
+[home_juzbun_gram]
+name=Telegram related stuffs
+enabled=1
+autorefresh=1
+baseurl=https://cdn.opensuse.org/repositories/home:/juzbun:/gram/openSUSE_Tumbleweed/
+type=rpm-md
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/home:/juzbun:/gram/openSUSE_Tumbleweed/repodata/repomd.xml.key
+keeppackages=1

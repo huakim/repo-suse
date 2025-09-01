@@ -1,0 +1,4 @@
+#!/bin/sh
+Xephyr "${1}" -screen 1024x768 & inotifywait --timeout 9 /tmp/.X11-unix/
+XDG_SESSION_TYPE=x11 DESKTOP_SESSION="" DISPLAY="${1}" WAYLAND_DISPLAY= \
+    MUTTER_DEBUG_DUMMY_MODE_SPECS=1024x768 XDG_CURRENT_DESKTOP=GNOME  dbus-run-session gnome-shell --x11

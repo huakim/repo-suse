@@ -1,0 +1,10 @@
+[packman]
+name=Packman
+enabled=1
+autorefresh=1
+baseurl=https://ftp.fau.de/packman/suse/openSUSE_Tumbleweed/
+type=rpm-md
+priority=70
+gpgcheck=1
+gpgkey=https://ftp.fau.de/packman/suse/openSUSE_Tumbleweed/repodata/repomd.xml.key
+keeppackages=1

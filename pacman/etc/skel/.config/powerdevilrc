@@ -1,0 +1,14 @@
+[AC][SuspendAndShutdown]
+AutoSuspendAction=0
+LidAction=0
+
+[Battery][SuspendAndShutdown]
+AutoSuspendAction=0
+LidAction=0
+
+[BatteryManagement]
+BatteryCriticalLevel=4
+BatteryLowLevel=7
+
+[LowBattery][SuspendAndShutdown]
+AutoSuspendAction=0

@@ -1,0 +1,8 @@
+etc/sysconfig/displaymanager
+usr/lib/udev/rules.d/99-livecd.rules
+etc/calamares/settings.conf
+etc/calamares/modules
+usr/lib64/calamares/modules/linkoverlay/main.py
+usr/lib64/calamares/modules/linkoverlay/module.desc
+usr/lib64/calamares/modules/restorecon/main.py
+usr/lib64/calamares/modules/restorecon/module.desc

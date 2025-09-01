@@ -1,0 +1,4 @@
+etc/zypp
+etc/dnf
+etc/pki/rpm-gpg
+etc/yum.repos.d

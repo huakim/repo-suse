@@ -196,7 +196,7 @@ git_update(){
 
 git_rebase(){
  git add --all
- git commit --amend "${1:-update}"
+ git commit --amend -m "${1:-update}"
  git push --force
 }
 

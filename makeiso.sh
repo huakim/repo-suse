@@ -4,7 +4,6 @@ git pull ||:
 smp="$(realpath $(dirname $0))"
 cd "${smp}"
 
-
 DRACUT_ARGS="--nomdadmconf --nolvmconf  --add 'livenet dmsquash-live dmsquash-live-ntfs convertfs pollcdrom qemu qemu-net' --no-hostonly --debug --no-early-microcode --force"
 
 if test -e "bootstrap-$1"
@@ -16,6 +15,8 @@ if test -e "liveiso-$1"
 then
   NO_DELETE_LIVEISO=true
 fi
+
+mkdir "bootstrap-$1"
 
 sudo -E env "DRACUT_ARGS=$DRACUT_ARGS" "LIVEINSTALL=yes" "DEFAULTUSER=live" "SKIP_RESTORECON=yes" ./bootstrap.sh "$1"
 

@@ -10,6 +10,7 @@ if ! [ -d "${dir}" ]; then
   btrfs sub cr "${dir}" || mkdir -p "${dir}"
   btrfs sub cr "${dir}/home" ||:
 fi
+
 cp -RTfvpu bootstrap "${dir}" ||:
 
 cd "${dir}"

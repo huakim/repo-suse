@@ -50,10 +50,10 @@ if [[ "${1}" != chroot ]]
 then
 i "${dir}/${idir}" "${smp}"
 
-FORCE=yes DOWNLOADONLY=yes INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-${1}.py"
+FORCE=yes DOWNLOADONLY=yes INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
 chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/aptat.sh"
 
-FORCE=yes DOWNLOADONLY=no CACHEONLY=yes SPAWN="${dir}" python3 "${smp}/pacman/apt-${1}.py"
+FORCE=yes DOWNLOADONLY=no CACHEONLY=yes SPAWN="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
 
 umount "${dir}/${idir}"
 fi
@@ -73,7 +73,7 @@ i "${dir}/${idir}" "${smp}"
 
 chroot "${dir}" /usr/bin/env "$(env)" bash "/${idir}/pacman/copy.sh"
 chroot "${dir}" /usr/bin/env "$(env)" bash "/${idir}/pacman/setup.sh"
-chroot "${dir}" /usr/bin/env "$(env)" "DEFAULTUSER=${DEFAULTUSER}" "USEDEFAULTS=yes" bash "/${idir}/pacman/user.sh"
+chroot "${dir}" /usr/bin/env "$(env)" "DEFAULTPASSWORD=${DEFAULTPASSWORD}" "DEFAULTUSER=${DEFAULTUSER}" "USEDEFAULTS=yes" bash "/${idir}/pacman/user.sh"
 
 #if [ -n "${INSTALL_NEW_RECOMMENDS}" ]; then
 #  chroot "${dir}" /usr/bin/env zypper -C "${smp}/pacman/var/cache/zypp" --auto-agree-with-licenses --non-interactive -vvv --gpg-auto-import-keys install-new-recommends

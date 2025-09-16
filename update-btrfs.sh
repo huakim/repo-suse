@@ -31,6 +31,7 @@ then
 		mount /dev/disk/by-uuid/"$j" "${bootstrapdir}/home" -o subvol=@home
                 export FSTAB=/etc/fstab
                 export INSTALL_NEW_RECOMMENDS=yes
+		export DEFAULTPASSWORD="$(sed -n -s "s~^$(whoami):\([^:]*\):.*~\1~p" /etc/shadow)"
                 . ./bootstrap.sh "${variant}"
                 systemd-nspawn -D "${bootstrapdir}" /bin/bash -x -c 'mount -o remount,rw /sys/fs/selinux; restorecon -Rv /home/*'
                 umount "${bootstrapdir}/home"

@@ -1,7 +1,0 @@
-[ix86-repo-debug]
-name=openSUSE-Tumbleweed-Debug
-enabled=0
-autorefresh=0
-baseurl=https://cdn.opensuse.org/ports/i586/debug/tumbleweed/repo/oss/
-path=/
-keeppackages=1

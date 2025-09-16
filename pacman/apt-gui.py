@@ -31,18 +31,19 @@ if env.check('EXTRAINSTALL'):
     pkgs.extend(qemu)
     pkgs.extend((
         "nekobox", 
-#        "code", 
+        "codium", 
         "remmina",
         "remmina-plugin-vnc",
         "remmina-plugin-rdp",
         "winetricks",
 	'wine-stable',
         "plymouth-dracut",
-#        "anbox-modules",
+        "anbox-modules",
 #        "anbox-kmp",
 #        "anbox-ueficert",
-#        "waydroid-image",
-        "chromium",
+        "waydroid-image",
+ 	"waydroid",       
+#        "chromium",
         "webapp-manager",
         "gnome-disk-utility"
 ))

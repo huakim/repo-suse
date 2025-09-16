@@ -1,8 +1,0 @@
-[home_juzbun_NekoBox]
-name=NekoBox (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=1
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/juzbun:/NekoBox/openSUSE_Tumbleweed/repodata/repomd.xml.key
-keeppackages=1
-baseurl=https://cdn.opensuse.org/repositories/home:/juzbun:/NekoBox/openSUSE_Tumbleweed/

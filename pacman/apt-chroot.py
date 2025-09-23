@@ -64,6 +64,7 @@ done
 """
 
 def ZYPPER_CONFIG_BUILDER(first_flags, second_flags):
+    print(second_flags)
     suffix_flags = []
     install_flags = []
     recommends_flags = []
@@ -131,10 +132,10 @@ def ZYPPER_CONFIG(new_recommends=False):
         else:
             flags.append('-v')
         if chstr(INSTALLROOT):
-            flags.extend(('--installroot', INSTALLROOT))
+            flags.append('--installroot=' + INSTALLROOT)
 #        flags = [dnf, 'install', '--use-host-config', '--setopt', 'install_weak_deps='+str(check(RECOMMENDS))]
         if chstr(CACHEDIR):
-            flags.extend(('--cache-dir', CACHEDIR))
+            flags.append('--cache-dir=' + CACHEDIR)
 #        if chstr(LIBDIR):
 #            flags.extend(('--setopt','persistdir='+LIBDIR))
         if new_recommends:
@@ -161,11 +162,10 @@ def ZYPPER_CONFIG(new_recommends=False):
                 flags.append('--recommends')
         else:
             flags.append('--no-recommends')
-        flags.append('--download')
         if check(DOWNLOADONLY):
-            flags.append('only')
+            flags.append('--download=only')
         else:
-            flags.append('in-advance')
+            flags.append('--download=in-advance')
         if check(FORCE):
             flags.append('--force-resolution')
         else:
@@ -174,6 +174,8 @@ def ZYPPER_CONFIG(new_recommends=False):
         if not new_recommends:
             if INSTALL_NEW_RECOMMENDS:
                 quit_flags = ZYPPER_CONFIG(True)
+        else:
+            return flags
         return ZYPPER_CONFIG_BUILDER(flags, quit_flags)
 
 def DNF_CONFIG():

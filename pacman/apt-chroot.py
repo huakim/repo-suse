@@ -31,11 +31,78 @@ pkgs = []
 def sh_opt(value):
     return '"'+value.replace('\\', '\\\\').replace('"','\\"').replace('`','\\`').replace('$', '\\$')+'"'
 
-def ZYPPER_CONFIG_BUILDER(first_flags, second_flags):
-    return [ 'bash', '-c', ' '.join(
-        [sh_opt(i) for i in first_flags]) + ' "${@}" ; ' + ' '.join(
-        [sh_opt(i) for i in second_flags]) ]
+ZYPPER_CONFIG_BUILDER_PROG="""
+SUFFIX="${1}"
+shift 1
+INSTALL="${1}"
+shift 1
+RECOMMENDS="${1}"
+shift 1
+declare -a SUFFIX_PROG=()
+declare -a INSTALL_PROG=()
+declare -a RECOMMENDS_PROG=()
+for (( i=1; i<=SUFFIX; i++ ))
+do
+  SUFFIX_PROG+=("${1}")
+  shift 1
+done
+for (( i=1; i<=INSTALL; i++ ))
+do
+  INSTALL_PROG+=("${1}")
+  shift 1
+done
+for (( i=1; i<=RECOMMENDS; i++ ))
+do
+  RECOMMENDS_PROG+=("${1}")
+  shift 1
+done
+(
+    echo "${INSTALL_PROG[@]}" "${@}"
+    echo "${RECOMMENDS_PROG[@]}"
+    echo quit
+) | env -- "${SUFFIX_PROG[@]}"
+"""
 
+def ZYPPER_CONFIG_BUILDER(first_flags, second_flags):
+    suffix_flags = []
+    install_flags = []
+    recommends_flags = []
+    f1 = False
+    f2 = False
+    for i in first_flags:
+        if f2:
+            install_flags.append(i)
+        elif f1:
+            if (i != ''):
+                if i[0] == '-':
+                    suffix_flags.append(i)
+                else:
+                    f2 = True
+                    install_flags.append(i)
+        else:
+            if (i == 'zypper'):
+                f1 = True
+                suffix_flags.append(i)
+    f1 = False
+    f2 = False
+    for i in second_flags:
+        if f2:
+            recommends_flags.append(i)
+        elif f1:
+            if (i != ''):
+                if i[0] == '-':
+                    pass
+                else:
+                    f2 = True
+                    recommends_flags.append(i)
+        else:
+            if (i == 'zypper'):
+                f1 = True
+    suffix_flags.append('shell')
+    suffix_int = str(len(suffix_flags))
+    install_int = str(len(install_flags))
+    recommends_int = str(len(recommends_flags))
+    return ['bash', '-c', ZYPPER_CONFIG_BUILDER_PROG, 'bash', suffix_int, install_int, recommends_int, *suffix_flags, *install_flags, *recommends_flags]
 
 def ZYPPER_CONFIG(new_recommends=False):
         INSTALLROOT=env('INSTALLROOT')
@@ -103,10 +170,11 @@ def ZYPPER_CONFIG(new_recommends=False):
             flags.append('--force-resolution')
         else:
             flags.append('--no-force-resolution')
+        quit_flags = ['quit']
         if not new_recommends:
             if INSTALL_NEW_RECOMMENDS:
-                return ZYPPER_CONFIG_BUILDER(flags, ZYPPER_CONFIG(True))
-        return flags
+                quit_flags = ZYPPER_CONFIG(True)
+        return ZYPPER_CONFIG_BUILDER(flags, quit_flags)
 
 def DNF_CONFIG():
         INSTALLROOT=env('INSTALLROOT')

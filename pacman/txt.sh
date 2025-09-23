@@ -117,7 +117,7 @@ link .local/share/KDE/neochat
 link .local/share/epiphany
 link .local/share/evolution
 link .local/share/geary
-link .local/var/pmbootstrap
+link .local/var
 link .local/share/Steam
 #link .local/share/kontact
 #link .local/share/local-mail

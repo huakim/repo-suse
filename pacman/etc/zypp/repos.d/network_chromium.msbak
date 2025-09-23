@@ -2,7 +2,7 @@
 name=network_chromium
 enabled=1
 autorefresh=1
+baseurl=https://download.opensuse.org/repositories/network:chromium/openSUSE_Tumbleweed/
 path=/
 type=rpm-md
 keeppackages=1
-baseurl=https://cdn.opensuse.org/repositories/network:chromium/openSUSE_Tumbleweed/

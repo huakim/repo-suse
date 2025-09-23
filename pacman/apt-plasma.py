@@ -29,6 +29,7 @@ if env.check("EXTRAINSTALL"):
 #"zapzap",
 'plasma6-session-x11',
 'kwin6-x11',
+'falkon',
 'remmina-plugin-kwallet'
 ))
 

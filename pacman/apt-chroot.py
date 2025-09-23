@@ -31,6 +31,12 @@ pkgs = []
 def sh_opt(value):
     return '"'+value.replace('\\', '\\\\').replace('"','\\"').replace('`','\\`').replace('$', '\\$')+'"'
 
+def ZYPPER_CONFIG_BUILDER(first_flags, second_flags):
+    return [ 'bash', '-c', ' '.join(
+        [sh_opt(i) for i in first_flags]) + ' "${@}" ; ' + ' '.join(
+        [sh_opt(i) for i in second_flags]) ]
+
+
 def ZYPPER_CONFIG(new_recommends=False):
         INSTALLROOT=env('INSTALLROOT')
         INTERACTIVE=check(env('INTERACTIVE'))
@@ -99,9 +105,7 @@ def ZYPPER_CONFIG(new_recommends=False):
             flags.append('--no-force-resolution')
         if not new_recommends:
             if INSTALL_NEW_RECOMMENDS:
-                return [ 'bash', '-c', ' '.join(
-                    [sh_opt(i) for i in flags]) + ' "${@}" ; ' + ' '.join(
-                    [sh_opt(i) for i in ZYPPER_CONFIG(True)]) ]
+                return ZYPPER_CONFIG_BUILDER(flags, ZYPPER_CONFIG(True))
         return flags
 
 def DNF_CONFIG():

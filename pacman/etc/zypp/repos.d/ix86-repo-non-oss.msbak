@@ -1,0 +1,7 @@
+[ix86-repo-non-oss]
+name=openSUSE-Tumbleweed-Non-Oss
+enabled=0
+autorefresh=0
+baseurl=https://cdn.opensuse.org/ports/i586/tumbleweed/repo/non-oss/
+path=/
+keeppackages=1

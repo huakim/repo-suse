@@ -1,9 +1,0 @@
-[home_hawkeye116477_waterfox]
-name=Waterfox (deb/pkg.tar.xz/rpm/AppImage) (openSUSE_Tumbleweed)
-enabled=1
-autorefresh=1
-baseurl=https://download.opensuse.org/repositories/home:/hawkeye116477:/waterfox/openSUSE_Tumbleweed/
-type=rpm-md
-gpgcheck=1
-gpgkey=https://download.opensuse.org/repositories/home:/hawkeye116477:/waterfox/openSUSE_Tumbleweed/repodata/repomd.xml.key
-keeppackages=1

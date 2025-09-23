@@ -1,8 +1,0 @@
-[network_chromium]
-name=network_chromium
-enabled=1
-autorefresh=1
-baseurl=https://download.opensuse.org/repositories/network:chromium/openSUSE_Tumbleweed/
-path=/
-type=rpm-md
-keeppackages=1

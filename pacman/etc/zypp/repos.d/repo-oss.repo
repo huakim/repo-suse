@@ -3,4 +3,5 @@ enabled=1
 autorefresh=1
 baseurl=https://cdn.opensuse.org/tumbleweed/repo/oss
 type=rpm-md
+gpgcheck=1
 keeppackages=1

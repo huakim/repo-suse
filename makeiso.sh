@@ -86,8 +86,8 @@ function b_o_o_t{
    initrd /LiveOS/initrd.img
  }
 }
-b_o_o_t 'Boot to ram' rd.live.ram=1
 b_o_o_t 'Live boot'
+b_o_o_t 'Boot to ram' rd.live.ram=1
 EOF
 
 grub2-mkrescue -v -o "liveiso-$1.iso" -V "${label}" "${iso}"

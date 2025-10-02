@@ -60,7 +60,7 @@ done
     echo "${INSTALL_PROG[@]}" "${@}"
     echo "${RECOMMENDS_PROG[@]}"
     echo quit
-) | env -- "${SUFFIX_PROG[@]}"
+) | ( exec "${SUFFIX_PROG[@]}" )
 """
 
 def ZYPPER_CONFIG_BUILDER(first_flags, second_flags):
@@ -131,12 +131,9 @@ def ZYPPER_CONFIG(new_recommends=False):
         else:
             flags.append('-v')
         if chstr(INSTALLROOT):
-            flags.extend(('--installroot', INSTALLROOT))
-#        flags = [dnf, 'install', '--use-host-config', '--setopt', 'install_weak_deps='+str(check(RECOMMENDS))]
+            flags.extend(('--installroot=' + INSTALLROOT,))
         if chstr(CACHEDIR):
-            flags.extend(('--cache-dir', CACHEDIR))
-#        if chstr(LIBDIR):
-#            flags.extend(('--setopt','persistdir='+LIBDIR))
+            flags.extend(('--cache-dir=' + CACHEDIR))
         if new_recommends:
             flags.append('install-new-recommends')
         else:
@@ -154,18 +151,15 @@ def ZYPPER_CONFIG(new_recommends=False):
         if check(NOGPGCHECK):
             if not new_recommends:
                 flags.append('--allow-unsigned-rpm')
-   #     if check(DEBUGONLY):
-   #         flags.append('--dry-run')
         if check(RECOMMENDS):
             if not new_recommends:
                 flags.append('--recommends')
         else:
             flags.append('--no-recommends')
-        flags.append('--download')
         if check(DOWNLOADONLY):
-            flags.append('only')
+            flags.append('--download=only')
         else:
-            flags.append('in-advance')
+            flags.append('--download=in-advance')
         if check(FORCE):
             flags.append('--force-resolution')
         else:

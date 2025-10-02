@@ -59,7 +59,7 @@ pkgs.extend((
 "btrfs-progs",
 "bluez-obexd",
 "dosfstools",
-"dracut-kiwi-live",
+#"dracut-kiwi-live",
 #"dracut-live",
 "exfatprogs",
 #"efibootmgr",

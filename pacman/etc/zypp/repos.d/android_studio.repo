@@ -1,10 +1,8 @@
-[copr:copr.fedorainfracloud.org:medzik:jetbrains]
+[copr.fedorainfracloud.org_medzik_jetbrains]
 name=Copr repo for jetbrains owned by medzik
-enabled=1
+enabled=0
 autorefresh=1
 baseurl=https://download.copr.fedorainfracloud.org/results/medzik/jetbrains/fedora-rawhide-$basearch/
-type=rpm-md
 gpgcheck=1
-repo_gpgcheck=0
 gpgkey=https://download.copr.fedorainfracloud.org/results/medzik/jetbrains/pubkey.gpg
 keeppackages=1

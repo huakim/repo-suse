@@ -84,7 +84,8 @@ pkgs.extend((
 "systemd-container",
 "kmod",
 #"tzdata",
-"udisks2"
+"udisks2",
+"device-mapper"
 ))
 # );
 

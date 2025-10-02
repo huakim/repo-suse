@@ -57,13 +57,17 @@ do
   shift 1
 done
 (
+    if [[ "${REFRESH}" == "yes" ]]
+    then
+        echo ref
+    fi
     echo "${INSTALL_PROG[@]}" "${@}"
     echo "${RECOMMENDS_PROG[@]}"
     echo quit
 ) | ( exec "${SUFFIX_PROG[@]}" )
 """
 
-def ZYPPER_CONFIG_BUILDER(first_flags, second_flags):
+def ZYPPER_CONFIG_BUILDER(first_flags, second_flags, is_refresh):
     print(second_flags)
     suffix_flags = []
     install_flags = []
@@ -103,7 +107,7 @@ def ZYPPER_CONFIG_BUILDER(first_flags, second_flags):
     suffix_int = str(len(suffix_flags))
     install_int = str(len(install_flags))
     recommends_int = str(len(recommends_flags))
-    return ['bash', '-c', ZYPPER_CONFIG_BUILDER_PROG, 'bash', suffix_int, install_int, recommends_int, *suffix_flags, *install_flags, *recommends_flags]
+    return ['env', 'REFRESH=yes' if is_refresh else 'REFRESH=no', 'bash', '-c', ZYPPER_CONFIG_BUILDER_PROG, 'bash', suffix_int, install_int, recommends_int, *suffix_flags, *install_flags, *recommends_flags]
 
 def ZYPPER_CONFIG(new_recommends=False):
         INSTALLROOT=env('INSTALLROOT')
@@ -119,6 +123,7 @@ def ZYPPER_CONFIG(new_recommends=False):
         FORCE=env('FORCE')
         RELEASEVER=env('RELEASEVER')
         CACHEONLY=env('CACHEONLY')
+        REFRESH=env('REFRESH')
         flags = ['zypper']
         if not check(INTERACTIVE):
             flags.extend(('--non-interactive',
@@ -172,7 +177,7 @@ def ZYPPER_CONFIG(new_recommends=False):
                 quit_flags = ZYPPER_CONFIG(True)
         else:
             return flags
-        return ZYPPER_CONFIG_BUILDER(flags, quit_flags)
+        return ZYPPER_CONFIG_BUILDER(flags, quit_flags, check(REFRESH))
 
 def DNF_CONFIG():
         INSTALLROOT=env('INSTALLROOT')

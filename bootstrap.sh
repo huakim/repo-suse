@@ -44,16 +44,16 @@ alias chroot='systemd-nspawn -D '
 
 
 DOWNLOADONLY=yes INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-chroot.py" sed bash rpm coreutils
-DOWNLOADONLY=no INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-chroot.py" sed bash rpm coreutils
+REFRESH=no DOWNLOADONLY=no INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-chroot.py" sed bash rpm coreutils
 
 if [[ "${1}" != chroot ]]
 then
 i "${dir}/${idir}" "${smp}"
 
-FORCE=yes DOWNLOADONLY=yes INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
+REFRESH=no FORCE=yes DOWNLOADONLY=yes INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
 chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/aptat.sh"
 
-FORCE=yes DOWNLOADONLY=no CACHEONLY=yes SPAWN="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
+REFRESH=no FORCE=yes DOWNLOADONLY=no CACHEONLY=yes SPAWN="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
 
 umount "${dir}/${idir}"
 fi

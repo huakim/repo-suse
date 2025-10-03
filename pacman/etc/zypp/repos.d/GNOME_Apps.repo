@@ -1,0 +1,8 @@
+[GNOME_Apps]
+name=GNOME Applications (openSUSE_Factory)
+enabled=1
+autorefresh=0
+baseurl=https://download.opensuse.org/repositories/GNOME:/Apps/openSUSE_Factory/
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/GNOME:/Apps/openSUSE_Factory/repodata/repomd.xml.key
+keeppackages=1

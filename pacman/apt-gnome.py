@@ -26,7 +26,7 @@ qemu=(
 #"nautilus-file-roller",
 #'transmission-gtk',
 #'nemo-extension-gsconnect',
-'varia',
+#'varia',
 'valent',
 #'ungoogled-chromium',
 #'epiphany',

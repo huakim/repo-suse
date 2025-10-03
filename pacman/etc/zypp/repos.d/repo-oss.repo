@@ -1,7 +1,7 @@
 [repo-oss]
 enabled=1
 autorefresh=1
-baseurl=https://cdn.opensuse.org/tumbleweed/repo/oss
+baseurl=https://cdn.opensuse.org/slowroll/repo/oss
 type=rpm-md
 gpgcheck=1
 keeppackages=1

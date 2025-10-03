@@ -14,9 +14,11 @@ if pkgs[0] == 'zypper':
 if env.check("FLATSERVERINSTALL"):
     pkgs.extend((
         'patterns-xfce-xfce_extra',
+        'patterns-xfce-xfce_wayland',
+        'weston',
         'wine-stable',
-#        'waydroid-image',
-#        'waydroid-magisk',
+        'waydroid-image',
+        'waydroid-magisk',
         'patterns-containers-container_runtime',
         'patterns-cockpit',
         'patterns-yast-yast2_server',
@@ -27,7 +29,9 @@ if env.check("FLATSERVERINSTALL"):
         'patterns-base-console',
         'patterns-server-kvm_server',
         'patterns-server-kvm_tools',
-        'codium'
+        'codium',
+        'openssh-server',
+        'openssh-clients'
     ))
 
 if env.check("LIVEINSTALL"):
@@ -115,9 +119,9 @@ pkgs.extend((
 if not env.check("SKIPKERNEL"):
     pkgs.extend((
 #"intel-compute-runtime",
-"kernel-default",
+"kernel-longterm",
 "kexec-tools",
-"dracut",
+"dracut-kiwi-live",
 "dracut-tools"
 #"Mesa",
 #"Mesa-dri",

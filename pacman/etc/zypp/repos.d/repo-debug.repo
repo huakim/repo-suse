@@ -2,6 +2,6 @@
 name=openSUSE-Tumbleweed-Debug
 enabled=0
 autorefresh=0
-baseurl=https://cdn.opensuse.org/debug/tumbleweed/repo/oss/
+baseurl=https://cdn.opensuse.org/debug/slowroll/repo/oss/
 path=/
 keeppackages=1

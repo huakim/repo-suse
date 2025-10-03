@@ -15,8 +15,8 @@ if env.check("FLATSERVERINSTALL"):
     pkgs.extend((
         'patterns-xfce-xfce_extra',
         'wine-stable',
-        'waydroid-image',
-        'waydroid-magisk',
+#        'waydroid-image',
+#        'waydroid-magisk',
         'patterns-containers-container_runtime',
         'patterns-cockpit',
         'patterns-yast-yast2_server',
@@ -117,6 +117,8 @@ if not env.check("SKIPKERNEL"):
 #"intel-compute-runtime",
 "kernel-default",
 "kexec-tools",
+"dracut",
+"dracut-tools"
 #"Mesa",
 #"Mesa-dri",
 #"nvidia-gpu-firmware",

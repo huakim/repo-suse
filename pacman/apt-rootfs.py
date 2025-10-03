@@ -8,6 +8,8 @@ pkgs=j.pkgs
 main=j.main
 env=j.env
 
+if env.check("FLATSERVERINSTALL"):
+  j.os.environ["EXTRAINSTALL"] = 'yes'
 
 if pkgs[0] == 'dnf5':
     dnfplugins=('dnf5-plugins',)

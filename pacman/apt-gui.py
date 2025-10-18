@@ -11,6 +11,9 @@ env=j.env
 if pkgs[0] == 'zypper':
     pkgs.append('yast2-qt-pkg')
 
+if env.check("FLATSERVERINSTALL"):
+    pkgs.extend(("ungoogled-chromium", "fractal", "weston"))
+
 if env.check('LIVEINSTALL'):
     pkgs.append('calamares')
 
@@ -35,8 +38,8 @@ if env.check('EXTRAINSTALL'):
         "remmina",
         "remmina-plugin-vnc",
         "remmina-plugin-rdp",
-        "winetricks",
-	'wine-stable',
+#        "winetricks",
+#	'wine-stable',
         "plymouth-dracut",
 #        "anbox-modules",
 #        "anbox-kmp",
@@ -110,7 +113,7 @@ f'gstreamer-plugins-{a}{b}' for a, b in zip([
 'libav'
 ], ['', '-32bit'])
 ],
-'pipewire-aptx',
+#'pipewire-aptx',
 #'libavcodec61',
 #'libavcodec60',
 'libfdk-aac2',

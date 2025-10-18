@@ -15,10 +15,7 @@ if env.check("FLATSERVERINSTALL"):
     pkgs.extend((
         'patterns-xfce-xfce_extra',
         'patterns-xfce-xfce_wayland',
-        'weston',
         'wine-stable',
-        'waydroid-image',
-        'waydroid-magisk',
         'patterns-containers-container_runtime',
         'patterns-cockpit',
         'patterns-yast-yast2_server',
@@ -29,13 +26,16 @@ if env.check("FLATSERVERINSTALL"):
         'patterns-base-console',
         'patterns-server-kvm_server',
         'patterns-server-kvm_tools',
-        'codium',
         'openssh-server',
-        'openssh-clients'
+        'openssh-clients',
+        'patterns-network-network_admin',
+        'net-tools-deprecated'
     ))
 
 if env.check("LIVEINSTALL"):
     pkgs.append('grub2')
+    pkgs.append('iputils')
+    pkgs.append('traceroute')
     for i in ['', '-extras']:
         for u in ['x86_64', 'i386']:
             for c in ['efi', 'xen', 'pc']:

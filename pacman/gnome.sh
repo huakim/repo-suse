@@ -32,8 +32,8 @@ $gs $v cursor-theme 'Adwaita'
 $gs $v document-font-name 'Serif 11'
 $gs $v enable-animations false
 $gs $v font-name 'Open Sans 11'
-$gs $v gtk-theme 'Yaru-MATE-dark'
-$gs $v icon-theme 'Gion'
+$gs $v gtk-theme 'Adwaita-dark'
+$gs $v icon-theme 'Adwaita'
 $gs $v monospace-font-name 'Roboto Mono 12'
 
 peripherals=$desktop.peripherals

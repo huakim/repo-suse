@@ -21,18 +21,19 @@ qemu=(
 "gnome-disk-utility",
 "gnome-remote-desktop",
 #"gnome-shell-extension-desktop-icons", #gtk4-ding",
-"gnome-shell-extension-valent",
+#"gnome-shell-extension-valent",
 #"nautilus-extension-terminal",
 #"nautilus-file-roller",
-#'transmission-gtk',
+'transmission-gtk',
 #'nemo-extension-gsconnect',
 #'varia',
-'valent',
+#'valent',
 #'ungoogled-chromium',
 #'epiphany',
 #'evolution',
 "fractal",
 "secrets",
+"uget",
 'seahorse'
 #'waterfox-wayland'
 #'Tangram'

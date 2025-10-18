@@ -39,6 +39,19 @@ qemu=(
 #'Tangram'
 )
 
+if env.check("GNOME_ANIMATIONS"):
+    pkgs.extend(
+    (
+    "gnome-shell-extension-dash2dock-lite",
+    "gnome-shell-extension-system-monitor",
+    "gnome-shell-extension-desktop-cube",
+    "gnome-shell-extension-compiz-windows-effect"
+    )
+)
+else: 
+    pkgs.append("gnome-shell-extension-dash-to-dock")
+
+
 if env.check('EXTRAINSTALL'):
     pkgs.extend(qemu)
 
@@ -52,6 +65,7 @@ pkgs.extend((
 #"evolution",
 "extension-manager",
 "engrampa",
+"gnome-shell-extension-gsconnect",
 #"nautilus-file-roller",
 "geany",
 "gtk2-metatheme-adwaita",
@@ -70,7 +84,6 @@ pkgs.extend((
 "gnome-session-wayland",
 "gnome-shell-extension-appindicator",
 "gnome-shell-extension-unite",
-"gnome-shell-extension-dash-to-dock",
 "gnome-shell-extension-desktop-icons", #gtk4-ding",
 #"gnome-shell-extension-gsconnect",
 "gnome-system-monitor",

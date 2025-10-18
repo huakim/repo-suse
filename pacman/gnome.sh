@@ -3,6 +3,19 @@ v=org.gnome.nautilus.preferences
 $gs $v 'default-folder-viewer' 'list-view'
 $gs $v 'show-hidden-files' true
 
+check() {
+    local a="$1"
+
+    # Check if argument is empty or if any of the specified values start with a
+    if [[ -z "$a" || "none" == "$a"* || "false" == "$a"* || "0" == "$a"* || "nil" == "$a"* ]]; then
+#        echo "false"
+        return 1
+    else
+#        echo "true"
+        return 0
+    fi
+}
+
 $gs org.gtk.gtk4.Settings.FileChooser 'show-hidden' true
 $gs org.gtk.Settings.FileChooser 'show-hidden' true
 $gs org.gnome.FileRoller.FileSelector 'show-hidden' true
@@ -30,7 +43,11 @@ $gs $v clock-show-seconds true
 $gs $v color-scheme 'prefer-dark'
 $gs $v cursor-theme 'Adwaita'
 $gs $v document-font-name 'Serif 11'
+if check "$GNOME_ANIMATIONS" ; then 
+$gs $v enable-animations true
+else
 $gs $v enable-animations false
+fi
 $gs $v font-name 'Open Sans 11'
 $gs $v gtk-theme 'Adwaita-dark'
 $gs $v icon-theme 'Adwaita'
@@ -70,12 +87,18 @@ $gs $v night-light-schedule-from 0
 $gs $v night-light-schedule-to 0
 
 v=org.gnome.shell
+
+if check "$GNOME_ANIMATIONS"; then 
+$gs $v enabled-extensions "['Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash2dock-lite@icedman.github.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io', 'compiz-windows-effect@hermes83.github.com', 'desktop-cube@schneegans.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']"
+else
 $gs $v enabled-extensions "['Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io']"
+fi
 $gs $v favorite-apps "[]"
 
 v=$v.extensions
 e=$v.gtk4-ding
 $gs $e icon-size 'small'
+
 
 
 e=$v.ding

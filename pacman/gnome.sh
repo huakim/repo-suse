@@ -107,6 +107,14 @@ $gs $e show-trash false
 $gs $e show-volumes false
 $gs $e add-volumes-opposite false
 
+e=$v.dash2dock-lite
+$gs $e shrink-icons true
+$gs $e autohide-dash true
+$gs $e pressure-sense false
+$gs $e dock-location 1
+$gs $e dock-position 'LEFT'
+
+
 e=$v.dash-to-dock
 $gs $e always-center-icons true
 $gs $e animation-time 0

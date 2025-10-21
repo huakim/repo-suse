@@ -121,7 +121,7 @@ if not env.check("SKIPKERNEL"):
 #"intel-compute-runtime",
 "kernel-longterm",
 "kexec-tools",
-"dracut-kiwi-live",
+#"dracut-kiwi-live",
 "dracut-tools"
 #"Mesa",
 #"Mesa-dri",

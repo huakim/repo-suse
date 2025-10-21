@@ -41,19 +41,30 @@ alias chroot='systemd-nspawn -D '
 #chroot "$dir" /bin/bash
 #chroot "$dir" /bin/bash "/${idir}/pacman/aptat.sh"
 
-
+unset SPAWN
+unset INSTALLROOT
 
 DOWNLOADONLY=yes INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-chroot.py" sed bash rpm coreutils
 REFRESH=no DOWNLOADONLY=no INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-chroot.py" sed bash rpm coreutils
 
 if [[ "${1}" != chroot ]]
 then
+
+mkdir -p "${dir}/${idir}"
 i "${dir}/${idir}" "${smp}"
+
+sleep 2
+chroot "${dir}" /usr/bin/ls "/${idir}/pacman"
+chroot "${dir}" /usr/bin/ls "/${idir}"
+chroot "${dir}" /usr/bin/ls "/extra"
+chroot "${dir}" /usr/bin/ls "/"
+sleep 2
+
 
 REFRESH=no FORCE=yes DOWNLOADONLY=yes INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
 chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/aptat.sh"
 
-REFRESH=no FORCE=yes DOWNLOADONLY=no CACHEONLY=yes SPAWN="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
+REFRESH=no FORCE=yes DOWNLOADONLY=no SPAWN="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
 
 umount "${dir}/${idir}"
 fi

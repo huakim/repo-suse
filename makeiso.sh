@@ -1,5 +1,5 @@
 #!/bin/sh -x
-git pull ||:
+#git pull ||:
 
 smp="$(realpath $(dirname $0))"
 cd "${smp}"
@@ -71,7 +71,7 @@ mksquashfs bootstrap-"$1" "${dir}/squashfs.img"
 
 dir="${iso}/boot/grub"
 
-if [ -z "$(command -v grub2-mkrescue)" ]; then
+if [[ -n "$(command -v grub-mkrescue)" ]]; then
   alias grub2-mkrescue=grub-mkrescue
 fi
 

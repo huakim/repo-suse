@@ -34,11 +34,15 @@ jobs:
         sudo bash -x ./aptat.sh
         cd ../
         sudo zypper --gpg-auto-import-keys ref
+    - name: Set up Docker Compose
+      uses: docker/setup-compose-action@v1
+      with:
+        version: latest
     - name: Generate ISO
       run: |
         set -a
-        ${{ github.event.inputs.env }}
-        sudo env $(env) bash -x makeiso.sh ${{ github.event.inputs.name }}
+        export ENVIRONMENT=${{ github.event.inputs.env }}
+        docker compose up --build --force-recreate
     - name: Upload ISO
       run: |
         mkdir deployment

@@ -8,3 +8,5 @@ commit-extra.sh
 copy-extra.sh
 makeiso.sh
 .github/workflows/manual.yml
+Dockerfile
+docker-compose.yml

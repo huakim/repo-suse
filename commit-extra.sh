@@ -12,5 +12,5 @@ for i in $listfiles; do
     git add "$(realpath --relative-to=. pacman/${i})"
 done
 git commit -m update
-git push
+git push --force
 )

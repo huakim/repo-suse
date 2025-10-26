@@ -29,7 +29,7 @@ i(){
 #i proc
 #i sys
 
-idir="extra/repo"
+idir="extra/repo/pacman"
 
 alias chroot='systemd-nspawn -D '
 
@@ -51,18 +51,10 @@ if [[ "${1}" != chroot ]]
 then
 
 mkdir -p "${dir}/${idir}"
-i "${dir}/${idir}" "${smp}"
-
-sleep 2
-chroot "${dir}" /usr/bin/ls "/${idir}/pacman"
-chroot "${dir}" /usr/bin/ls "/${idir}"
-chroot "${dir}" /usr/bin/ls "/extra"
-chroot "${dir}" /usr/bin/ls "/"
-sleep 2
-
+i "${dir}/${idir}" "${smp}/pacman"
 
 REFRESH=no FORCE=yes DOWNLOADONLY=yes INSTALLROOT="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
-chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/aptat.sh"
+chroot "${dir}" /usr/bin/env bash "/${idir}/aptat.sh"
 
 REFRESH=no FORCE=yes DOWNLOADONLY=no SPAWN="${dir}" python3 "${smp}/pacman/apt-${1}.py" $EXTRAPACKAGES
 
@@ -74,7 +66,7 @@ fi
 
 chcon -Rv --reference=/var/lib/machines "${dir}"
 
-i "${dir}/${idir}" "${smp}"
+i "${dir}/${idir}" "${smp}/pacman"
 
 #touch "${dir}/.autorelabel"
 #i extra "${smp}"
@@ -82,9 +74,9 @@ i "${dir}/${idir}" "${smp}"
 #chroot . /bin/bash "/extra/pacman/apt-${1}.py"
 #chroot "${dir}" /bin/bash
 
-chroot "${dir}" /usr/bin/env "$(env)" bash "/${idir}/pacman/copy.sh"
-chroot "${dir}" /usr/bin/env "$(env)" bash "/${idir}/pacman/setup.sh"
-chroot "${dir}" /usr/bin/env "$(env)" "DEFAULTPASSWORD=${DEFAULTPASSWORD}" "DEFAULTUSER=${DEFAULTUSER}" "USEDEFAULTS=yes" bash "/${idir}/pacman/user.sh"
+chroot "${dir}" /usr/bin/env "$(env)" bash "/${idir}/copy.sh"
+chroot "${dir}" /usr/bin/env "$(env)" bash "/${idir}/setup.sh"
+chroot "${dir}" /usr/bin/env "$(env)" "DEFAULTPASSWORD=${DEFAULTPASSWORD}" "DEFAULTUSER=${DEFAULTUSER}" "USEDEFAULTS=yes" bash "/${idir}/user.sh"
 
 #if [ -n "${INSTALL_NEW_RECOMMENDS}" ]; then
 #  chroot "${dir}" /usr/bin/env zypper -C "${smp}/pacman/var/cache/zypp" --auto-agree-with-licenses --non-interactive -vvv --gpg-auto-import-keys install-new-recommends
@@ -102,10 +94,10 @@ eval "chroot . /usr/bin/env dracut --kver=${kernel_version} ${DRACUT_ARGS}"
 if [ -f "${FSTAB}" ]; then
   rm -v "${dir}/etc/fstab"
   cp -v "${FSTAB}" "${dir}/etc/fstab"
-  chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/aptat.sh"
+  chroot "${dir}" /usr/bin/env bash "/${idir}/aptat.sh"
 #  chroot . /usr/bin/env 'HOME=/home/lenovo' /bin/bash /extra/home/lenovo/txt.sh
 else
-  chroot "${dir}" /usr/bin/env bash "/${idir}/pacman/aptdt.sh"
+  chroot "${dir}" /usr/bin/env bash "/${idir}/aptdt.sh"
 fi
 
 umount "${dir}/${idir}"

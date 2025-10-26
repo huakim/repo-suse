@@ -26,7 +26,7 @@ EOF
 
 ENV ENVIRONMENT=''
 
-RUN mkdir /extra
+RUN mkdir /extra/repo/pacman -p
 
 RUN cat << 'EOF' > /etc/systemd/system/makeiso.service 
 [Unit]
@@ -59,4 +59,4 @@ RUN systemctl enable makeiso
 
 STOPSIGNAL SIGRTMIN+3
 
-CMD ["bash", "-c", "echo 'set -e' ';' pushd /extra/repo/pacman ';' ./aptat.sh ';' popd ';' $ENVIRONMENT ';' cd /extra/repo ';' ./makeiso.sh '${VARIANT:-gnome}' > /extra/makeiso.environment ; exec /sbin/init"]
+CMD ["bash", "-c", "echo 'set -e' ';' pushd /extra/repo/pacman ';' ./aptat.sh ';' popd ';' $ENVIRONMENT ';' cd /extra/repo ';' ./makeiso.sh '${VARIANT:-gnome}' ';' mv '*.iso' deployment '||: ;' 'poweroff' > /extra/makeiso.environment ; exec /sbin/init"]

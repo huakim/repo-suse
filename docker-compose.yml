@@ -8,7 +8,10 @@ services:
       - ALL
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
-      - ./:/extra/repo:rw
+      - ./pacman:/extra/repo/pacman:rw
+      - ./bootstrap.sh:/extra/repo/bootstrap.sh
+      - ./makeiso.sh:/extra/repo/makeiso.sh
+      - ./:/extra/repo/deployment
     tmpfs:
       - /run
       - /tmp

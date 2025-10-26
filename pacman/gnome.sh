@@ -89,9 +89,9 @@ $gs $v night-light-schedule-to 0
 v=org.gnome.shell
 
 if check "$GNOME_ANIMATIONS"; then 
-$gs $v enabled-extensions "['Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash2dock-lite@icedman.github.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io', 'compiz-windows-effect@hermes83.github.com', 'desktop-cube@schneegans.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']"
+$gs $v enabled-extensions "['power-off-options@axelitama.github.io', 'Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash2dock-lite@icedman.github.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io', 'compiz-windows-effect@hermes83.github.com', 'desktop-cube@schneegans.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']"
 else
-$gs $v enabled-extensions "['Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io']"
+$gs $v enabled-extensions "['power-off-options@axelitama.github.io', 'Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io']"
 fi
 $gs $v favorite-apps "[]"
 
@@ -114,6 +114,13 @@ $gs $e pressure-sense false
 $gs $e dock-location 1
 $gs $e dock-position 'LEFT'
 
+e=$v.power-off-options
+$gs $e show-hybrid-sleep true
+$gs $e show-hibernate true
+$gs $e show-screenoff true
+$gs $e show-reboot-to-bios false
+$gs $e show-soft-reboot false
+$gs $e show-suspend-then-hibernate false
 
 e=$v.dash-to-dock
 $gs $e always-center-icons true

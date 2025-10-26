@@ -78,6 +78,7 @@ pkgs.extend((
 "gnome-control-center",
 "gnome-keyring",
 "gnome-menus",
+"gnome-shell-extension-power-off-options",
 #"gnome-online-accounts",
 "gnome-power-manager",
 "gnome-session",

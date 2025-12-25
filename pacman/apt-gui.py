@@ -1,8 +1,5 @@
 #!/bin/python3
-#use File::Basename;
-#use File::Spec;
-#require File::Spec->catfile(dirname(__FILE__), 'apt-base.pl');
-#our @pkgs;
+
 j=__import__('apt-base')
 pkgs=j.pkgs
 main=j.main
@@ -52,7 +49,7 @@ if env.check('EXTRAINSTALL'):
 ))
 
 pkgs.extend((
-"dbus-1-x11",
+"dbus-1",
 "gparted",
 #"generic-logos",
 "google-roboto-mono-fonts",

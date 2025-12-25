@@ -1,0 +1,9 @@
+[server_database_postgresql]
+name=PostgreSQL and related packages (openSUSE_Tumbleweed)
+enabled=1
+autorefresh=1
+baseurl=https://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/
+type=rpm-md
+gpgcheck=1
+gpgkey=https://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key
+keeppackages=1

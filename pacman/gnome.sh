@@ -89,9 +89,9 @@ $gs $v night-light-schedule-to 0
 v=org.gnome.shell
 
 if check "$GNOME_ANIMATIONS"; then 
-$gs $v enabled-extensions "['power-off-options@axelitama.github.io', 'Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash2dock-lite@icedman.github.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io', 'compiz-windows-effect@hermes83.github.com', 'desktop-cube@schneegans.github.com', 'system-monitor@gnome-shell-extensions.gcampax.github.com']"
+$gs $v enabled-extensions "['power-off-options@axelitama.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'dash2dock-lite@icedman.github.com', 'compiz-windows-effect@hermes83.github.com', 'desktop-cube@schneegans.github.com']"
 else
-$gs $v enabled-extensions "['power-off-options@axelitama.github.io', 'Onboard_Indicator@onboard.org', 'appindicatorsupport@rgcjonas.gmail.com', 'dash-to-dock@micxgx.gmail.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io']"
+$gs $v enabled-extensions "['power-off-options@axelitama.github.io', 'appindicatorsupport@rgcjonas.gmail.com', 'unite@hardpixel.eu', 'ding@rastersoft.com', 'gsconnect@andyholmes.github.io', 'system-monitor@gnome-shell-extensions.gcampax.github.com', 'dash-to-dock@micxgx.gmail.com']"
 fi
 $gs $v favorite-apps "[]"
 

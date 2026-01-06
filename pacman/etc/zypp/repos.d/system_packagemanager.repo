@@ -7,3 +7,4 @@ type=rpm-md
 gpgcheck=1
 gpgkey=https://download.opensuse.org/repositories/system:/packagemanager/openSUSE_Tumbleweed/repodata/repomd.xml.key
 keeppackages=1
+repo_gpgcheck=0

@@ -7,3 +7,4 @@ type=rpm-md
 gpgcheck=1
 gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
 keeppackages=1
+repo_gpgcheck=0

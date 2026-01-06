@@ -6,3 +6,4 @@ baseurl=https://download.opensuse.org/repositories/home:/juzbun:/bagpack/openSUS
 gpgcheck=1
 gpgkey=https://download.opensuse.org/repositories/home:/juzbun:/bagpack/openSUSE_Tumbleweed/repodata/repomd.xml.key
 keeppackages=1
+repo_gpgcheck=0

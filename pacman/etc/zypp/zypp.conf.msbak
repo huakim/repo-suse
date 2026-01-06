@@ -335,7 +335,7 @@
 ##   or unknown signature can lead to a corrupted system and in extreme
 ##   cases even to a system compromise.
 ##
-# repo_gpgcheck = unset -> according to gpgcheck
+# repo_gpgcheck = off
 # pkg_gpgcheck =  unset -> according to gpgcheck
 
 ##

@@ -9,6 +9,7 @@ gpgkey=https://packages.gitlab.com/gitlab/gitlab-ce/gpgkey
        https://packages.gitlab.com/gitlab/gitlab-ce/gpgkey/gitlab-gitlab-ce-3D645A26AB9FBD22.pub.gpg
        https://packages.gitlab.com/gitlab/gitlab-ce/gpgkey/gitlab-gitlab-ce-CB947AD886C8E8FD.pub.gpg
 keeppackages=1
+repo_gpgcheck=0
 [gitlab_ce-source]
 name=gitlab_gitlab-ce-source
 enabled=0

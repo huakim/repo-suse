@@ -5,3 +5,4 @@ baseurl=https://cdn.opensuse.org/tumbleweed/repo/oss
 type=rpm-md
 gpgcheck=1
 keeppackages=1
+repo_gpgcheck=0

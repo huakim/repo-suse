@@ -6,3 +6,4 @@ baseurl=https://download.opensuse.org/repositories/GNOME:/Apps/openSUSE_Factory/
 gpgcheck=1
 gpgkey=https://download.opensuse.org/repositories/GNOME:/Apps/openSUSE_Factory/repodata/repomd.xml.key
 keeppackages=1
+repo_gpgcheck=0

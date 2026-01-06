@@ -7,3 +7,4 @@ path=/
 type=rpm-md
 gpgcheck=1
 keeppackages=1
+repo_gpgcheck=0

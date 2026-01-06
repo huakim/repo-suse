@@ -6,3 +6,4 @@ baseurl=https://download.copr.fedorainfracloud.org/results/medzik/jetbrains/fedo
 gpgcheck=1
 gpgkey=https://download.copr.fedorainfracloud.org/results/medzik/jetbrains/pubkey.gpg
 keeppackages=1
+repo_gpgcheck=0

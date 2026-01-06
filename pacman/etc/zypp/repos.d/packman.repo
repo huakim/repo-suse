@@ -8,3 +8,4 @@ priority=70
 gpgcheck=1
 gpgkey=https://ftp.fau.de/packman/suse/openSUSE_Tumbleweed/repodata/repomd.xml.key
 keeppackages=1
+repo_gpgcheck=0
